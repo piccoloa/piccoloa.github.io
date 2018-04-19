@@ -108,7 +108,7 @@ Education
 
 Certifications:
 ------
-* Chartered Financial Analytst
+* Chartered Financial Analyst
 * Certified Public Accountant (Inactive)
 
 Skills and Interests
