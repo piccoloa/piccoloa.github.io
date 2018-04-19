@@ -106,8 +106,14 @@ Education
 
     *BS Accounting*, 1990  
 
+Certifications:
+------
+* Chartered Financial Analytst
+* Certified Public Accountant (Inactive)
+
 Skills and Interests
 ------
 
 * Python: Python programming and Python libraries for data science included in the Anaconda distribution including NumPy, pandas, SciPy, Scikit-learn and Natural Language Tool Kit (NLTK)
 * Operating Systems: Linux, OS X, Docker, virtual machines, virtual environments
+* Other: Salesforce, QlikView, PowerBi, Tableau, MS-Access, MS-Office
