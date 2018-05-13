@@ -4,4 +4,4 @@ title: About
 permalink: /about/
 ---
 
-This is website will host by personal blog and is a work in progress.
+This is website will host by personal blog.
