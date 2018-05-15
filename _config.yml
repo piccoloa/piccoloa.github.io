@@ -13,20 +13,38 @@
 # you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
-title: Alex Piccolo, CFA
-email: alexpiccolo@gmail.com
+title: Alex Piccolo
+email: alexpiccolo+blog@gmail.com
 description: >- # this means to ignore newlines until "baseurl:"
-  Created by Alex Piccolo using Jekyll.
+  Created using Jekyll.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: PiccoloSunday
 github_username:  piccoloa
+linkedin_username: alex-piccolo-cfa
+linkedin_name: Alex Piccolo
+#so_username: briancaffey
+#so_link: 6084948/briancaffey
+#steemit_name: mrbrian
+#steemit_username: mrbrian
 
 # Build settings
 markdown: kramdown
-theme: minima
-plugins:
-  - jekyll-feed
+highlighter: rouge
+
+#plugins:
+#  - jekyll-feed
+
+#not included in piccoloa--- believe this referes to projects
+#collections:
+#  projects:
+#    output: true
+#    permalink: /:collection/:name
+
+
+
+
+
 
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list

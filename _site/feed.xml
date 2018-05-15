@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Alex Piccolo</title>
+    <description>Created using Jekyll.</description>
+    <link>http://localhost:4000/</link>
+    <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Tue, 15 May 2018 10:33:17 -0400</pubDate>
+    <lastBuildDate>Tue, 15 May 2018 10:33:17 -0400</lastBuildDate>
+    <generator>Jekyll v3.8.1</generator>
+    
+      <item>
+        <title>Welcome to my first test blog!</title>
+        <description>&lt;p&gt;This is my first post which is being hosted on &lt;a href=&quot;https://pages.github.com/&quot;&gt;GitHub Pages&lt;/a&gt; using &lt;a href=&quot;https://jekyllrb.com/&quot;&gt;Jekyll&lt;/a&gt;. I hope that these posts continue to improve and offer an opportunity to share what I have learned and communicate more effectively.  This post is just me practicing how to use Jekyll and some links for those interested in how I created the site.  I began the tutorial on &lt;a href=&quot;http://briancaffey.github.io/2016/03/17/jekyll-tutorial.html&quot;&gt;this site&lt;/a&gt; until I ran into problems with getting &lt;a href=&quot;https://disqus.com/&quot;&gt;Disqus comments&lt;/a&gt; to work.&lt;/p&gt;
+
+&lt;p&gt;Check out the &lt;a href=&quot;https://jekyllrb.com/docs/home&quot;&gt;Jekyll docs&lt;/a&gt; for more info on how to get the most out of Jekyll. File all bugs/feature requests at &lt;a href=&quot;https://github.com/jekyll/jekyll&quot;&gt;Jekyll’s GitHub repo&lt;/a&gt;. If you have questions, you can ask them on &lt;a href=&quot;https://talk.jekyllrb.com/&quot;&gt;Jekyll Talk&lt;/a&gt;.&lt;/p&gt;
+
+</description>
+        <pubDate>Mon, 16 Apr 2018 13:55:09 -0400</pubDate>
+        <link>http://localhost:4000/2018/04/16/welcome-to-jekyll.html</link>
+        <guid isPermaLink="true">http://localhost:4000/2018/04/16/welcome-to-jekyll.html</guid>
+        
+        
+      </item>
+    
+  </channel>
+</rss>
