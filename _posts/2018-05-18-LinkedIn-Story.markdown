@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Shared Article: The Death of Expertise"
-date:   2018-04-16 12:55:09 -0500
+date:   2018-05-18 12:55:09 -0500
 comments: true
 ---
 ## **Originally on LinkedIn**
