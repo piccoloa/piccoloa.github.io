@@ -5,8 +5,8 @@
     <description>Created using Jekyll.</description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Mon, 21 May 2018 17:05:22 -0400</pubDate>
-    <lastBuildDate>Mon, 21 May 2018 17:05:22 -0400</lastBuildDate>
+    <pubDate>Mon, 21 May 2018 17:10:42 -0400</pubDate>
+    <lastBuildDate>Mon, 21 May 2018 17:10:42 -0400</lastBuildDate>
     <generator>Jekyll v3.8.1</generator>
     
       <item>
@@ -75,9 +75,9 @@ The raw or landing zone within the data lake context is usually where files are 
 
 &lt;p&gt;One approach to governance is to implement a method for de-identifying sensitive data.  Since the data is written quickly without schema, the ability to tag data on original write is limited for efficiency reasons.  Some profiling tools have been built to scan the data lake and look for sensitive data.  These tools include &lt;a href=&quot;https://www.dataguise.com/&quot;&gt;DataGuise&lt;/a&gt; and &lt;a href=&quot;https://www.waterlinedata.com/&quot;&gt;Waterline Data.&lt;/a&gt; Another approach is transparent encryption that is offered by &lt;a href=&quot;https://www.cloudera.com/products/product-components/cloudera-navigator.html&quot;&gt;Cloudera Navigator&lt;/a&gt;  that encrypts data when it is written and de-crypts the data when read.&lt;/p&gt;
 </description>
-        <pubDate>Fri, 18 May 2018 13:55:09 -0400</pubDate>
-        <link>http://localhost:4000/2018/05/18/LinkedIn-Story0.html</link>
-        <guid isPermaLink="true">http://localhost:4000/2018/05/18/LinkedIn-Story0.html</guid>
+        <pubDate>Mon, 21 May 2018 06:55:09 -0400</pubDate>
+        <link>http://localhost:4000/2018/05/21/Datalake1.html</link>
+        <guid isPermaLink="true">http://localhost:4000/2018/05/21/Datalake1.html</guid>
         
         
       </item>
