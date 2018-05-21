@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Data Lakes: Overview-Part 1</title>
+  <meta name="description" content="Notes From Concept to Implementation">
+  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="/css/main.css">
+  <link rel="canonical" href="http://localhost:4000/2018/05/18/LinkedIn-Story0.html">
+  <link rel="alternate" type="application/rss+xml" title="Alex Piccolo" href="http://localhost:4000/feed.xml">
+  <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+</head>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-118929786-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-118929786-1');
+</script>
+
+  <body>
+    <style>
+    img{
+      display:block;
+      margin:auto;
+    }
+    </style>
+    <header class="site-header">
+
+  <div class="wrapper">
+
+    <a class="site-title" href="/">Alex Piccolo</a>
+
+    <nav class="site-nav">
+      <a href="#" class="menu-icon">
+        <svg viewBox="0 0 18 15">
+          <path fill="#424242" d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z"/>
+          <path fill="#424242" d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484 h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z"/>
+          <path fill="#424242" d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z"/>
+        </svg>
+      </a>
+
+      <div class="trigger">
+        
+          
+          <a class="page-link" href="/contact">Contact</a>
+          
+        
+          
+          <a class="page-link" href="/blog">Blog</a>
+          
+        
+          
+        
+          
+        
+          
+        
+          
+          <a class="page-link" href="/resume">Resume</a>
+          
+        
+      </div>
+    </nav>
+
+  </div>
+
+</header>
+
+
+    <div class="page-content">
+      <div class="wrapper">
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title" itemprop="name headline">Data Lakes: Overview-Part 1</h1>
+    <p class="post-meta"><time datetime="2018-05-18T13:55:09-04:00" itemprop="datePublished">May 18, 2018</time></p>
+  </header>
+
+  <div class="post-content" itemprop="articleBody">
+    <h3 id="notes-from-concept-to-implementation">Notes From Concept to Implementation</h3>
+
+<p>Over the next few blogs, I will share with you my reading about data lakes and the impact of data lakes on the analytics value chain.   I will try to answer the following questions:</p>
+<ol>
+  <li><strong>Where did the data lake concept originate?</strong></li>
+  <li><strong>What are the problems that data lakes are solving or not solving?</strong></li>
+  <li><strong>What are the typical components of enterprise data lakes?</strong></li>
+  <li><strong>How are data lakes being used to increase productivity or share data?</strong></li>
+  <li><strong>What are the data governance issues that need to be addressed?</strong></li>
+</ol>
+
+<p><strong>1. **Where did the data lake concept originate?</strong></p>
+
+<p>“Google, Facebook and Yahoo had discovered big data before anyone else, but it was obvious that it was coming to banks, hospitals and other traditional companies. Enterprises had already realized that cloud computing was important. They were rebuilding their data centers to be cloudy. We realized that a once‑in‑a‑generation technology change was underway, and knew that we had a chance to create a company to deliver the modern platform for big data”  <a href="https://www.sec.gov/Archives/edgar/data/1535379/000162828017003221/projectthunders-1.htm#seac698b4139f443582aeb0a2fd342826">Cloudera</a>.  While not inventing the term, Cloudera embraced the Apache open source projects to build a data management platform that could scale the way of Google, Facebook and Yahoo. <br />
+Prior to data lakes, technologies were architected and created to solve specific data related problems.  These special purpose legacy architectures were expensive and inflexible.  Examples of these systems included relational databases for back-office reporting and billing, to large document management systems for storing unstructured data.  Those companies born from the web were the first to encounter the limitations of processing large volumes of data with data of different variety.  Building on the idea’s of  Google, Apache Hadoop software was created by Doug Cutting and Mike Carfarella.  Hadoop was comprised of HDFS and MapReduce technologies.</p>
+
+<p>The primary use of a data lake is to store data.  The Apache Hadoop project is primarily spoken of as the source for storing data and has become the default term by most data professionals when referring to data lakes.</p>
+
+<p><strong>2. **What are the problems that data lakes are solving or not solving?</strong></p>
+
+<p>Data lakes are perceived very much in the same light as the original data warehouse. The promise of answering important strategic as well as predicting success or failure based on large volumes of data have been the primary reason to spend. Predicting the future is not easy. Many of the data science or predictive models have not had as high returns as originally thought.  More successful approaches to implementing data lakes have started with a small single cross departmental data problem that can show a high ROI.  A project such as reducing customer churn that reaches across two or three organizations including support, product analytics, sales and a renewals team could be one example.  Another project could be one related to a central point of governance.  This could be a data lake to create a centralized entity resolution dataset to monitor and manage sensitive data.</p>
+
+<p>The transforming of data, or the T in ETL (extracting, transforming, and loading) is the process where Hadoop has been thought to cause the greatest improvements.  Because much of the transforming of data in the process is done on an ETL server, a Hadoop cluster architecture is much more efficient at transforming the data as it gets loaded to the data lake.  Additionally, data that is not in tabular form can be saved in its native form and avoid converting the data to a target schema.   This is especially important to vast volumes of unstructured IOT data.</p>
+
+<p>Some of the other benefits include allowing for non-programmers to create data visualizations, reports, dashboard and SQL like access to provide for analysis.</p>
+
+<p>One of the pitfalls to Data lakes has been couched in the “data puddles” term.  These stranded data lakes become a problem when the proliferation of data lakes leads to data quality and cost problems of implementing duplicative systems.  Data puddles are meant to be avoided with the proper implementation by IT versus separate business initiatives.</p>
+
+<p><strong>3.  **What are the typical components of enterprise data lakes?</strong></p>
+
+<p>Hadoop is a massively parallel storage and execution platform.  Hadoop includes a distributed files system (HDFS) that some vendors like MapR and IBM provide their own proprietary files systems.<br />
+<img src="https://lh3.googleusercontent.com/qZGmOopCmnwsJI5NyI1gj9EwqZ58kJepgyB9aCrHXAhG4aDlB2WUrAkmBpOp6mtysXDUaXfJ4DMDQw" alt="enter image description here" title="Storage System" /></p>
+
+<p>Hadoop is a platform and an ecosystem that incorporates many of the most used open source projects including Hive and Spark.  Hive allows for SQL like interface to Hadoop and Spark turns Hadoop to an in-memory execution system.  Hadoop provides for an extremely scalable cost effective system that is modular in form.  The system has a schema-on-read architecture unlike relational databases.  The schema-on-read nature of Hadoop allows for data to be added quickly to the data lake without needing to know the structure of the data to write to disk.  This avoids the high cost of processing the data when it is being collected and written to the store.</p>
+
+<p>Many of the same issues regarding data quality continue to be components that must be addressed with data lakes.  Data completeness,  data type (string, number..) format, cardinality (unique values) and referential integrity are rules that still need to be considered when designing and implementing data lakes. One added concept to data lakes is lineage.  Lineage accounts for setting priorities based on where the data was derived.  Understanding the source of the data was from a spreadsheet or from a system of record will be key to understanding which data has priority.  Implementing lineage can be difficult as multiple tools could be used to access the same dataset without the data lake understanding the same data is being added. There are some that would argue that one ETL tool could provide a more rigorous approach to centralizing the collection process.</p>
+
+<p>Granularity and transformation of data are two concepts that a data lake needs to consider to create reliable data sets.  Within granularity, data set level refers to the  <a href="https://medium.freecodecamp.org/i-dont-understand-graph-theory-1c96572a1401">directed graph</a> representation of relationship between datasets while field level lineage is also represented between fields. The transformational representation needs to be translated to a common representation where the lineage of the data needs to be interpreted in a manner that can be more easily understood despite all changes that have occurred.  Read more about the process whereby the focus on denormalization becomes critical in the context of the data lake and specifically in terms of any associated <a href="http://www.ibmbigdatahub.com/blog/charting-data-lake-model-normalization-patterns-data-lakes">Hadoop/HDFS data structures.</a></p>
+
+<p><img src="https://lh3.googleusercontent.com/9QNxGMJEWXgHYbG4bKLaImavVnlgMUGvINieD--K8NG0WqE8hj_6b7X2RlyGJhEx2mo11kh1zCjS1A" alt="enter image description here" title="Data Lake Architecture" /></p>
+
+<p>Above is an example of a generic data lake architecture from Alex Gorelik’s book The Enterprise Big Data Lake:
+The raw or landing zone within the data lake context is usually where files are loaded from external systems.  The gold area is where it is transformed data, while the work folder with data is where users projects and data is stored.  The sensitive data area is where the encrypted files are stored.</p>
+
+<p>Given the size of the data lake and lack of a search function, finding relevant data is extremely cumbersome in a data lake without a catalog.  Although Hue, the Hadoop utility, allows for some limited preview of data files additional tools from vendors like <a href="https://www.prnewswire.com/news-releases/teradata-loom-radically-increases-data-lake-productivity-300034309.html">Teradata’s Loom</a>  and Waterline Data Inventory are used to catalog Hadoop data besides relational databases to run outside of Hadoop for the cataloging data. Additional cataloging tools are available from <a href="https://www.cloudera.com/products/product-components/cloudera-navigator.html">Cloudera’s Navigator product</a>.  One open source project, <a href="https://atlas.apache.org/">Apache Atlas,</a> has been created to help solve the meta data and governance framework for Hadoop.</p>
+
+<p><strong>4.  **How are data lakes being used to increase productivity or share data?</strong></p>
+
+<p>Besides the technical requirements, some organizations are struggling to implement Hadoop as there is a battle between the silos of the business user and IT for control of the Hadoop cluster.   This is where the democratization of data is one of the first steps to capitalizing on a companies digital assets. Like markets, the potential of data is curtailed when data is not transparent.  Early in my transition to using corporate data, I discovered the only way to perform any meaningful analysis was to ask questions of the available data. I quickly realized that unless I was querying the data myself, the data was either out of date or incomplete. I subsequently took my first database class at the local community college.  New self-service tools such as Tableau and Qlik are allowing power users or subject matter experts to create and transform data to allow business users to more quickly access the data to help answer business questions.</p>
+
+<p>The problem with the traditional business analyst process of the past is the data needed to be found, provisioned, prepped, and then analyzed.  Part of the process included creating <a href="https://en.wikipedia.org/wiki/Data_element_definition">critical data elements</a> can not rapidly change as according to new user requirements . This is a complete contrast to growing up with Google and Wikipedia.  The pure volume of data makes it impossible to document and tag everything, this is where new tools that leverage machine learning and auto-tracking of data consumption creates catalogs of tribal knowledge.  This is much a kin to the search scoring that powers search engines.</p>
+
+<p>In order to make consumption of the data easier, many tools are being used to prepare the data to be consumed applications.  This is where the data wrangling aspect of most data mining and data science projects spend the majority of the time. Like Excel, which is impractical for large data lake files, newer tools are being used to clean and shape the data to the right form.  Some of the vendors providing these tools are <a href="https://www.alteryx.com/analytics/pages/trial?utm_source=google&amp;lsm=google&amp;utm_medium=cpc&amp;utm_campaign=Demgen%20Mixed%20-%20Brand_New&amp;utm_content=Trial&amp;utm_term=alteryx&amp;utm_adid=205401968765&amp;gclid=Cj0KCQjw3InYBRCLARIsAG6bfMR9jexiDucFtkZaQlHRP4YskOYXkjHH-otnrB6VsirkqAaMk54KnkAaAhiIEALw_wcB">Alteryx</a>, <a href="https://www.datameer.com/">Datameer</a>, <a href="https://www.paxata.com/">Paxata</a>, and <a href="https://www.trifacta.com/">Trifacta</a> as well as traditional vendors such ase <a href="https://www.informatica.com/lp/gartner-leadership.html?gclid=Cj0KCQjw3InYBRCLARIsAG6bfMQ24lWtRi7q5p1kwyp5C7_Q__XreO6DO7y9SjvM1vlb3owsUTFNSvoaAkVrEALw_wcB&amp;formid=3599&amp;programName=17Q2-PPC1-GBL-NA-Gartner-Leader_Promo_Analyst_Reports-PT3323&amp;cps=ppcGS&amp;cext=search_google_17q2_gartner-leadership-report-3323_na_us_en&amp;kw=informatica&amp;s_kwcid=AL!5237!3!268772362957!e!!g!!informatica&amp;ef_id=Wv6nZQAAAJKhihMJ:20180521184449:s#fbid=P0KjhgpvA91">Informatica</a> and <a href="https://www.talend.com/landing-download/ppc/tos-data-integration/?utm_source=google&amp;utm_medium=cpc&amp;utm_campaign=NA%20Search%20-%20Branded%20-%20General&amp;utm_term=talend&amp;utm_content=talend%20-%20exact&amp;utm_creative=244553309005&amp;lang=en&amp;src=GoogleAdwordsOD_US&amp;kid=null&amp;gclid=Cj0KCQjw3InYBRCLARIsAG6bfMSPEx4xvdMWapP06gIY5wY2gJa-zHGYTSdKfLI2dpiJnFc0sx1QWwkaAs28EALw_wcB">Talend</a> provide tools with the idea of providing self-service for the business analyst.</p>
+
+<p>Combining data or joining data sets is where much of the value from data lakes becomes immediately useful.  Unfortunately, common ids are uncommon amongst separate data sets.  This is where the idea of entity resolution becomes instrumental in capturing value from the data.  Master Data Management systems with probabilistic matching engines that have rules for defining matched entities help in joining data sets.  One company providing entity resolution products is <a href="https://www.tamr.com/">Tamr</a>.</p>
+
+<p><strong>5.  **What are the data governance issues that need to be addressed?</strong></p>
+
+<p>The centralized nature of a data lake could allow for greater governance versus heterogenous systems that use different technologies.  Stewardship of data lakes is key to creating trusted users that have organizational responsibility for the data.  Some form of provisioning of the data is one of the critical problems of data lakes.  One approach that has been widely adopted is only allowing analysts access to data they need for there specific job function.  An example could be allowing access based on location or some other form of limiting data.</p>
+
+<p>Data lake users and zones are typically segmented into four zones: a landing zone where data scientists, developers, and data engineers have access; a gold zone where analysts and data scientists have access; a work zone for data scientists and data engineers; and finally a sensitive zone where data stewards and trusted analysts have access.</p>
+
+<p>One approach to governance is to implement a method for de-identifying sensitive data.  Since the data is written quickly without schema, the ability to tag data on original write is limited for efficiency reasons.  Some profiling tools have been built to scan the data lake and look for sensitive data.  These tools include <a href="https://www.dataguise.com/">DataGuise</a> and <a href="https://www.waterlinedata.com/">Waterline Data.</a> Another approach is transparent encryption that is offered by <a href="https://www.cloudera.com/products/product-components/cloudera-navigator.html">Cloudera Navigator</a>  that encrypts data when it is written and de-crypts the data when read.</p>
+
+  </div>
+
+
+<!-- Add Disqus comments. -->
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+  /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+  var disqus_shortname = 'https-piccoloa-github-io'; // required: replace example with your forum shortname
+  var disqus_identifier = "/2018/05/18/LinkedIn-Story0.html";
+
+  /* * * DON'T EDIT BELOW THIS LINE * * */
+  (function() {
+    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+  })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+
+
+</article>
+
+      </div>
+    </div>
+
+    <footer class="site-footer">
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">Alex Piccolo</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li>Alex Piccolo</li>
+          <li><a href="mailto:alexpiccolo+blog@gmail.com">alexpiccolo+blog@gmail.com</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col footer-col-2">
+        <ul class="social-media-list">
+          
+          <li>
+            <a href="https://github.com/piccoloa">
+    <span class="purple-icon icon--github">
+        <svg viewBox="0 0 16 16">
+    <path fill="#6e5494" d="M7.999,0.431c-4.285,0-7.76,3.474-7.76,7.761 c0,3.428,2.223,6.337,5.307,7.363c0.388,0.071,0.53-0.168,0.53-0.374c0-0.184-0.007-0.672-0.01-1.32 c-2.159,0.469-2.614-1.04-2.614-1.04c-0.353-0.896-0.862-1.135-0.862-1.135c-0.705-0.481,0.053-0.472,0.053-0.472 c0.779,0.055,1.189,0.8,1.189,0.8c0.692,1.186,1.816,0.843,2.258,0.645c0.071-0.502,0.271-0.843,0.493-1.037 C4.86,11.425,3.049,10.76,3.049,7.786c0-0.847,0.302-1.54,0.799-2.082C3.768,5.507,3.501,4.718,3.924,3.65 c0,0,0.652-0.209,2.134,0.796C6.677,4.273,7.34,4.187,8,4.184c0.659,0.003,1.323,0.089,1.943,0.261 c1.482-1.004,2.132-0.796,2.132-0.796c0.423,1.068,0.157,1.857,0.077,2.054c0.497,0.542,0.798,1.235,0.798,2.082 c0,2.981-1.814,3.637-3.543,3.829c0.279,0.24,0.527,0.713,0.527,1.437c0,1.037-0.01,1.874-0.01,2.129 c0,0.208,0.14,0.449,0.534,0.373c3.081-1.028,5.302-3.935,5.302-7.362C15.76,3.906,12.285,0.431,7.999,0.431z"/>
+</svg>
+
+    </span>
+    <span class="username">
+        piccoloa
+    </span>
+</a>
+
+          </li>
+          
+
+          
+          <li>
+            <a href="https://twitter.com/PiccoloSunday"><span class="icon icon--twitter"><svg viewBox="0 0 16 16"><path fill="#00aced" d="M15.969,3.058c-0.586,0.26-1.217,0.436-1.878,0.515c0.675-0.405,1.194-1.045,1.438-1.809c-0.632,0.375-1.332,0.647-2.076,0.793c-0.596-0.636-1.446-1.033-2.387-1.033c-1.806,0-3.27,1.464-3.27,3.27 c0,0.256,0.029,0.506,0.085,0.745C5.163,5.404,2.753,4.102,1.14,2.124C0.859,2.607,0.698,3.168,0.698,3.767 c0,1.134,0.577,2.135,1.455,2.722C1.616,6.472,1.112,6.325,0.671,6.08c0,0.014,0,0.027,0,0.041c0,1.584,1.127,2.906,2.623,3.206 C3.02,9.402,2.731,9.442,2.433,9.442c-0.211,0-0.416-0.021-0.615-0.059c0.416,1.299,1.624,2.245,3.055,2.271 c-1.119,0.877-2.529,1.4-4.061,1.4c-0.264,0-0.524-0.015-0.78-0.046c1.447,0.928,3.166,1.469,5.013,1.469 c6.015,0,9.304-4.983,9.304-9.304c0-0.142-0.003-0.283-0.009-0.423C14.976,4.29,15.531,3.714,15.969,3.058z"/></svg>
+</span><span class="username">PiccoloSunday</span></a>
+
+          </li>
+          
+          
+          <li>
+                <a href="https://www.linkedin.com/in/alex-piccolo-cfa">
+      <span class="icon  icon--linkedin">
+        <svg viewBox="0 50 512 512" >
+          <path fill="#828282" d="M150.65,100.682c0,27.992-22.508,50.683-50.273,50.683c-27.765,0-50.273-22.691-50.273-50.683
+          C50.104,72.691,72.612,50,100.377,50C128.143,50,150.65,72.691,150.65,100.682z M143.294,187.333H58.277V462h85.017V187.333z
+          M279.195,187.333h-81.541V462h81.541c0,0,0-101.877,0-144.181c0-38.624,17.779-61.615,51.807-61.615
+          c31.268,0,46.289,22.071,46.289,61.615c0,39.545,0,144.181,0,144.181h84.605c0,0,0-100.344,0-173.915
+          s-41.689-109.131-99.934-109.131s-82.768,45.369-82.768,45.369V187.333z"/>
+        </svg>
+      </span>
+  
+      <span class="username">Alex Piccolo</span>
+    </a>
+          </li>
+          
+        </ul>
+      </div>
+
+      <div class="footer-col footer-col-3">
+        <p>Created using Jekyll.</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+
+
+  </body>
+
+</html>
