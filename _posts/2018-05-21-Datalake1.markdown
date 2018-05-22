@@ -1,11 +1,11 @@
 ---
 layout: post
-title:  "Data Lakes: Overview-Part 1"
+title:  "Data Lakes: Overview"
 date:   2018-05-21 5:55:09 -0500
 comments: true
 ---
 
-
+_Part 1_
 ### Notes From Concept to Implementation  
 
  Over the next few blogs, I will share with you my reading about data lakes and the impact of data lakes on the analytics value chain.   I will try to answer the following questions:
@@ -48,7 +48,7 @@ Granularity and transformation of data are two concepts that a data lake needs t
 
 ![enter image description here](https://lh3.googleusercontent.com/9QNxGMJEWXgHYbG4bKLaImavVnlgMUGvINieD--K8NG0WqE8hj_6b7X2RlyGJhEx2mo11kh1zCjS1A "Data Lake Architecture")
 
-Above is an example of a generic data lake architecture from Alex Gorelik's book The Enterprise Big Data Lake:
+Above is an example of a generic data lake architecture from Alex Gorelik's book The Enterprise Big Data Lake.
 The raw or landing zone within the data lake context is usually where files are loaded from external systems.  The gold area is where it is transformed data, while the work folder with data is where users projects and data is stored.  The sensitive data area is where the encrypted files are stored.
 
 Given the size of the data lake and lack of a search function, finding relevant data is extremely cumbersome in a data lake without a catalog.  Although Hue, the Hadoop utility, allows for some limited preview of data files additional tools from vendors like [Teradata's Loom](https://www.prnewswire.com/news-releases/teradata-loom-radically-increases-data-lake-productivity-300034309.html)  and Waterline Data Inventory are used to catalog Hadoop data besides relational databases to run outside of Hadoop for the cataloging data. Additional cataloging tools are available from [Cloudera's Navigator product](https://www.cloudera.com/products/product-components/cloudera-navigator.html).  One open source project, [Apache Atlas,](https://atlas.apache.org/) has been created to help solve the meta data and governance framework for Hadoop.
