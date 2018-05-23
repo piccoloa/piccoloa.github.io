@@ -8,7 +8,7 @@ comments: true
 _Part 1_
 ### Notes From Concept to Implementation  
 
- This is the first blog under the topic **Data Lakes** and will be followed by additional topics pertaining to data lakes.  Each post will start with the title Data Lakes followed by a [:new topic].  Each topic will go deeper and share additional details and links to practical tools that I have discovered.  I hope that will help in better understanding the impact of data lakes on the analytics value chain.   I will try to answer the following questions in this blog:
+ This is the first blog under the topic **Data Lakes** and will be followed by additional topics pertaining to data lakes.  Each post will start with the title Data Lakes followed by a [:new topic].  Each topic will go deeper and share additional details and links to practical tools that I have discovered.  The goal is to better understand the impact of data lakes on the analytics value chain.   This post broadly covers the following questions:
  1. **Where did the data lake concept originate?**
  2. **What are the problems that data lakes are solving or not solving?**
  3. **What are the typical components of enterprise data lakes?**
