@@ -5,9 +5,22 @@
     <description>Created using Jekyll.</description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Thu, 24 May 2018 09:30:26 -0400</pubDate>
-    <lastBuildDate>Thu, 24 May 2018 09:30:26 -0400</lastBuildDate>
+    <pubDate>Fri, 25 May 2018 10:53:11 -0400</pubDate>
+    <lastBuildDate>Fri, 25 May 2018 10:53:11 -0400</lastBuildDate>
     <generator>Jekyll v3.8.1</generator>
+    
+      <item>
+        <title>Shared Article: &quot;Special operations surgical team&quot;</title>
+        <description>&lt;p&gt;&lt;a href=&quot;https://www.cbsnews.com/news/profiles-in-service-air-force-elite-surgical-team/?ftag=CNM-00-10aac3a&quot;&gt;Meet the Air Force’s “life-saving” special operations surgical team.&lt;/a&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;theres-something-to-be-said-about-being-somewhere-horrible-and-smoking-a-cigar-with-a-good-friend-and-then-possibly-being-that-familiar-face-that-they-look-up-to-you-in-the-scariest-moment-of-their-life-and-that--thats-why-i-do-it-lyon-said-&quot;&gt;**“There’s something to be said about being somewhere horrible and smoking a cigar with a good friend and then possibly being that familiar face that they look up to you in the scariest moment of their life. And that – that’s why I do it,” Lyon said. **&lt;/h4&gt;
+</description>
+        <pubDate>Fri, 25 May 2018 00:00:00 -0400</pubDate>
+        <link>http://localhost:4000/2018/05/25/Airforce_cbs.html</link>
+        <guid isPermaLink="true">http://localhost:4000/2018/05/25/Airforce_cbs.html</guid>
+        
+        
+      </item>
     
       <item>
         <title>Data Lakes: Overview</title>
