@@ -15,7 +15,7 @@ This is a blog of my notes for setting up and beginning to explore my health dat
 
 **Example of ETL using Docker, Python and MariaDB**
 
-This is an example of using [ETL with Docker containers](https://github.com/piccoloa/datamovers). The data is extracted from Fitbit using the Fitbit API by way of a [python script](https://github.com/tuchandra/sleep-analysis) to access the nightly sleep logs.  Follow the instructions created by [Tushar Chandra](https://github.com/tuchandra)  to save the JSON files to your local host. Once your data is saved to a DB, the data can be used to access historical data for further analysis.  To access your personal information through your Fitbit JSON files, you will be required to go to the [Fitbit Developers website](https://dev.fitbit.com/) and register an account and create an app. Chandra's python script and instructions are well documented in his [Github repository](https://github.com/tuchandra/sleep-analysis).  The app will be for "Personal" use, which gives access to intraday sleep data and can be revised to access other Fitbit data.
+This is an example of using ETL with Docker containers. The data is extracted from Fitbit using the Fitbit API by way of a [python script](https://github.com/tuchandra/sleep-analysis) to access the nightly sleep logs.  Follow the instructions created by [Tushar Chandra](https://github.com/tuchandra)  to save the JSON files to your local host. Once your data is saved to a DB, the data can be used to access historical data for further analysis.  To access your personal information through your Fitbit JSON files, you will be required to go to the [Fitbit Developers website](https://dev.fitbit.com/) and register an account and create an app. Chandra's python script and instructions are well documented in his [Github repository](https://github.com/tuchandra/sleep-analysis).  The app will be for "Personal" use, which gives access to intraday sleep data and can be revised to access other Fitbit data.
 
 I plan on making additional changes to the Fitbit api python script to incorporate the API time limitations using [this code](http://shishu.info/2016/06/how-to-download-your-fitbit-second-level-data-without-coding/)  and allow for easier access to other data besides sleep.
 
@@ -27,6 +27,7 @@ The goals of this project include:
 
 Note: Fitbit is a registered trademark and service mark of Fitbit, Inc. My analysis project is designed for personal use with the Fitbit platform. This product is not put out by Fitbit, and Fitbit does not service or warrant the functionality of this product.
 
+[Link to Github repo]((https://github.com/piccoloa/datamovers))
 
 **Install required python packages**
 
