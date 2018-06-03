@@ -5,12 +5,12 @@
     <description>Created using Jekyll.</description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Thu, 31 May 2018 06:52:56 -0400</pubDate>
-    <lastBuildDate>Thu, 31 May 2018 06:52:56 -0400</lastBuildDate>
+    <pubDate>Sun, 03 Jun 2018 09:30:06 -0400</pubDate>
+    <lastBuildDate>Sun, 03 Jun 2018 09:30:06 -0400</lastBuildDate>
     <generator>Jekyll v3.8.1</generator>
     
       <item>
-        <title>Data Science: Set-up</title>
+        <title>Data Science: Not so pretty Set Up</title>
         <description>&lt;p&gt;&lt;img src=&quot;/static/datascience1.jpg&quot; alt=&quot;png&quot; /&gt;
 &lt;a href=&quot;https://www.google.com/maps/place/51%C2%B045'02.9%22N+1%C2%B014'48.5%22W/@51.7508,-1.2489887,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x0!8m2!3d51.7508!4d-1.2468&quot;&gt;Working environment&lt;/a&gt;&lt;/p&gt;
 
@@ -21,7 +21,7 @@
 
 &lt;p&gt;&lt;strong&gt;Example of ETL using Docker, Python and MariaDB&lt;/strong&gt;&lt;/p&gt;
 
-&lt;p&gt;This is an example of using &lt;a href=&quot;https://github.com/piccoloa/datamovers&quot;&gt;ETL with Docker containers&lt;/a&gt;. The data is extracted from Fitbit using the Fitbit API by way of a &lt;a href=&quot;https://github.com/tuchandra/sleep-analysis&quot;&gt;python script&lt;/a&gt; to access the nightly sleep logs.  Follow the instructions created by &lt;a href=&quot;https://github.com/tuchandra&quot;&gt;Tushar Chandra&lt;/a&gt;  to save the JSON files to your local host. Once your data is saved to a DB, the data can be used to access historical data for further analysis.  To access your personal information through your Fitbit JSON files, you will be required to go to the &lt;a href=&quot;https://dev.fitbit.com/&quot;&gt;Fitbit Developers website&lt;/a&gt; and register an account and create an app. Chandra’s python script and instructions are well documented in his &lt;a href=&quot;https://github.com/tuchandra/sleep-analysis&quot;&gt;Github repository&lt;/a&gt;.  The app will be for “Personal” use, which gives access to intraday sleep data and can be revised to access other Fitbit data.&lt;/p&gt;
+&lt;p&gt;This is an example of using ETL with Docker containers. The data is extracted from Fitbit using the Fitbit API by way of a &lt;a href=&quot;https://github.com/tuchandra/sleep-analysis&quot;&gt;python script&lt;/a&gt; to access the nightly sleep logs.  Follow the instructions created by &lt;a href=&quot;https://github.com/tuchandra&quot;&gt;Tushar Chandra&lt;/a&gt;  to save the JSON files to your local host. Once your data is saved to a DB, the data can be used to access historical data for further analysis.  To access your personal information through your Fitbit JSON files, you will be required to go to the &lt;a href=&quot;https://dev.fitbit.com/&quot;&gt;Fitbit Developers website&lt;/a&gt; and register an account and create an app. Chandra’s python script and instructions are well documented in his &lt;a href=&quot;https://github.com/tuchandra/sleep-analysis&quot;&gt;Github repository&lt;/a&gt;.  The app will be for “Personal” use, which gives access to intraday sleep data and can be revised to access other Fitbit data.&lt;/p&gt;
 
 &lt;p&gt;I plan on making additional changes to the Fitbit api python script to incorporate the API time limitations using &lt;a href=&quot;http://shishu.info/2016/06/how-to-download-your-fitbit-second-level-data-without-coding/&quot;&gt;this code&lt;/a&gt;  and allow for easier access to other data besides sleep.&lt;/p&gt;
 
@@ -34,6 +34,8 @@
 &lt;/ul&gt;
 
 &lt;p&gt;Note: Fitbit is a registered trademark and service mark of Fitbit, Inc. My analysis project is designed for personal use with the Fitbit platform. This product is not put out by Fitbit, and Fitbit does not service or warrant the functionality of this product.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;(https://github.com/piccoloa/datamovers)&quot;&gt;Link to Github repo&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;Install required python packages&lt;/strong&gt;&lt;/p&gt;
 
@@ -68,7 +70,7 @@ You should consider upgrading via the 'pip install --upgrade pip' command.
 &lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;mysql_dest_engine&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;create_engine&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'mysql+pymysql://root:admin@mariadb.my-network'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;Run sql scripts in database container to verify connection and confirm available data bases.&lt;/p&gt;
+&lt;p&gt;Run sql scripts in database container to verify connection and confirm available databases.&lt;/p&gt;
 
 &lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;showDatabases&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;mysql_dest_engine&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;execute&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'show databases;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
 &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;showDatabases&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
@@ -243,7 +245,7 @@ timeInBed 413
 
 
         &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;k&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;v&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;date_data&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'summary'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;items&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;():&lt;/span&gt;
-            &lt;span class=&quot;c&quot;&gt;#check to file contents to see if there is data for the date if no, add nan&lt;/span&gt;
+            &lt;span class=&quot;c&quot;&gt;#check file contents to see if there is data for the date if no, add nan&lt;/span&gt;
             &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;k&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'totalMinutesAsleep'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
                 &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;v&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
                     &lt;span class=&quot;n&quot;&gt;data&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;append&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;np&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;nan&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
@@ -340,7 +342,7 @@ timeInBed 413
 
 &lt;p&gt;Write pandas table to the database.&lt;/p&gt;
 
-&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;df&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;to_sql&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;con&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;mysql_dest_engine&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'sleepFitbit'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;schema&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;bp&quot;&gt;None&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;if_exists&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'replace'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;df&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;to_sql&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;con&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;mysql_dest_engine&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'sleepFitbit'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;schema&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;bp&quot;&gt;None&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;if_exists&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'replace'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;chunksize&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1000&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;Confirm data was written to database.&lt;/p&gt;
@@ -365,8 +367,6 @@ timeInBed 413
       <item>
         <title>Shared Article: &quot;We don’t use a corporate jet anymore&quot;</title>
         <description>&lt;p&gt;&lt;a href=&quot;https://www.bizjournals.com/triangle/news/2018/05/22/for-sale-crees-corporate-jet-under-ceos-order.html&quot;&gt;For sale! Cree’s corporate jet — under CEO’s order&lt;/a&gt;&lt;/p&gt;
-
-&lt;h4 id=&quot;without-an-engaged-employee-base-youre-not-going-to-win&quot;&gt;&lt;strong&gt;“Without an engaged employee base, you’re not going to win”&lt;/strong&gt;&lt;/h4&gt;
 </description>
         <pubDate>Tue, 29 May 2018 00:00:00 -0400</pubDate>
         <link>http://localhost:4000/2018/05/29/Cree1.html</link>
@@ -416,7 +416,7 @@ Prior to data lakes, technologies were architected and created to solve specific
 
 &lt;p&gt;Data lakes are perceived very much in the same light as the original data warehouse. The promise of answering important strategic as well as predicting success or failure based on large volumes of data have been the primary reason to spend. Predicting the future is not easy. Many of the data science or predictive models have not had as high returns as originally thought.  More successful approaches to implementing data lakes have started with a small single cross departmental data problem that can show a high ROI.  A project such as reducing customer churn that reaches across two or three organizations including support, product analytics, sales and a renewals team could be one example.  Another project could be one related to a central point of governance.  This could be a data lake to create a centralized entity resolution dataset to monitor and manage sensitive data.&lt;/p&gt;
 
-&lt;p&gt;The transforming of data, or the T in ETL (extracting, transforming, and loading) is the process where Hadoop has been thought to cause the greatest improvements.  Because much of the transforming of data in the process is done on an ETL server, a Hadoop cluster architecture is much more efficient at transforming the data as it gets loaded to the data lake.  Additionally, data that is not in tabular form can be saved in its native form and avoid converting the data to a target schema.   This is especially important to vast volumes of unstructured IOT data.&lt;/p&gt;
+&lt;p&gt;The &lt;a href=&quot;https://piccoloa.github.io/2018/05/31/Data-Science1.html&quot;&gt;transforming of data&lt;/a&gt;, or the T in ETL (extracting, transforming, and loading) is the process where Hadoop has been thought to cause the greatest improvements.  Because much of the transforming of data in the process is done on an ETL server, a Hadoop cluster architecture is much more efficient at transforming the data as it gets loaded to the data lake.  Additionally, data that is not in tabular form can be saved in its native form and avoid converting the data to a target schema.   This is especially important to vast volumes of unstructured IOT data.&lt;/p&gt;
 
 &lt;p&gt;Some of the other benefits include allowing for non-programmers to create data visualizations, reports, dashboard and SQL like access to provide for analysis.&lt;/p&gt;
 

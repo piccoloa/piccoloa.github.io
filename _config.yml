@@ -36,10 +36,10 @@ highlighter: rouge
 #  - jekyll-feed
 
 #not included in piccoloa--- believe this referes to projects
-#collections:
-#  projects:
-#    output: true
-#    permalink: /:collection/:name
+collections:
+ projects:
+   output: true
+   permalink: /:collection/:name
 
 
 

@@ -1,9 +1,10 @@
 ---
 layout: post
-title:  "Data Science: Set-up"
+title:  "Data Science: Not so pretty Set Up"
 date:   2018-05-31
 comments: true
-image: /static/uglyfruit.jpg
+image:  /static/uglyfruit.jpg
+excerpt: 'While not exciting, the idea here is to have a reliable way to gather your data, have it accessible across different projects, and work in a repeatable environment.  Using a testing environment set-up in a consistent Docker environment will allow you greater flexibility in testing and eventually moving your work to production.'
 ---
 ![png](/static/datascience1.jpg)
 [Working environment](https://www.google.com/maps/place/51%C2%B045'02.9%22N+1%C2%B014'48.5%22W/@51.7508,-1.2489887,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x0!8m2!3d51.7508!4d-1.2468)
@@ -68,7 +69,7 @@ Create connection to MariaDB container host named mariadb as root over the Docke
 mysql_dest_engine = create_engine('mysql+pymysql://root:admin@mariadb.my-network')
 ```
 
-Run sql scripts in database container to verify connection and confirm available data bases.
+Run sql scripts in database container to verify connection and confirm available databases.
 
 
 ```python
@@ -284,7 +285,7 @@ for date in dates:
 
 
         for k, v in date_data['summary'].items():
-            #check to file contents to see if there is data for the date if no, add nan
+            #check file contents to see if there is data for the date if no, add nan
             if k == 'totalMinutesAsleep':
                 if v == 0:
                     data.append(np.nan)
@@ -394,7 +395,7 @@ Write pandas table to the database.
 
 
 ```python
-df.to_sql(con=mysql_dest_engine, name='sleepFitbit', schema=None, if_exists='replace')
+df.to_sql(con=mysql_dest_engine, name='sleepFitbit', schema=None, if_exists='replace', chunksize=1000)
 ```
 
 Confirm data was written to database.

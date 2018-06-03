@@ -14,11 +14,21 @@ layout: default
   <ul class="post-list">
     {% for post in site.posts %}
       <li>
-        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
-
         <h2>
           <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+          <small>{{ post.date | date: "%B %e, %Y"}}</small>
         </h2>
+
+        <h3>
+        <div class="entry">
+          {% if post.excerpt %}
+          {{ post.excerpt }}
+          {% else %}
+          {{ post.content | truncatewords:30}}
+          {% endif %}
+        </div>        
+        </h3>
+        <a href="{{ site.baseurl }}{{ post.url }}" class="read-more">Read More</a>
         <!-- <script>
           img {
               display:block;

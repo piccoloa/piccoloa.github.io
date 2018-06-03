@@ -6,8 +6,8 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>Data Science: Set-up</title>
-  <meta name="description" content="Working environment">
+  <title>Data Science: Not so pretty Set Up</title>
+  <meta name="description" content="While not exciting, the idea here is to have a reliable way to gather your data, have it accessible across different projects, and work in a repeatable envir...">
   <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
   <link rel="stylesheet" href="/css/main.css">
   <link rel="canonical" href="http://localhost:4000/2018/05/31/Data-Science1.html">
@@ -79,7 +79,7 @@
         <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
 
   <header class="post-header">
-    <h1 class="post-title" itemprop="name headline">Data Science: Set-up</h1>
+    <h1 class="post-title" itemprop="name headline">Data Science: Not so pretty Set Up</h1>
     <p class="post-meta"><time datetime="2018-05-31T00:00:00-04:00" itemprop="datePublished">May 31, 2018</time></p>
   </header>
 
@@ -94,7 +94,7 @@
 
 <p><strong>Example of ETL using Docker, Python and MariaDB</strong></p>
 
-<p>This is an example of using <a href="https://github.com/piccoloa/datamovers">ETL with Docker containers</a>. The data is extracted from Fitbit using the Fitbit API by way of a <a href="https://github.com/tuchandra/sleep-analysis">python script</a> to access the nightly sleep logs.  Follow the instructions created by <a href="https://github.com/tuchandra">Tushar Chandra</a>  to save the JSON files to your local host. Once your data is saved to a DB, the data can be used to access historical data for further analysis.  To access your personal information through your Fitbit JSON files, you will be required to go to the <a href="https://dev.fitbit.com/">Fitbit Developers website</a> and register an account and create an app. Chandra’s python script and instructions are well documented in his <a href="https://github.com/tuchandra/sleep-analysis">Github repository</a>.  The app will be for “Personal” use, which gives access to intraday sleep data and can be revised to access other Fitbit data.</p>
+<p>This is an example of using ETL with Docker containers. The data is extracted from Fitbit using the Fitbit API by way of a <a href="https://github.com/tuchandra/sleep-analysis">python script</a> to access the nightly sleep logs.  Follow the instructions created by <a href="https://github.com/tuchandra">Tushar Chandra</a>  to save the JSON files to your local host. Once your data is saved to a DB, the data can be used to access historical data for further analysis.  To access your personal information through your Fitbit JSON files, you will be required to go to the <a href="https://dev.fitbit.com/">Fitbit Developers website</a> and register an account and create an app. Chandra’s python script and instructions are well documented in his <a href="https://github.com/tuchandra/sleep-analysis">Github repository</a>.  The app will be for “Personal” use, which gives access to intraday sleep data and can be revised to access other Fitbit data.</p>
 
 <p>I plan on making additional changes to the Fitbit api python script to incorporate the API time limitations using <a href="http://shishu.info/2016/06/how-to-download-your-fitbit-second-level-data-without-coding/">this code</a>  and allow for easier access to other data besides sleep.</p>
 
@@ -107,6 +107,8 @@
 </ul>
 
 <p>Note: Fitbit is a registered trademark and service mark of Fitbit, Inc. My analysis project is designed for personal use with the Fitbit platform. This product is not put out by Fitbit, and Fitbit does not service or warrant the functionality of this product.</p>
+
+<p><a href="(https://github.com/piccoloa/datamovers)">Link to Github repo</a></p>
 
 <p><strong>Install required python packages</strong></p>
 
@@ -141,7 +143,7 @@ You should consider upgrading via the 'pip install --upgrade pip' command.
 <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">mysql_dest_engine</span> <span class="o">=</span> <span class="n">create_engine</span><span class="p">(</span><span class="s">'mysql+pymysql://root:admin@mariadb.my-network'</span><span class="p">)</span>
 </code></pre></div></div>
 
-<p>Run sql scripts in database container to verify connection and confirm available data bases.</p>
+<p>Run sql scripts in database container to verify connection and confirm available databases.</p>
 
 <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">showDatabases</span> <span class="o">=</span> <span class="n">mysql_dest_engine</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s">'show databases;'</span><span class="p">)</span>
 <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">showDatabases</span><span class="p">:</span>
@@ -316,7 +318,7 @@ timeInBed 413
 
 
         <span class="k">for</span> <span class="n">k</span><span class="p">,</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">date_data</span><span class="p">[</span><span class="s">'summary'</span><span class="p">]</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
-            <span class="c">#check to file contents to see if there is data for the date if no, add nan</span>
+            <span class="c">#check file contents to see if there is data for the date if no, add nan</span>
             <span class="k">if</span> <span class="n">k</span> <span class="o">==</span> <span class="s">'totalMinutesAsleep'</span><span class="p">:</span>
                 <span class="k">if</span> <span class="n">v</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
                     <span class="n">data</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">nan</span><span class="p">)</span>
@@ -413,7 +415,7 @@ timeInBed 413
 
 <p>Write pandas table to the database.</p>
 
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">df</span><span class="o">.</span><span class="n">to_sql</span><span class="p">(</span><span class="n">con</span><span class="o">=</span><span class="n">mysql_dest_engine</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s">'sleepFitbit'</span><span class="p">,</span> <span class="n">schema</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span> <span class="n">if_exists</span><span class="o">=</span><span class="s">'replace'</span><span class="p">)</span>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">df</span><span class="o">.</span><span class="n">to_sql</span><span class="p">(</span><span class="n">con</span><span class="o">=</span><span class="n">mysql_dest_engine</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s">'sleepFitbit'</span><span class="p">,</span> <span class="n">schema</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span> <span class="n">if_exists</span><span class="o">=</span><span class="s">'replace'</span><span class="p">,</span> <span class="n">chunksize</span><span class="o">=</span><span class="mi">1000</span><span class="p">)</span>
 </code></pre></div></div>
 
 <p>Confirm data was written to database.</p>
