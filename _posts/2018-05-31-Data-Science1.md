@@ -21,7 +21,7 @@ This is an example of using ETL with Docker containers. The data is extracted fr
 I plan on making additional changes to the Fitbit api python script to incorporate the API time limitations using [this code](http://shishu.info/2016/06/how-to-download-your-fitbit-second-level-data-without-coding/)  and allow for easier access to other data besides sleep.
 
 The goals of this project include:
-* Working in a [Docker](https://www.docker.com/docker-community) and [Jupyter notebook](http://jupyter.org/) environment for data science
+* Working in a [Docker](https://www.docker.com/docker-community) and [Jupyter notebooks](https://github.com/jupyter/docker-stacks) environment for data science
  * Extracting data from Fitbit JSON log files.
  * Transforming the JSON data
  * Loading the data into a database as data store for further analysis
