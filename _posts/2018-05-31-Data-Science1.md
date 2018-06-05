@@ -28,7 +28,7 @@ The goals of this project include:
 
 Note: Fitbit is a registered trademark and service mark of Fitbit, Inc. My analysis project is designed for personal use with the Fitbit platform. This product is not put out by Fitbit, and Fitbit does not service or warrant the functionality of this product.
 
-[Link to Github repo]((https://github.com/piccoloa/datamovers))
+[Link to Github repo](https://github.com/piccoloa/datamovers)
 
 **Install required python packages**
 
