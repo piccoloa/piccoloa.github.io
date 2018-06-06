@@ -5,9 +5,20 @@
     <description>Created using Jekyll.</description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sun, 03 Jun 2018 09:30:06 -0400</pubDate>
-    <lastBuildDate>Sun, 03 Jun 2018 09:30:06 -0400</lastBuildDate>
+    <pubDate>Wed, 06 Jun 2018 06:25:39 -0400</pubDate>
+    <lastBuildDate>Wed, 06 Jun 2018 06:25:39 -0400</lastBuildDate>
     <generator>Jekyll v3.8.1</generator>
+    
+      <item>
+        <title>Shared Article: What Google and Facebook Know About You</title>
+        <description>&lt;p&gt;&lt;a href=&quot;https://medium.com/s/trustissues/find-out-what-google-and-facebook-know-about-you-31d0fa6d7b61&quot;&gt;How to do a data detox, in a zillion easy steps&lt;/a&gt;&lt;/p&gt;
+</description>
+        <pubDate>Wed, 06 Jun 2018 00:00:00 -0400</pubDate>
+        <link>http://localhost:4000/2018/06/06/PersonalData1.html</link>
+        <guid isPermaLink="true">http://localhost:4000/2018/06/06/PersonalData1.html</guid>
+        
+        
+      </item>
     
       <item>
         <title>Data Science: Not so pretty Set Up</title>
@@ -27,7 +38,7 @@
 
 &lt;p&gt;The goals of this project include:&lt;/p&gt;
 &lt;ul&gt;
-  &lt;li&gt;Working in a &lt;a href=&quot;https://www.docker.com/docker-community&quot;&gt;Docker&lt;/a&gt; and &lt;a href=&quot;http://jupyter.org/&quot;&gt;Jupyter notebook&lt;/a&gt; environment for data science&lt;/li&gt;
+  &lt;li&gt;Working in a &lt;a href=&quot;https://www.docker.com/docker-community&quot;&gt;Docker&lt;/a&gt; and &lt;a href=&quot;https://github.com/jupyter/docker-stacks&quot;&gt;Jupyter notebooks&lt;/a&gt; environment for data science&lt;/li&gt;
   &lt;li&gt;Extracting data from Fitbit JSON log files.&lt;/li&gt;
   &lt;li&gt;Transforming the JSON data&lt;/li&gt;
   &lt;li&gt;Loading the data into a database as data store for further analysis&lt;/li&gt;
@@ -35,7 +46,7 @@
 
 &lt;p&gt;Note: Fitbit is a registered trademark and service mark of Fitbit, Inc. My analysis project is designed for personal use with the Fitbit platform. This product is not put out by Fitbit, and Fitbit does not service or warrant the functionality of this product.&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&quot;(https://github.com/piccoloa/datamovers)&quot;&gt;Link to Github repo&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://github.com/piccoloa/datamovers&quot;&gt;Link to Github repo&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;Install required python packages&lt;/strong&gt;&lt;/p&gt;
 
