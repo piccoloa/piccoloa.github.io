@@ -4,7 +4,7 @@ title:  'Shared Podcast: "Reed Hastings,
 Founder & CEO of Netflix"'
 comments: true
 date:   2018-06-29
-excerpt: 'Since I find myself repeating some of the content in this podcast often at work, I thought it could be useful to just share the link.  I really appreciated the reference to company culture, principal one and how he learned from his mistakes at Pure Software.  The Wisteria is from my backyard.'
+excerpt: 'Since I find myself repeating some of the content in this podcast often at work, I thought it could be useful to just share the link.  I really appreciated the reference to company culture, principal one and how he learned from his mistakes at Pure Software.'
 ---
 [Podcast Link](https://mastersofscale.com/reed-hastings-culture-shock/)
 
