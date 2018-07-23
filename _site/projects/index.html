@@ -6,11 +6,11 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>Blog</title>
+  <title>Projects</title>
   <meta name="description" content="Created using Jekyll.">
   <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
   <link rel="stylesheet" href="/css/main.css">
-  <link rel="canonical" href="http://localhost:4000/blog">
+  <link rel="canonical" href="http://localhost:4000/projects/">
   <link rel="alternate" type="application/rss+xml" title="Alex Piccolo" href="http://localhost:4000/feed.xml">
   <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 </head>
@@ -80,95 +80,86 @@
 
     <div class="page-content">
       <div class="wrapper">
-        <article class="post">
-
-  <header class="post-header">
-    <h1 class="post-title">Blog</h1>
-  </header>
-
-  <div class="post-content">
-    
-<h1 class="page-heading">Recent Posts (8)</h1>
-
-<ul class="post-list">
-    
-      <li>
-        <span class="post-meta">Jun 30, 2018</span>
-
-        <h2>
-          <a class="post-link" href="/2018/06/30/DS1a_Set_up.html">Data Science: Not so pretty Set Up</a>
-        </h2>
-        <a href="/2018/06/30/DS1a_Set_up.html"><img src="/static/uglyfruit.jpg" /></a>
-      </li>
-    
-      <li>
-        <span class="post-meta">Jun 29, 2018</span>
-
-        <h2>
-          <a class="post-link" href="/2018/06/29/CultureShock.html">Shared Podcast: "Reed Hastings, Founder &amp; CEO of Netflix"</a>
-        </h2>
+        <div class="doc-container">
+    <div class="doc-menu">
         
-      </li>
-    
-      <li>
-        <span class="post-meta">Jun 6, 2018</span>
-
-        <h2>
-          <a class="post-link" href="/2018/06/06/PersonalData1.html">Shared Article: What Google and Facebook Know About You</a>
-        </h2>
         
-      </li>
-    
-      <li>
-        <span class="post-meta">May 29, 2018</span>
-
-        <h2>
-          <a class="post-link" href="/2018/05/29/Cree1.html">Shared Article: "We don’t use a corporate jet anymore"</a>
-        </h2>
         
-      </li>
-    
-      <li>
-        <span class="post-meta">May 25, 2018</span>
-
-        <h2>
-          <a class="post-link" href="/2018/05/25/Airforce_cbs.html">Shared Article: "Special operations surgical team"</a>
-        </h2>
         
-      </li>
-    
-      <li>
-        <span class="post-meta">May 21, 2018</span>
-
-        <h2>
-          <a class="post-link" href="/2018/05/21/Datalake1.html">Data Lakes: Overview</a>
-        </h2>
-        <a href="/2018/05/21/Datalake1.html"><img src="/img/oxfordPond.jpg" /></a>
-      </li>
-    
-      <li>
-        <span class="post-meta">May 18, 2018</span>
-
-        <h2>
-          <a class="post-link" href="/2018/05/18/LinkedIn-Story.html">Shared Article: The Death of Expertise</a>
-        </h2>
+        <p class="category">Exploring Big Data</p>
+        <ul>
         
-      </li>
-    
-      <li>
-        <span class="post-meta">Apr 16, 2018</span>
-
-        <h2>
-          <a class="post-link" href="/2018/04/16/welcome-to-jekyll.html">Welcome to my first test blog!</a>
-        </h2>
         
-      </li>
-    
-  </ul>
+            <li>
+            
+                <a href="/projects/Exploring%20Big%20Data/entity-resolution" class="doc-link" role="link">  Entity Resolution </a>
+            
+            </li>
+        
+        </ul>
+        
+        
+        <p class="category">Projects</p>
+        <ul>
+        
+        
+            <li>
+            
+                <a href="/projects/Projects/linking-people" class="doc-link" role="link">  Entity Resolution-Identify and link the Same Person </a>
+            
+            </li>
+        
+        </ul>
+        
+    </div>
+    <article class="projects">
+        <header class="doc-header">
+            <h1 class="doc-title">Projects</h1>
+            <a class="edit-button" href="/tree/master/docs/">Edit</a>
+        </header>
+        <section>
+            <h2 id="exploring-big-data">Exploring Big Data.</h2>
 
-  </div>
+<p>These projects are a combination of academic research areas explored over the past year or so while studying at Rutgers as well as a topical areas I have found of interest since drinking the big data kool-aid.</p>
 
-</article>
+<p>If you find areas for improving this content or are looking for more detailed understanding of the subject areas, post your ideas in the forum below or send me an email.</p>
+
+        </section>
+    </article>
+</div>
+<style>footer { display: none; }</style>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/3.2.2/anchor.min.js"></script>
+<script>anchors.add('h1, h2, h3, h4, h5, h6');</script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script>
+   $(document).ready(function (){
+
+     var scrollPosition = getParameterByName('scroll');
+     if(scrollPosition)
+      $(".doc-menu").scrollTop(scrollPosition);
+
+     $('.doc-link').click(function(){
+        var scrollTop = $(".doc-menu").scrollTop();
+        if(scrollTop > 0)
+          $(this).attr("href",this.href + "?scroll=" + $(".doc-menu").scrollTop());
+     });
+
+     function getParameterByName(name, url) {
+        if (!url) {
+          url = window.location.href;
+        }
+        name = name.replace(/[\[\]]/g, "\\$&");
+        var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+            results = regex.exec(url);
+        if (!results) return null;
+        if (!results[2]) return '';
+        return decodeURIComponent(results[2].replace(/\+/g, " "));
+    }
+
+   });
+</script>
+
 
       </div>
     </div>

@@ -35,11 +35,35 @@ highlighter: rouge
 #plugins:
 #  - jekyll-feed
 
-#not included in piccoloa--- believe this referes to projects
+#not included in piccoloa--- believe this referes to documentation
 collections:
  projects:
    output: true
-   permalink: /:collection/:name
+   permalink: /:collection/:path
+
+# Site menu settings
+menu:
+  - title: "Contact"
+    url: "/contact"
+  - title: "Blog"
+    url: "/blog"
+  - title: "Projects"
+    url: "/projects"
+  - title: "Resume"
+    url: "/resume"
+# End
+
+
+category_order:
+  - 'Exploring Big Data'
+  - 'Projects'
+  # - 'Advanced'
+  # - 'Platforms'
+  # - 'Plugins'
+  # - 'Samples'
+  # - 'Tutorials'
+  # - 'Upgrading'
+  # - 'Contributing'
 
 
 

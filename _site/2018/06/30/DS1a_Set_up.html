@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Data Science: Not so pretty Set Up</title>
+  <meta name="description" content="While not exciting, the idea here is to have a reliable way to gather your data, have it accessible across different projects, and work in a repeatable envir...">
+  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="/css/main.css">
+  <link rel="canonical" href="http://localhost:4000/2018/06/30/DS1a_Set_up.html">
+  <link rel="alternate" type="application/rss+xml" title="Alex Piccolo" href="http://localhost:4000/feed.xml">
+  <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+</head>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-118929786-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-118929786-1');
+</script>
+
+  <body>
+    <style>
+    img{
+      display:block;
+      margin:auto;
+    }
+    </style>
+    <header class="site-header">
+
+  <div class="wrapper">
+
+    <a class="site-title" href="/">Alex Piccolo</a>
+
+    <nav class="site-nav">
+      <a href="#" class="menu-icon">
+        <svg viewBox="0 0 18 15">
+          <path fill="#424242" d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z"/>
+          <path fill="#424242" d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484 h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z"/>
+          <path fill="#424242" d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z"/>
+        </svg>
+      </a>
+
+      <div class="trigger">
+        
+          
+          <a class="page-link" href="/contact">Contact</a>
+          
+        
+          
+          <a class="page-link" href="/blog">Blog</a>
+          
+        
+          
+        
+          
+        
+          
+        
+          
+          <a class="page-link" href="/projects/">Projects</a>
+          
+        
+          
+          <a class="page-link" href="/resume">Resume</a>
+          
+        
+      </div>
+    </nav>
+
+  </div>
+
+</header>
+
+
+    <div class="page-content">
+      <div class="wrapper">
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title" itemprop="name headline">Data Science: Not so pretty Set Up</h1>
+    <p class="post-meta"><time datetime="2018-06-30T00:00:00-04:00" itemprop="datePublished">Jun 30, 2018</time></p>
+  </header>
+
+  <div class="post-content" itemprop="articleBody">
+    <p><img src="/static/datascience1.jpg" alt="png" />
+<a href="https://www.google.com/maps/place/51%C2%B045'02.9%22N+1%C2%B014'48.5%22W/@51.7508,-1.2489887,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x0!8m2!3d51.7508!4d-1.2468">Working environment</a></p>
+
+<p><em>Part 1a</em></p>
+<h3 id="notes-exploring-personalized-health">Notes Exploring Personalized Health</h3>
+
+<p>This is a blog of my notes for setting up and beginning to explore my health data.  The idea here is to have reliable way to gather the data and have it available to mine and create models to help explain and answer questions about my own personal data. If anyone is reading these blogs, I will throw a <a href="https://www.youtube.com/watch?v=TTg7NcucINc">song</a> somewhere in each blog that came to mind while writing it.</p>
+
+<p><strong>Example of ETL using Docker, Python and MariaDB</strong></p>
+
+<p>This is an example of using ETL with Docker containers. The data is extracted from Fitbit using the Fitbit API by way of a <a href="https://github.com/tuchandra/sleep-analysis">python script</a> to access the nightly sleep logs.  Follow the instructions created by <a href="https://github.com/tuchandra">Tushar Chandra</a>  to save the JSON files to your local host. Once your data is saved to a DB, the data can be used to access historical data for further analysis.  To access your personal information through your Fitbit JSON files, you will be required to go to the <a href="https://dev.fitbit.com/">Fitbit Developers website</a> and register an account and create an app. Chandra’s python script and instructions are well documented in his <a href="https://github.com/tuchandra/sleep-analysis">Github repository</a>.  The app will be for “Personal” use, which gives access to intraday sleep data and can be revised to access other Fitbit data.</p>
+
+<p>I plan on making additional changes to the Fitbit api python script to incorporate the API time limitations using <a href="http://shishu.info/2016/06/how-to-download-your-fitbit-second-level-data-without-coding/">this code</a>  and allow for easier access to other data besides sleep.</p>
+
+<p>The goals of this project include:</p>
+<ul>
+  <li>Working in a <a href="https://www.docker.com/docker-community">Docker</a> and <a href="https://github.com/jupyter/docker-stacks">Jupyter notebooks</a> environment for data science</li>
+  <li>Extracting data from Fitbit JSON log files.</li>
+  <li>Transforming the JSON data</li>
+  <li>Loading the data into a database as data store for further analysis</li>
+</ul>
+
+<p>Note: Fitbit is a registered trademark and service mark of Fitbit, Inc. My analysis project is designed for personal use with the Fitbit platform. This product is not put out by Fitbit, and Fitbit does not service or warrant the functionality of this product.</p>
+
+<p><a href="https://github.com/piccoloa/datamovers">Link to Github repo</a></p>
+
+<p><strong>Install required python packages</strong></p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">os</span>
+<span class="kn">import</span> <span class="nn">pyodbc</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="n">np</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="n">pd</span>
+<span class="kn">import</span> <span class="nn">pandas.io.sql</span> <span class="k">as</span> <span class="n">psql</span>
+<span class="kn">from</span> <span class="nn">sqlalchemy</span> <span class="kn">import</span> <span class="n">create_engine</span>
+</code></pre></div></div>
+
+<p><strong>Install ijson on odbcNotebook</strong><br />
+This step can be avoided by adding the pip command to the Dockerbuild file and rebuilding the odbcNotebook imaage. Still good example of working in bash through notebook.</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>%%bash
+
+pip <span class="nb">install </span>ijson
+</code></pre></div></div>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Collecting ijson
+  Downloading https://files.pythonhosted.org/packages/7f/e9/8508c5f4987ba238a2b169e582c1f70a47272b22a2f1fb06b9318201bb9e/ijson-2.3-py2.py3-none-any.whl
+Installing collected packages: ijson
+Successfully installed ijson-2.3
+
+
+You are using pip version 9.0.3, however version 10.0.1 is available.
+You should consider upgrading via the 'pip install --upgrade pip' command.
+</code></pre></div></div>
+
+<p>Create connection to MariaDB container host named mariadb as root over the Docker network.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">mysql_dest_engine</span> <span class="o">=</span> <span class="n">create_engine</span><span class="p">(</span><span class="s">'mysql+pymysql://root:admin@mariadb.my-network'</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p>Run sql scripts in database container to verify connection and confirm available databases.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">showDatabases</span> <span class="o">=</span> <span class="n">mysql_dest_engine</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s">'show databases;'</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">showDatabases</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+</code></pre></div></div>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>('Fitbit',)
+('information_schema',)
+('mysql',)
+('performance_schema',)
+</code></pre></div></div>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c">#connect to mariadb container and add database to write data, then print to view avaialble databases</span>
+<span class="n">createDatabase</span> <span class="o">=</span> <span class="n">mysql_dest_engine</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s">'CREATE DATABASE IF NOT EXISTS Fitbit;'</span><span class="p">)</span>
+<span class="n">showDatabases</span> <span class="o">=</span> <span class="n">mysql_dest_engine</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s">'show databases;'</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">showDatabases</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+</code></pre></div></div>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>('Fitbit',)
+('information_schema',)
+('mysql',)
+('performance_schema',)
+
+
+/opt/conda/lib/python3.6/site-packages/pymysql/cursors.py:165: Warning: (1007, "Can't create database 'Fitbit'; database exists")
+  result = self._query(query)
+</code></pre></div></div>
+
+<p>View current working directory for notebook.</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>%%bash
+
+<span class="nb">pwd</span>
+</code></pre></div></div>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>/home/jovyan/work/BlogLoadingJsonToMariaDB
+</code></pre></div></div>
+
+<p>Change to directory where log files were stored by fitbit.py script.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">os</span><span class="o">.</span><span class="n">chdir</span><span class="p">(</span><span class="s">'/home/jovyan/work/PracticeWorkingwithJSON/data/logs'</span><span class="p">)</span>
+</code></pre></div></div>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="err">!</span><span class="n">ls</span>
+</code></pre></div></div>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>2015-04-28.json  2015-04-29.json  2015-04-30.json
+</code></pre></div></div>
+
+<p>Take a look at raw json data file to view structure of file. This <a href="https://www.dataquest.io/blog/python-json-tutorial/">Dataquest blog</a> has a good example of working with large json files.</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>%%bash
+
+<span class="nb">head </span>2015-04-28.json
+</code></pre></div></div>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>{"sleep": [{"awakeCount": 5, "awakeDuration": 9, "awakeningsCount": 17, "dateOfSleep": "2015-04-28", "duration": 24780000, "efficiency": 94, "endTime": "2015-04-28T06:09:30.000", "isMainSleep": true, "logId": 886290350, "minuteData": [{"dateTime": "23:16:30", "value": "3"}, {"dateTime": "23:17:30", "value": "3"}, {"dateTime": "23:18:30", "value": "2"}, {"dateTime": "23:19:30", "value": "1"}, {"dateTime": "23:20:30", "value": "1"}, {"dateTime": "23:21:30", "value": "1"}, {"dateTime": "23:22:30", "value": "1"}, {"dateTime": "23:23:30", "value": "1"}, {"dateTime": "23:24:30", "value": "1"}, {"dateTime": "23:25:30", "value": "1"}, {"dateTime": "23:26:30", "value": "1"}, {"dateTime": "23:27:30", "value": "1"}, {"dateTime": "23:28:30", "value": "1"}, {"dateTime": "23:29:30", "value": "1"}, {"dateTime": "23:30:30", "value": "1"}, {"dateTime": "23:31:30", "value": "1"}, {"dateTime": "23:32:30", "value": "1"}, {"dateTime": "23:33:30", "value": "1"}, {"dateTime": "23:34:30", "value": "1"}, {"dateTime": "23:35:30", "value": "1"}, {"dateTime": "23:36:30", "value": "1"}, {"dateTime": "23:37:30", "value": "1"}, {"dateTime": "23:38:30", "value": "1"}, {"dateTime": "23:39:30", "value": "1"}, {"dateTime": "23:40:30", "value": "1"}, {"dateTime": "23:41:30", "value": "1"}, {"dateTime": "23:42:30", "value": "1"}, {"dateTime": "23:43:30", "value": "1"}, {"dateTime": "23:44:30", "value": "1"}, {"dateTime": "23:45:30", "value": "1"}, {"dateTime": "23:46:30", "value": "1"}, {"dateTime": "23:47:30", "value": "1"}, {"dateTime": "23:48:30", "value": "1"}, {"dateTime": "23:49:30", "value": "1"}, {"dateTime": "23:50:30", "value": "1"}, {"dateTime": "23:51:30", "value": "2"}, {"dateTime": "23:52:30", "value": "1"}, {"dateTime": "23:53:30", "value": "1"}, {"dateTime": "23:54:30", "value": "1"}, {"dateTime": "23:55:30", "value": "1"}, {"dateTime": "23:56:30", "value": "1"}, {"dateTime": "23:57:30", "value": "1"}, {"dateTime": "23:58:30", "value": "1"}, {"dateTime": "23:59:30", "value": "1"}, {"dateTime": "00:00:30", "value": "1"}, {"dateTime": "00:01:30", "value": "1"}, {"dateTime": "00:02:30", "value": "1"}, {"dateTime": "00:03:30", "value": "1"}, {"dateTime": "00:04:30", "value": "1"}, {"dateTime": "00:05:30", "value": "1"}, {"dateTime": "00:06:30", "value": "1"}, {"dateTime": "00:07:30", "value": "1"}, {"dateTime": "00:08:30", "value": "1"}, {"dateTime": "00:09:30", "value": "1"}, {"dateTime": "00:10:30", "value": "1"}, {"dateTime": "00:11:30", "value": "1"}, {"dateTime": "00:12:30", "value": "1"}, {"dateTime": "00:13:30", "value": "1"}, {"dateTime": "00:14:30", "value": "1"}, {"dateTime": "00:15:30", "value": "1"}, {"dateTime": "00:16:30", "value": "1"}, {"dateTime": "00:17:30", "value": "1"}, {"dateTime": "00:18:30", "value": "1"}, {"dateTime": "00:19:30", "value": "1"}, {"dateTime": "00:20:30", "value": "1"}, {"dateTime": "00:21:30", "value": "1"}, {"dateTime": "00:22:30", "value": "1"}, {"dateTime": "00:23:30", "value": "1"}, {"dateTime": "00:24:30", "value": "1"}, {"dateTime": "00:25:30", "value": "1"}, {"dateTime": "00:26:30", "value": "1"}, {"dateTime": "00:27:30", "value": "1"}, {"dateTime": "00:28:30", "value": "2"}, {"dateTime": "00:29:30", "value": "1"}, {"dateTime": "00:30:30", "value": "1"}, {"dateTime": "00:31:30", "value": "1"}, {"dateTime": "00:32:30", "value": "1"}, {"dateTime": "00:33:30", "value": "1"}, {"dateTime": "00:34:30", "value": "1"}, {"dateTime": "00:35:30", "value": "1"}, {"dateTime": "00:36:30", "value": "1"}, {"dateTime": "00:37:30", "value": "1"}, {"dateTime": "00:38:30", "value": "1"}, {"dateTime": "00:39:30", "value": "1"}, {"dateTime": "00:40:30", "value": "1"}, {"dateTime": "00:41:30", "value": "1"}, {"dateTime": "00:42:30", "value": "1"}, {"dateTime": "00:43:30", "value": "1"}, {"dateTime": "00:44:30", "value": "1"}, {"dateTime": "00:45:30", "value": "1"}, {"dateTime": "00:46:30", "value": "1"}, {"dateTime": "00:47:30", "value": "1"}, {"dateTime": "00:48:30", "value": "1"}, {"dateTime": "00:49:30", "value": "1"}, {"dateTime": "00:50:30", "value": "1"}, {"dateTime": "00:51:30", "value": "1"}, {"dateTime": "00:52:30", "value": "1"}, {"dateTime": "00:53:30", "value": "1"}, {"dateTime": "00:54:30", "value": "1"}, {"dateTime": "00:55:30", "value": "1"}, {"dateTime": "00:56:30", "value": "1"}, {"dateTime": "00:57:30", "value": "1"}, {"dateTime": "00:58:30", "value": "1"}, {"dateTime": "00:59:30", "value": "1"}, {"dateTime": "01:00:30", "value": "1"}, {"dateTime": "01:01:30", "value": "1"}, {"dateTime": "01:02:30", "value": "1"}, {"dateTime": "01:03:30", "value": "1"}, {"dateTime": "01:04:30", "value": "1"}, {"dateTime": "01:05:30", "value": "1"}, {"dateTime": "01:06:30", "value": "1"}, {"dateTime": "01:07:30", "value": "1"}, {"dateTime": "01:08:30", "value": "1"}, {"dateTime": "01:09:30", "value": "1"}, {"dateTime": "01:10:30", "value": "1"}, {"dateTime": "01:11:30", "value": "1"}, {"dateTime": "01:12:30", "value": "1"}, {"dateTime": "01:13:30", "value": "1"}, {"dateTime": "01:14:30", "value": "1"}, {"dateTime": "01:15:30", "value": "1"}, {"dateTime": "01:16:30", "value": "1"}, {"dateTime": "01:17:30", "value": "1"}, {"dateTime": "01:18:30", "value": "1"}, {"dateTime": "01:19:30", "value": "1"}, {"dateTime": "01:20:30", "value": "1"}, {"dateTime": "01:21:30", "value": "1"}, {"dateTime": "01:22:30", "value": "1"}, {"dateTime": "01:23:30", "value": "1"}, {"dateTime": "01:24:30", "value": "1"}, {"dateTime": "01:25:30", "value": "1"}, {"dateTime": "01:26:30", "value": "1"}, {"dateTime": "01:27:30", "value": "1"}, {"dateTime": "01:28:30", "value": "1"}, {"dateTime": "01:29:30", "value": "1"}, {"dateTime": "01:30:30", "value": "1"}, {"dateTime": "01:31:30", "value": "1"}, {"dateTime": "01:32:30", "value": "1"}, {"dateTime": "01:33:30", "value": "1"}, {"dateTime": "01:34:30", "value": "1"}, {"dateTime": "01:35:30", "value": "1"}, {"dateTime": "01:36:30", "value": "1"}, {"dateTime": "01:37:30", "value": "1"}, {"dateTime": "01:38:30", "value": "1"}, {"dateTime": "01:39:30", "value": "1"}, {"dateTime": "01:40:30", "value": "1"}, {"dateTime": "01:41:30", "value": "1"}, {"dateTime": "01:42:30", "value": "1"}, {"dateTime": "01:43:30", "value": "1"}, {"dateTime": "01:44:30", "value": "1"}, {"dateTime": "01:45:30", "value": "1"}, {"dateTime": "01:46:30", "value": "1"}, {"dateTime": "01:47:30", "value": "1"}, {"dateTime": "01:48:30", "value": "1"}, {"dateTime": "01:49:30", "value": "1"}, {"dateTime": "01:50:30", "value": "1"}, {"dateTime": "01:51:30", "value": "1"}, {"dateTime": "01:52:30", "value": "1"}, {"dateTime": "01:53:30", "value": "1"}, {"dateTime": "01:54:30", "value": "1"}, {"dateTime": "01:55:30", "value": "1"}, {"dateTime": "01:56:30", "value": "1"}, {"dateTime": "01:57:30", "value": "1"}, {"dateTime": "01:58:30", "value": "1"}, {"dateTime": "01:59:30", "value": "1"}, {"dateTime": "02:00:30", "value": "1"}, {"dateTime": "02:01:30", "value": "1"}, {"dateTime": "02:02:30", "value": "1"}, {"dateTime": "02:03:30", "value": "1"}, {"dateTime": "02:04:30", "value": "1"}, {"dateTime": "02:05:30", "value": "1"}, {"dateTime": "02:06:30", "value": "1"}, {"dateTime": "02:07:30", "value": "1"}, {"dateTime": "02:08:30", "value": "1"}, {"dateTime": "02:09:30", "value": "1"}, {"dateTime": "02:10:30", "value": "1"}, {"dateTime": "02:11:30", "value": "1"}, {"dateTime": "02:12:30", "value": "1"}, {"dateTime": "02:13:30", "value": "1"}, {"dateTime": "02:14:30", "value": "1"}, {"dateTime": "02:15:30", "value": "1"}, {"dateTime": "02:16:30", "value": "1"}, {"dateTime": "02:17:30", "value": "1"}, {"dateTime": "02:18:30", "value": "1"}, {"dateTime": "02:19:30", "value": "1"}, {"dateTime": "02:20:30", "value": "1"}, {"dateTime": "02:21:30", "value": "1"}, {"dateTime": "02:22:30", "value": "1"}, {"dateTime": "02:23:30", "value": "1"}, {"dateTime": "02:24:30", "value": "1"}, {"dateTime": "02:25:30", "value": "1"}, {"dateTime": "02:26:30", "value": "1"}, {"dateTime": "02:27:30", "value": "1"}, {"dateTime": "02:28:30", "value": "1"}, {"dateTime": "02:29:30", "value": "1"}, {"dateTime": "02:30:30", "value": "1"}, {"dateTime": "02:31:30", "value": "1"}, {"dateTime": "02:32:30", "value": "1"}, {"dateTime": "02:33:30", "value": "1"}, {"dateTime": "02:34:30", "value": "1"}, {"dateTime": "02:35:30", "value": "1"}, {"dateTime": "02:36:30", "value": "1"}, {"dateTime": "02:37:30", "value": "1"}, {"dateTime": "02:38:30", "value": "1"}, {"dateTime": "02:39:30", "value": "1"}, {"dateTime": "02:40:30", "value": "1"}, {"dateTime": "02:41:30", "value": "1"}, {"dateTime": "02:42:30", "value": "1"}, {"dateTime": "02:43:30", "value": "1"}, {"dateTime": "02:44:30", "value": "1"}, {"dateTime": "02:45:30", "value": "1"}, {"dateTime": "02:46:30", "value": "1"}, {"dateTime": "02:47:30", "value": "1"}, {"dateTime": "02:48:30", "value": "1"}, {"dateTime": "02:49:30", "value": "1"}, {"dateTime": "02:50:30", "value": "1"}, {"dateTime": "02:51:30", "value": "1"}, {"dateTime": "02:52:30", "value": "1"}, {"dateTime": "02:53:30", "value": "1"}, {"dateTime": "02:54:30", "value": "1"}, {"dateTime": "02:55:30", "value": "1"}, {"dateTime": "02:56:30", "value": "1"}, {"dateTime": "02:57:30", "value": "1"}, {"dateTime": "02:58:30", "value": "1"}, {"dateTime": "02:59:30", "value": "1"}, {"dateTime": "03:00:30", "value": "1"}, {"dateTime": "03:01:30", "value": "1"}, {"dateTime": "03:02:30", "value": "1"}, {"dateTime": "03:03:30", "value": "1"}, {"dateTime": "03:04:30", "value": "1"}, {"dateTime": "03:05:30", "value": "1"}, {"dateTime": "03:06:30", "value": "1"}, {"dateTime": "03:07:30", "value": "1"}, {"dateTime": "03:08:30", "value": "1"}, {"dateTime": "03:09:30", "value": "1"}, {"dateTime": "03:10:30", "value": "1"}, {"dateTime": "03:11:30", "value": "1"}, {"dateTime": "03:12:30", "value": "1"}, {"dateTime": "03:13:30", "value": "1"}, {"dateTime": "03:14:30", "value": "1"}, {"dateTime": "03:15:30", "value": "1"}, {"dateTime": "03:16:30", "value": "1"}, {"dateTime": "03:17:30", "value": "1"}, {"dateTime": "03:18:30", "value": "1"}, {"dateTime": "03:19:30", "value": "1"}, {"dateTime": "03:20:30", "value": "1"}, {"dateTime": "03:21:30", "value": "1"}, {"dateTime": "03:22:30", "value": "1"}, {"dateTime": "03:23:30", "value": "1"}, {"dateTime": "03:24:30", "value": "1"}, {"dateTime": "03:25:30", "value": "1"}, {"dateTime": "03:26:30", "value": "1"}, {"dateTime": "03:27:30", "value": "1"}, {"dateTime": "03:28:30", "value": "1"}, {"dateTime": "03:29:30", "value": "1"}, {"dateTime": "03:30:30", "value": "1"}, {"dateTime": "03:31:30", "value": "1"}, {"dateTime": "03:32:30", "value": "1"}, {"dateTime": "03:33:30", "value": "1"}, {"dateTime": "03:34:30", "value": "1"}, {"dateTime": "03:35:30", "value": "1"}, {"dateTime": "03:36:30", "value": "1"}, {"dateTime": "03:37:30", "value": "1"}, {"dateTime": "03:38:30", "value": "1"}, {"dateTime": "03:39:30", "value": "1"}, {"dateTime": "03:40:30", "value": "1"}, {"dateTime": "03:41:30", "value": "1"}, {"dateTime": "03:42:30", "value": "1"}, {"dateTime": "03:43:30", "value": "1"}, {"dateTime": "03:44:30", "value": "1"}, {"dateTime": "03:45:30", "value": "1"}, {"dateTime": "03:46:30", "value": "1"}, {"dateTime": "03:47:30", "value": "1"}, {"dateTime": "03:48:30", "value": "1"}, {"dateTime": "03:49:30", "value": "1"}, {"dateTime": "03:50:30", "value": "1"}, {"dateTime": "03:51:30", "value": "1"}, {"dateTime": "03:52:30", "value": "1"}, {"dateTime": "03:53:30", "value": "1"}, {"dateTime": "03:54:30", "value": "1"}, {"dateTime": "03:55:30", "value": "1"}, {"dateTime": "03:56:30", "value": "1"}, {"dateTime": "03:57:30", "value": "1"}, {"dateTime": "03:58:30", "value": "1"}, {"dateTime": "03:59:30", "value": "1"}, {"dateTime": "04:00:30", "value": "1"}, {"dateTime": "04:01:30", "value": "1"}, {"dateTime": "04:02:30", "value": "1"}, {"dateTime": "04:03:30", "value": "1"}, {"dateTime": "04:04:30", "value": "1"}, {"dateTime": "04:05:30", "value": "1"}, {"dateTime": "04:06:30", "value": "1"}, {"dateTime": "04:07:30", "value": "1"}, {"dateTime": "04:08:30", "value": "1"}, {"dateTime": "04:09:30", "value": "1"}, {"dateTime": "04:10:30", "value": "1"}, {"dateTime": "04:11:30", "value": "1"}, {"dateTime": "04:12:30", "value": "1"}, {"dateTime": "04:13:30", "value": "1"}, {"dateTime": "04:14:30", "value": "1"}, {"dateTime": "04:15:30", "value": "1"}, {"dateTime": "04:16:30", "value": "1"}, {"dateTime": "04:17:30", "value": "1"}, {"dateTime": "04:18:30", "value": "2"}, {"dateTime": "04:19:30", "value": "2"}, {"dateTime": "04:20:30", "value": "1"}, {"dateTime": "04:21:30", "value": "1"}, {"dateTime": "04:22:30", "value": "2"}, {"dateTime": "04:23:30", "value": "1"}, {"dateTime": "04:24:30", "value": "1"}, {"dateTime": "04:25:30", "value": "1"}, {"dateTime": "04:26:30", "value": "1"}, {"dateTime": "04:27:30", "value": "1"}, {"dateTime": "04:28:30", "value": "1"}, {"dateTime": "04:29:30", "value": "1"}, {"dateTime": "04:30:30", "value": "1"}, {"dateTime": "04:31:30", "value": "1"}, {"dateTime": "04:32:30", "value": "1"}, {"dateTime": "04:33:30", "value": "1"}, {"dateTime": "04:34:30", "value": "1"}, {"dateTime": "04:35:30", "value": "1"}, {"dateTime": "04:36:30", "value": "1"}, {"dateTime": "04:37:30", "value": "1"}, {"dateTime": "04:38:30", "value": "1"}, {"dateTime": "04:39:30", "value": "1"}, {"dateTime": "04:40:30", "value": "1"}, {"dateTime": "04:41:30", "value": "1"}, {"dateTime": "04:42:30", "value": "1"}, {"dateTime": "04:43:30", "value": "1"}, {"dateTime": "04:44:30", "value": "1"}, {"dateTime": "04:45:30", "value": "1"}, {"dateTime": "04:46:30", "value": "1"}, {"dateTime": "04:47:30", "value": "2"}, {"dateTime": "04:48:30", "value": "2"}, {"dateTime": "04:49:30", "value": "2"}, {"dateTime": "04:50:30", "value": "2"}, {"dateTime": "04:51:30", "value": "2"}, {"dateTime": "04:52:30", "value": "2"}, {"dateTime": "04:53:30", "value": "3"}, {"dateTime": "04:54:30", "value": "2"}, {"dateTime": "04:55:30", "value": "2"}, {"dateTime": "04:56:30", "value": "3"}, {"dateTime": "04:57:30", "value": "3"}, {"dateTime": "04:58:30", "value": "2"}, {"dateTime": "04:59:30", "value": "3"}, {"dateTime": "05:00:30", "value": "2"}, {"dateTime": "05:01:30", "value": "3"}, {"dateTime": "05:02:30", "value": "3"}, {"dateTime": "05:03:30", "value": "3"}, {"dateTime": "05:04:30", "value": "2"}, {"dateTime": "05:05:30", "value": "2"}, {"dateTime": "05:06:30", "value": "1"}, {"dateTime": "05:07:30", "value": "1"}, {"dateTime": "05:08:30", "value": "1"}, {"dateTime": "05:09:30", "value": "1"}, {"dateTime": "05:10:30", "value": "1"}, {"dateTime": "05:11:30", "value": "1"}, {"dateTime": "05:12:30", "value": "1"}, {"dateTime": "05:13:30", "value": "1"}, {"dateTime": "05:14:30", "value": "1"}, {"dateTime": "05:15:30", "value": "1"}, {"dateTime": "05:16:30", "value": "1"}, {"dateTime": "05:17:30", "value": "1"}, {"dateTime": "05:18:30", "value": "1"}, {"dateTime": "05:19:30", "value": "1"}, {"dateTime": "05:20:30", "value": "1"}, {"dateTime": "05:21:30", "value": "1"}, {"dateTime": "05:22:30", "value": "1"}, {"dateTime": "05:23:30", "value": "2"}, {"dateTime": "05:24:30", "value": "1"}, {"dateTime": "05:25:30", "value": "1"}, {"dateTime": "05:26:30", "value": "1"}, {"dateTime": "05:27:30", "value": "1"}, {"dateTime": "05:28:30", "value": "1"}, {"dateTime": "05:29:30", "value": "1"}, {"dateTime": "05:30:30", "value": "1"}, {"dateTime": "05:31:30", "value": "1"}, {"dateTime": "05:32:30", "value": "1"}, {"dateTime": "05:33:30", "value": "1"}, {"dateTime": "05:34:30", "value": "1"}, {"dateTime": "05:35:30", "value": "1"}, {"dateTime": "05:36:30", "value": "1"}, {"dateTime": "05:37:30", "value": "2"}, {"dateTime": "05:38:30", "value": "1"}, {"dateTime": "05:39:30", "value": "1"}, {"dateTime": "05:40:30", "value": "1"}, {"dateTime": "05:41:30", "value": "1"}, {"dateTime": "05:42:30", "value": "1"}, {"dateTime": "05:43:30", "value": "1"}, {"dateTime": "05:44:30", "value": "1"}, {"dateTime": "05:45:30", "value": "1"}, {"dateTime": "05:46:30", "value": "1"}, {"dateTime": "05:47:30", "value": "1"}, {"dateTime": "05:48:30", "value": "1"}, {"dateTime": "05:49:30", "value": "1"}, {"dateTime": "05:50:30", "value": "1"}, {"dateTime": "05:51:30", "value": "1"}, {"dateTime": "05:52:30", "value": "1"}, {"dateTime": "05:53:30", "value": "1"}, {"dateTime": "05:54:30", "value": "1"}, {"dateTime": "05:55:30", "value": "1"}, {"dateTime": "05:56:30", "value": "1"}, {"dateTime": "05:57:30", "value": "1"}, {"dateTime": "05:58:30", "value": "1"}, {"dateTime": "05:59:30", "value": "1"}, {"dateTime": "06:00:30", "value": "1"}, {"dateTime": "06:01:30", "value": "1"}, {"dateTime": "06:02:30", "value": "1"}, {"dateTime": "06:03:30", "value": "1"}, {"dateTime": "06:04:30", "value": "1"}, {"dateTime": "06:05:30", "value": "1"}, {"dateTime": "06:06:30", "value": "1"}, {"dateTime": "06:07:30", "value": "1"}, {"dateTime": "06:08:30", "value": "1"}], "minutesAfterWakeup": 0, "minutesAsleep": 384, "minutesAwake": 26, "minutesToFallAsleep": 0, "restlessCount": 12, "restlessDuration": 20, "startTime": "2015-04-27T23:16:30.000", "timeInBed": 413}], "summary": {"totalMinutesAsleep": 384, "totalSleepRecords": 1, "totalTimeInBed": 413}}
+</code></pre></div></div>
+
+<p>Looking at the raw text there are three sets of data in json file.  Python reads the json files as dictionaries with sets of nested dictionaries.  The trick is to find and extract the dictionary that has the key:value pairs that are of interest. In this case we will explore <em>sleep</em> and <em>summary</em>.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">ijson</span>
+
+<span class="n">filename</span> <span class="o">=</span> <span class="s">"2015-04-28.json"</span>
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="s">'r'</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+    <span class="n">objects</span> <span class="o">=</span> <span class="n">ijson</span><span class="o">.</span><span class="n">items</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="s">'sleep'</span><span class="p">)</span>
+    <span class="n">columns</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">objects</span><span class="p">)</span>
+</code></pre></div></div>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">print</span><span class="p">(</span><span class="n">columns</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+</code></pre></div></div>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>[{'awakeCount': 5, 'awakeDuration': 9, 'awakeningsCount': 17, 'dateOfSleep': '2015-04-28', 'duration': 24780000, 'efficiency': 94, 'endTime': '2015-04-28T06:09:30.000', 'isMainSleep': True, 'logId': 886290350, 'minuteData': [{'dateTime': '23:16:30', 'value': '3'}, {'dateTime': '23:17:30', 'value': '3'}, {'dateTime': '23:18:30', 'value': '2'}, {'dateTime': '23:19:30', 'value': '1'}, {'dateTime': '23:20:30', 'value': '1'}, {'dateTime': '23:21:30', 'value': '1'}, {'dateTime': '23:22:30', 'value': '1'}, {'dateTime': '23:23:30', 'value': '1'}, {'dateTime': '23:24:30', 'value': '1'}, {'dateTime': '23:25:30', 'value': '1'}, {'dateTime': '23:26:30', 'value': '1'}, {'dateTime': '23:27:30', 'value': '1'}, {'dateTime': '23:28:30', 'value': '1'}, {'dateTime': '23:29:30', 'value': '1'}, {'dateTime': '23:30:30', 'value': '1'}, {'dateTime': '23:31:30', 'value': '1'}, {'dateTime': '23:32:30', 'value': '1'}, {'dateTime': '23:33:30', 'value': '1'}, {'dateTime': '23:34:30', 'value': '1'}, {'dateTime': '23:35:30', 'value': '1'}, {'dateTime': '23:36:30', 'value': '1'}, {'dateTime': '23:37:30', 'value': '1'}, {'dateTime': '23:38:30', 'value': '1'}, {'dateTime': '23:39:30', 'value': '1'}, {'dateTime': '23:40:30', 'value': '1'}, {'dateTime': '23:41:30', 'value': '1'}, {'dateTime': '23:42:30', 'value': '1'}, {'dateTime': '23:43:30', 'value': '1'}, {'dateTime': '23:44:30', 'value': '1'}, {'dateTime': '23:45:30', 'value': '1'}, {'dateTime': '23:46:30', 'value': '1'}, {'dateTime': '23:47:30', 'value': '1'}, {'dateTime': '23:48:30', 'value': '1'}, {'dateTime': '23:49:30', 'value': '1'}, {'dateTime': '23:50:30', 'value': '1'}, {'dateTime': '23:51:30', 'value': '2'}, {'dateTime': '23:52:30', 'value': '1'}, {'dateTime': '23:53:30', 'value': '1'}, {'dateTime': '23:54:30', 'value': '1'}, {'dateTime': '23:55:30', 'value': '1'}, {'dateTime': '23:56:30', 'value': '1'}, {'dateTime': '23:57:30', 'value': '1'}, {'dateTime': '23:58:30', 'value': '1'}, {'dateTime': '23:59:30', 'value': '1'}, {'dateTime': '00:00:30', 'value': '1'}, {'dateTime': '00:01:30', 'value': '1'}, {'dateTime': '00:02:30', 'value': '1'}, {'dateTime': '00:03:30', 'value': '1'}, {'dateTime': '00:04:30', 'value': '1'}, {'dateTime': '00:05:30', 'value': '1'}, {'dateTime': '00:06:30', 'value': '1'}, {'dateTime': '00:07:30', 'value': '1'}, {'dateTime': '00:08:30', 'value': '1'}, {'dateTime': '00:09:30', 'value': '1'}, {'dateTime': '00:10:30', 'value': '1'}, {'dateTime': '00:11:30', 'value': '1'}, {'dateTime': '00:12:30', 'value': '1'}, {'dateTime': '00:13:30', 'value': '1'}, {'dateTime': '00:14:30', 'value': '1'}, {'dateTime': '00:15:30', 'value': '1'}, {'dateTime': '00:16:30', 'value': '1'}, {'dateTime': '00:17:30', 'value': '1'}, {'dateTime': '00:18:30', 'value': '1'}, {'dateTime': '00:19:30', 'value': '1'}, {'dateTime': '00:20:30', 'value': '1'}, {'dateTime': '00:21:30', 'value': '1'}, {'dateTime': '00:22:30', 'value': '1'}, {'dateTime': '00:23:30', 'value': '1'}, {'dateTime': '00:24:30', 'value': '1'}, {'dateTime': '00:25:30', 'value': '1'}, {'dateTime': '00:26:30', 'value': '1'}, {'dateTime': '00:27:30', 'value': '1'}, {'dateTime': '00:28:30', 'value': '2'}, {'dateTime': '00:29:30', 'value': '1'}, {'dateTime': '00:30:30', 'value': '1'}, {'dateTime': '00:31:30', 'value': '1'}, {'dateTime': '00:32:30', 'value': '1'}, {'dateTime': '00:33:30', 'value': '1'}, {'dateTime': '00:34:30', 'value': '1'}, {'dateTime': '00:35:30', 'value': '1'}, {'dateTime': '00:36:30', 'value': '1'}, {'dateTime': '00:37:30', 'value': '1'}, {'dateTime': '00:38:30', 'value': '1'}, {'dateTime': '00:39:30', 'value': '1'}, {'dateTime': '00:40:30', 'value': '1'}, {'dateTime': '00:41:30', 'value': '1'}, {'dateTime': '00:42:30', 'value': '1'}, {'dateTime': '00:43:30', 'value': '1'}, {'dateTime': '00:44:30', 'value': '1'}, {'dateTime': '00:45:30', 'value': '1'}, {'dateTime': '00:46:30', 'value': '1'}, {'dateTime': '00:47:30', 'value': '1'}, {'dateTime': '00:48:30', 'value': '1'}, {'dateTime': '00:49:30', 'value': '1'}, {'dateTime': '00:50:30', 'value': '1'}, {'dateTime': '00:51:30', 'value': '1'}, {'dateTime': '00:52:30', 'value': '1'}, {'dateTime': '00:53:30', 'value': '1'}, {'dateTime': '00:54:30', 'value': '1'}, {'dateTime': '00:55:30', 'value': '1'}, {'dateTime': '00:56:30', 'value': '1'}, {'dateTime': '00:57:30', 'value': '1'}, {'dateTime': '00:58:30', 'value': '1'}, {'dateTime': '00:59:30', 'value': '1'}, {'dateTime': '01:00:30', 'value': '1'}, {'dateTime': '01:01:30', 'value': '1'}, {'dateTime': '01:02:30', 'value': '1'}, {'dateTime': '01:03:30', 'value': '1'}, {'dateTime': '01:04:30', 'value': '1'}, {'dateTime': '01:05:30', 'value': '1'}, {'dateTime': '01:06:30', 'value': '1'}, {'dateTime': '01:07:30', 'value': '1'}, {'dateTime': '01:08:30', 'value': '1'}, {'dateTime': '01:09:30', 'value': '1'}, {'dateTime': '01:10:30', 'value': '1'}, {'dateTime': '01:11:30', 'value': '1'}, {'dateTime': '01:12:30', 'value': '1'}, {'dateTime': '01:13:30', 'value': '1'}, {'dateTime': '01:14:30', 'value': '1'}, {'dateTime': '01:15:30', 'value': '1'}, {'dateTime': '01:16:30', 'value': '1'}, {'dateTime': '01:17:30', 'value': '1'}, {'dateTime': '01:18:30', 'value': '1'}, {'dateTime': '01:19:30', 'value': '1'}, {'dateTime': '01:20:30', 'value': '1'}, {'dateTime': '01:21:30', 'value': '1'}, {'dateTime': '01:22:30', 'value': '1'}, {'dateTime': '01:23:30', 'value': '1'}, {'dateTime': '01:24:30', 'value': '1'}, {'dateTime': '01:25:30', 'value': '1'}, {'dateTime': '01:26:30', 'value': '1'}, {'dateTime': '01:27:30', 'value': '1'}, {'dateTime': '01:28:30', 'value': '1'}, {'dateTime': '01:29:30', 'value': '1'}, {'dateTime': '01:30:30', 'value': '1'}, {'dateTime': '01:31:30', 'value': '1'}, {'dateTime': '01:32:30', 'value': '1'}, {'dateTime': '01:33:30', 'value': '1'}, {'dateTime': '01:34:30', 'value': '1'}, {'dateTime': '01:35:30', 'value': '1'}, {'dateTime': '01:36:30', 'value': '1'}, {'dateTime': '01:37:30', 'value': '1'}, {'dateTime': '01:38:30', 'value': '1'}, {'dateTime': '01:39:30', 'value': '1'}, {'dateTime': '01:40:30', 'value': '1'}, {'dateTime': '01:41:30', 'value': '1'}, {'dateTime': '01:42:30', 'value': '1'}, {'dateTime': '01:43:30', 'value': '1'}, {'dateTime': '01:44:30', 'value': '1'}, {'dateTime': '01:45:30', 'value': '1'}, {'dateTime': '01:46:30', 'value': '1'}, {'dateTime': '01:47:30', 'value': '1'}, {'dateTime': '01:48:30', 'value': '1'}, {'dateTime': '01:49:30', 'value': '1'}, {'dateTime': '01:50:30', 'value': '1'}, {'dateTime': '01:51:30', 'value': '1'}, {'dateTime': '01:52:30', 'value': '1'}, {'dateTime': '01:53:30', 'value': '1'}, {'dateTime': '01:54:30', 'value': '1'}, {'dateTime': '01:55:30', 'value': '1'}, {'dateTime': '01:56:30', 'value': '1'}, {'dateTime': '01:57:30', 'value': '1'}, {'dateTime': '01:58:30', 'value': '1'}, {'dateTime': '01:59:30', 'value': '1'}, {'dateTime': '02:00:30', 'value': '1'}, {'dateTime': '02:01:30', 'value': '1'}, {'dateTime': '02:02:30', 'value': '1'}, {'dateTime': '02:03:30', 'value': '1'}, {'dateTime': '02:04:30', 'value': '1'}, {'dateTime': '02:05:30', 'value': '1'}, {'dateTime': '02:06:30', 'value': '1'}, {'dateTime': '02:07:30', 'value': '1'}, {'dateTime': '02:08:30', 'value': '1'}, {'dateTime': '02:09:30', 'value': '1'}, {'dateTime': '02:10:30', 'value': '1'}, {'dateTime': '02:11:30', 'value': '1'}, {'dateTime': '02:12:30', 'value': '1'}, {'dateTime': '02:13:30', 'value': '1'}, {'dateTime': '02:14:30', 'value': '1'}, {'dateTime': '02:15:30', 'value': '1'}, {'dateTime': '02:16:30', 'value': '1'}, {'dateTime': '02:17:30', 'value': '1'}, {'dateTime': '02:18:30', 'value': '1'}, {'dateTime': '02:19:30', 'value': '1'}, {'dateTime': '02:20:30', 'value': '1'}, {'dateTime': '02:21:30', 'value': '1'}, {'dateTime': '02:22:30', 'value': '1'}, {'dateTime': '02:23:30', 'value': '1'}, {'dateTime': '02:24:30', 'value': '1'}, {'dateTime': '02:25:30', 'value': '1'}, {'dateTime': '02:26:30', 'value': '1'}, {'dateTime': '02:27:30', 'value': '1'}, {'dateTime': '02:28:30', 'value': '1'}, {'dateTime': '02:29:30', 'value': '1'}, {'dateTime': '02:30:30', 'value': '1'}, {'dateTime': '02:31:30', 'value': '1'}, {'dateTime': '02:32:30', 'value': '1'}, {'dateTime': '02:33:30', 'value': '1'}, {'dateTime': '02:34:30', 'value': '1'}, {'dateTime': '02:35:30', 'value': '1'}, {'dateTime': '02:36:30', 'value': '1'}, {'dateTime': '02:37:30', 'value': '1'}, {'dateTime': '02:38:30', 'value': '1'}, {'dateTime': '02:39:30', 'value': '1'}, {'dateTime': '02:40:30', 'value': '1'}, {'dateTime': '02:41:30', 'value': '1'}, {'dateTime': '02:42:30', 'value': '1'}, {'dateTime': '02:43:30', 'value': '1'}, {'dateTime': '02:44:30', 'value': '1'}, {'dateTime': '02:45:30', 'value': '1'}, {'dateTime': '02:46:30', 'value': '1'}, {'dateTime': '02:47:30', 'value': '1'}, {'dateTime': '02:48:30', 'value': '1'}, {'dateTime': '02:49:30', 'value': '1'}, {'dateTime': '02:50:30', 'value': '1'}, {'dateTime': '02:51:30', 'value': '1'}, {'dateTime': '02:52:30', 'value': '1'}, {'dateTime': '02:53:30', 'value': '1'}, {'dateTime': '02:54:30', 'value': '1'}, {'dateTime': '02:55:30', 'value': '1'}, {'dateTime': '02:56:30', 'value': '1'}, {'dateTime': '02:57:30', 'value': '1'}, {'dateTime': '02:58:30', 'value': '1'}, {'dateTime': '02:59:30', 'value': '1'}, {'dateTime': '03:00:30', 'value': '1'}, {'dateTime': '03:01:30', 'value': '1'}, {'dateTime': '03:02:30', 'value': '1'}, {'dateTime': '03:03:30', 'value': '1'}, {'dateTime': '03:04:30', 'value': '1'}, {'dateTime': '03:05:30', 'value': '1'}, {'dateTime': '03:06:30', 'value': '1'}, {'dateTime': '03:07:30', 'value': '1'}, {'dateTime': '03:08:30', 'value': '1'}, {'dateTime': '03:09:30', 'value': '1'}, {'dateTime': '03:10:30', 'value': '1'}, {'dateTime': '03:11:30', 'value': '1'}, {'dateTime': '03:12:30', 'value': '1'}, {'dateTime': '03:13:30', 'value': '1'}, {'dateTime': '03:14:30', 'value': '1'}, {'dateTime': '03:15:30', 'value': '1'}, {'dateTime': '03:16:30', 'value': '1'}, {'dateTime': '03:17:30', 'value': '1'}, {'dateTime': '03:18:30', 'value': '1'}, {'dateTime': '03:19:30', 'value': '1'}, {'dateTime': '03:20:30', 'value': '1'}, {'dateTime': '03:21:30', 'value': '1'}, {'dateTime': '03:22:30', 'value': '1'}, {'dateTime': '03:23:30', 'value': '1'}, {'dateTime': '03:24:30', 'value': '1'}, {'dateTime': '03:25:30', 'value': '1'}, {'dateTime': '03:26:30', 'value': '1'}, {'dateTime': '03:27:30', 'value': '1'}, {'dateTime': '03:28:30', 'value': '1'}, {'dateTime': '03:29:30', 'value': '1'}, {'dateTime': '03:30:30', 'value': '1'}, {'dateTime': '03:31:30', 'value': '1'}, {'dateTime': '03:32:30', 'value': '1'}, {'dateTime': '03:33:30', 'value': '1'}, {'dateTime': '03:34:30', 'value': '1'}, {'dateTime': '03:35:30', 'value': '1'}, {'dateTime': '03:36:30', 'value': '1'}, {'dateTime': '03:37:30', 'value': '1'}, {'dateTime': '03:38:30', 'value': '1'}, {'dateTime': '03:39:30', 'value': '1'}, {'dateTime': '03:40:30', 'value': '1'}, {'dateTime': '03:41:30', 'value': '1'}, {'dateTime': '03:42:30', 'value': '1'}, {'dateTime': '03:43:30', 'value': '1'}, {'dateTime': '03:44:30', 'value': '1'}, {'dateTime': '03:45:30', 'value': '1'}, {'dateTime': '03:46:30', 'value': '1'}, {'dateTime': '03:47:30', 'value': '1'}, {'dateTime': '03:48:30', 'value': '1'}, {'dateTime': '03:49:30', 'value': '1'}, {'dateTime': '03:50:30', 'value': '1'}, {'dateTime': '03:51:30', 'value': '1'}, {'dateTime': '03:52:30', 'value': '1'}, {'dateTime': '03:53:30', 'value': '1'}, {'dateTime': '03:54:30', 'value': '1'}, {'dateTime': '03:55:30', 'value': '1'}, {'dateTime': '03:56:30', 'value': '1'}, {'dateTime': '03:57:30', 'value': '1'}, {'dateTime': '03:58:30', 'value': '1'}, {'dateTime': '03:59:30', 'value': '1'}, {'dateTime': '04:00:30', 'value': '1'}, {'dateTime': '04:01:30', 'value': '1'}, {'dateTime': '04:02:30', 'value': '1'}, {'dateTime': '04:03:30', 'value': '1'}, {'dateTime': '04:04:30', 'value': '1'}, {'dateTime': '04:05:30', 'value': '1'}, {'dateTime': '04:06:30', 'value': '1'}, {'dateTime': '04:07:30', 'value': '1'}, {'dateTime': '04:08:30', 'value': '1'}, {'dateTime': '04:09:30', 'value': '1'}, {'dateTime': '04:10:30', 'value': '1'}, {'dateTime': '04:11:30', 'value': '1'}, {'dateTime': '04:12:30', 'value': '1'}, {'dateTime': '04:13:30', 'value': '1'}, {'dateTime': '04:14:30', 'value': '1'}, {'dateTime': '04:15:30', 'value': '1'}, {'dateTime': '04:16:30', 'value': '1'}, {'dateTime': '04:17:30', 'value': '1'}, {'dateTime': '04:18:30', 'value': '2'}, {'dateTime': '04:19:30', 'value': '2'}, {'dateTime': '04:20:30', 'value': '1'}, {'dateTime': '04:21:30', 'value': '1'}, {'dateTime': '04:22:30', 'value': '2'}, {'dateTime': '04:23:30', 'value': '1'}, {'dateTime': '04:24:30', 'value': '1'}, {'dateTime': '04:25:30', 'value': '1'}, {'dateTime': '04:26:30', 'value': '1'}, {'dateTime': '04:27:30', 'value': '1'}, {'dateTime': '04:28:30', 'value': '1'}, {'dateTime': '04:29:30', 'value': '1'}, {'dateTime': '04:30:30', 'value': '1'}, {'dateTime': '04:31:30', 'value': '1'}, {'dateTime': '04:32:30', 'value': '1'}, {'dateTime': '04:33:30', 'value': '1'}, {'dateTime': '04:34:30', 'value': '1'}, {'dateTime': '04:35:30', 'value': '1'}, {'dateTime': '04:36:30', 'value': '1'}, {'dateTime': '04:37:30', 'value': '1'}, {'dateTime': '04:38:30', 'value': '1'}, {'dateTime': '04:39:30', 'value': '1'}, {'dateTime': '04:40:30', 'value': '1'}, {'dateTime': '04:41:30', 'value': '1'}, {'dateTime': '04:42:30', 'value': '1'}, {'dateTime': '04:43:30', 'value': '1'}, {'dateTime': '04:44:30', 'value': '1'}, {'dateTime': '04:45:30', 'value': '1'}, {'dateTime': '04:46:30', 'value': '1'}, {'dateTime': '04:47:30', 'value': '2'}, {'dateTime': '04:48:30', 'value': '2'}, {'dateTime': '04:49:30', 'value': '2'}, {'dateTime': '04:50:30', 'value': '2'}, {'dateTime': '04:51:30', 'value': '2'}, {'dateTime': '04:52:30', 'value': '2'}, {'dateTime': '04:53:30', 'value': '3'}, {'dateTime': '04:54:30', 'value': '2'}, {'dateTime': '04:55:30', 'value': '2'}, {'dateTime': '04:56:30', 'value': '3'}, {'dateTime': '04:57:30', 'value': '3'}, {'dateTime': '04:58:30', 'value': '2'}, {'dateTime': '04:59:30', 'value': '3'}, {'dateTime': '05:00:30', 'value': '2'}, {'dateTime': '05:01:30', 'value': '3'}, {'dateTime': '05:02:30', 'value': '3'}, {'dateTime': '05:03:30', 'value': '3'}, {'dateTime': '05:04:30', 'value': '2'}, {'dateTime': '05:05:30', 'value': '2'}, {'dateTime': '05:06:30', 'value': '1'}, {'dateTime': '05:07:30', 'value': '1'}, {'dateTime': '05:08:30', 'value': '1'}, {'dateTime': '05:09:30', 'value': '1'}, {'dateTime': '05:10:30', 'value': '1'}, {'dateTime': '05:11:30', 'value': '1'}, {'dateTime': '05:12:30', 'value': '1'}, {'dateTime': '05:13:30', 'value': '1'}, {'dateTime': '05:14:30', 'value': '1'}, {'dateTime': '05:15:30', 'value': '1'}, {'dateTime': '05:16:30', 'value': '1'}, {'dateTime': '05:17:30', 'value': '1'}, {'dateTime': '05:18:30', 'value': '1'}, {'dateTime': '05:19:30', 'value': '1'}, {'dateTime': '05:20:30', 'value': '1'}, {'dateTime': '05:21:30', 'value': '1'}, {'dateTime': '05:22:30', 'value': '1'}, {'dateTime': '05:23:30', 'value': '2'}, {'dateTime': '05:24:30', 'value': '1'}, {'dateTime': '05:25:30', 'value': '1'}, {'dateTime': '05:26:30', 'value': '1'}, {'dateTime': '05:27:30', 'value': '1'}, {'dateTime': '05:28:30', 'value': '1'}, {'dateTime': '05:29:30', 'value': '1'}, {'dateTime': '05:30:30', 'value': '1'}, {'dateTime': '05:31:30', 'value': '1'}, {'dateTime': '05:32:30', 'value': '1'}, {'dateTime': '05:33:30', 'value': '1'}, {'dateTime': '05:34:30', 'value': '1'}, {'dateTime': '05:35:30', 'value': '1'}, {'dateTime': '05:36:30', 'value': '1'}, {'dateTime': '05:37:30', 'value': '2'}, {'dateTime': '05:38:30', 'value': '1'}, {'dateTime': '05:39:30', 'value': '1'}, {'dateTime': '05:40:30', 'value': '1'}, {'dateTime': '05:41:30', 'value': '1'}, {'dateTime': '05:42:30', 'value': '1'}, {'dateTime': '05:43:30', 'value': '1'}, {'dateTime': '05:44:30', 'value': '1'}, {'dateTime': '05:45:30', 'value': '1'}, {'dateTime': '05:46:30', 'value': '1'}, {'dateTime': '05:47:30', 'value': '1'}, {'dateTime': '05:48:30', 'value': '1'}, {'dateTime': '05:49:30', 'value': '1'}, {'dateTime': '05:50:30', 'value': '1'}, {'dateTime': '05:51:30', 'value': '1'}, {'dateTime': '05:52:30', 'value': '1'}, {'dateTime': '05:53:30', 'value': '1'}, {'dateTime': '05:54:30', 'value': '1'}, {'dateTime': '05:55:30', 'value': '1'}, {'dateTime': '05:56:30', 'value': '1'}, {'dateTime': '05:57:30', 'value': '1'}, {'dateTime': '05:58:30', 'value': '1'}, {'dateTime': '05:59:30', 'value': '1'}, {'dateTime': '06:00:30', 'value': '1'}, {'dateTime': '06:01:30', 'value': '1'}, {'dateTime': '06:02:30', 'value': '1'}, {'dateTime': '06:03:30', 'value': '1'}, {'dateTime': '06:04:30', 'value': '1'}, {'dateTime': '06:05:30', 'value': '1'}, {'dateTime': '06:06:30', 'value': '1'}, {'dateTime': '06:07:30', 'value': '1'}, {'dateTime': '06:08:30', 'value': '1'}], 'minutesAfterWakeup': 0, 'minutesAsleep': 384, 'minutesAwake': 26, 'minutesToFallAsleep': 0, 'restlessCount': 12, 'restlessDuration': 20, 'startTime': '2015-04-27T23:16:30.000', 'timeInBed': 413}]
+</code></pre></div></div>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">ijson</span>
+
+<span class="n">filename</span> <span class="o">=</span> <span class="s">"2015-04-28.json"</span>
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="s">'r'</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+    <span class="n">objects</span> <span class="o">=</span> <span class="n">ijson</span><span class="o">.</span><span class="n">items</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="s">'summary'</span><span class="p">)</span>
+    <span class="n">columns</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">objects</span><span class="p">)</span>
+</code></pre></div></div>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">print</span><span class="p">(</span><span class="n">columns</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+</code></pre></div></div>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>{'totalMinutesAsleep': 384, 'totalSleepRecords': 1, 'totalTimeInBed': 413}
+</code></pre></div></div>
+
+<p>Another approach to viewing and working with the json file is to use the json package.  I’ve seen this package more often used for smaller datasets.  In this case we will take a look at the file again with this method.  There is a lot of data collected for one night’s sleep.  You can get real sense of how the internet of things is a big data volume problem.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">json</span>
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s">'2015-04-28.json'</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+    <span class="n">sample_data</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">loads</span><span class="p">(</span><span class="n">f</span><span class="o">.</span><span class="n">read</span><span class="p">())</span>
+
+<span class="k">for</span> <span class="n">k</span><span class="p">,</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">sample_data</span><span class="p">[</span><span class="s">'sleep'</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">k</span><span class="p">,</span> <span class="n">v</span><span class="p">)</span>
+</code></pre></div></div>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>awakeCount 5
+awakeDuration 9
+awakeningsCount 17
+dateOfSleep 2015-04-28
+duration 24780000
+efficiency 94
+endTime 2015-04-28T06:09:30.000
+isMainSleep True
+logId 886290350
+minuteData [{'dateTime': '23:16:30', 'value': '3'}, {'dateTime': '23:17:30', 'value': '3'}, {'dateTime': '23:18:30', 'value': '2'}, {'dateTime': '23:19:30', 'value': '1'}, {'dateTime': '23:20:30', 'value': '1'}, {'dateTime': '23:21:30', 'value': '1'}, {'dateTime': '23:22:30', 'value': '1'}, {'dateTime': '23:23:30', 'value': '1'}, {'dateTime': '23:24:30', 'value': '1'}, {'dateTime': '23:25:30', 'value': '1'}, {'dateTime': '23:26:30', 'value': '1'}, {'dateTime': '23:27:30', 'value': '1'}, {'dateTime': '23:28:30', 'value': '1'}, {'dateTime': '23:29:30', 'value': '1'}, {'dateTime': '23:30:30', 'value': '1'}, {'dateTime': '23:31:30', 'value': '1'}, {'dateTime': '23:32:30', 'value': '1'}, {'dateTime': '23:33:30', 'value': '1'}, {'dateTime': '23:34:30', 'value': '1'}, {'dateTime': '23:35:30', 'value': '1'}, {'dateTime': '23:36:30', 'value': '1'}, {'dateTime': '23:37:30', 'value': '1'}, {'dateTime': '23:38:30', 'value': '1'}, {'dateTime': '23:39:30', 'value': '1'}, {'dateTime': '23:40:30', 'value': '1'}, {'dateTime': '23:41:30', 'value': '1'}, {'dateTime': '23:42:30', 'value': '1'}, {'dateTime': '23:43:30', 'value': '1'}, {'dateTime': '23:44:30', 'value': '1'}, {'dateTime': '23:45:30', 'value': '1'}, {'dateTime': '23:46:30', 'value': '1'}, {'dateTime': '23:47:30', 'value': '1'}, {'dateTime': '23:48:30', 'value': '1'}, {'dateTime': '23:49:30', 'value': '1'}, {'dateTime': '23:50:30', 'value': '1'}, {'dateTime': '23:51:30', 'value': '2'}, {'dateTime': '23:52:30', 'value': '1'}, {'dateTime': '23:53:30', 'value': '1'}, {'dateTime': '23:54:30', 'value': '1'}, {'dateTime': '23:55:30', 'value': '1'}, {'dateTime': '23:56:30', 'value': '1'}, {'dateTime': '23:57:30', 'value': '1'}, {'dateTime': '23:58:30', 'value': '1'}, {'dateTime': '23:59:30', 'value': '1'}, {'dateTime': '00:00:30', 'value': '1'}, {'dateTime': '00:01:30', 'value': '1'}, {'dateTime': '00:02:30', 'value': '1'}, {'dateTime': '00:03:30', 'value': '1'}, {'dateTime': '00:04:30', 'value': '1'}, {'dateTime': '00:05:30', 'value': '1'}, {'dateTime': '00:06:30', 'value': '1'}, {'dateTime': '00:07:30', 'value': '1'}, {'dateTime': '00:08:30', 'value': '1'}, {'dateTime': '00:09:30', 'value': '1'}, {'dateTime': '00:10:30', 'value': '1'}, {'dateTime': '00:11:30', 'value': '1'}, {'dateTime': '00:12:30', 'value': '1'}, {'dateTime': '00:13:30', 'value': '1'}, {'dateTime': '00:14:30', 'value': '1'}, {'dateTime': '00:15:30', 'value': '1'}, {'dateTime': '00:16:30', 'value': '1'}, {'dateTime': '00:17:30', 'value': '1'}, {'dateTime': '00:18:30', 'value': '1'}, {'dateTime': '00:19:30', 'value': '1'}, {'dateTime': '00:20:30', 'value': '1'}, {'dateTime': '00:21:30', 'value': '1'}, {'dateTime': '00:22:30', 'value': '1'}, {'dateTime': '00:23:30', 'value': '1'}, {'dateTime': '00:24:30', 'value': '1'}, {'dateTime': '00:25:30', 'value': '1'}, {'dateTime': '00:26:30', 'value': '1'}, {'dateTime': '00:27:30', 'value': '1'}, {'dateTime': '00:28:30', 'value': '2'}, {'dateTime': '00:29:30', 'value': '1'}, {'dateTime': '00:30:30', 'value': '1'}, {'dateTime': '00:31:30', 'value': '1'}, {'dateTime': '00:32:30', 'value': '1'}, {'dateTime': '00:33:30', 'value': '1'}, {'dateTime': '00:34:30', 'value': '1'}, {'dateTime': '00:35:30', 'value': '1'}, {'dateTime': '00:36:30', 'value': '1'}, {'dateTime': '00:37:30', 'value': '1'}, {'dateTime': '00:38:30', 'value': '1'}, {'dateTime': '00:39:30', 'value': '1'}, {'dateTime': '00:40:30', 'value': '1'}, {'dateTime': '00:41:30', 'value': '1'}, {'dateTime': '00:42:30', 'value': '1'}, {'dateTime': '00:43:30', 'value': '1'}, {'dateTime': '00:44:30', 'value': '1'}, {'dateTime': '00:45:30', 'value': '1'}, {'dateTime': '00:46:30', 'value': '1'}, {'dateTime': '00:47:30', 'value': '1'}, {'dateTime': '00:48:30', 'value': '1'}, {'dateTime': '00:49:30', 'value': '1'}, {'dateTime': '00:50:30', 'value': '1'}, {'dateTime': '00:51:30', 'value': '1'}, {'dateTime': '00:52:30', 'value': '1'}, {'dateTime': '00:53:30', 'value': '1'}, {'dateTime': '00:54:30', 'value': '1'}, {'dateTime': '00:55:30', 'value': '1'}, {'dateTime': '00:56:30', 'value': '1'}, {'dateTime': '00:57:30', 'value': '1'}, {'dateTime': '00:58:30', 'value': '1'}, {'dateTime': '00:59:30', 'value': '1'}, {'dateTime': '01:00:30', 'value': '1'}, {'dateTime': '01:01:30', 'value': '1'}, {'dateTime': '01:02:30', 'value': '1'}, {'dateTime': '01:03:30', 'value': '1'}, {'dateTime': '01:04:30', 'value': '1'}, {'dateTime': '01:05:30', 'value': '1'}, {'dateTime': '01:06:30', 'value': '1'}, {'dateTime': '01:07:30', 'value': '1'}, {'dateTime': '01:08:30', 'value': '1'}, {'dateTime': '01:09:30', 'value': '1'}, {'dateTime': '01:10:30', 'value': '1'}, {'dateTime': '01:11:30', 'value': '1'}, {'dateTime': '01:12:30', 'value': '1'}, {'dateTime': '01:13:30', 'value': '1'}, {'dateTime': '01:14:30', 'value': '1'}, {'dateTime': '01:15:30', 'value': '1'}, {'dateTime': '01:16:30', 'value': '1'}, {'dateTime': '01:17:30', 'value': '1'}, {'dateTime': '01:18:30', 'value': '1'}, {'dateTime': '01:19:30', 'value': '1'}, {'dateTime': '01:20:30', 'value': '1'}, {'dateTime': '01:21:30', 'value': '1'}, {'dateTime': '01:22:30', 'value': '1'}, {'dateTime': '01:23:30', 'value': '1'}, {'dateTime': '01:24:30', 'value': '1'}, {'dateTime': '01:25:30', 'value': '1'}, {'dateTime': '01:26:30', 'value': '1'}, {'dateTime': '01:27:30', 'value': '1'}, {'dateTime': '01:28:30', 'value': '1'}, {'dateTime': '01:29:30', 'value': '1'}, {'dateTime': '01:30:30', 'value': '1'}, {'dateTime': '01:31:30', 'value': '1'}, {'dateTime': '01:32:30', 'value': '1'}, {'dateTime': '01:33:30', 'value': '1'}, {'dateTime': '01:34:30', 'value': '1'}, {'dateTime': '01:35:30', 'value': '1'}, {'dateTime': '01:36:30', 'value': '1'}, {'dateTime': '01:37:30', 'value': '1'}, {'dateTime': '01:38:30', 'value': '1'}, {'dateTime': '01:39:30', 'value': '1'}, {'dateTime': '01:40:30', 'value': '1'}, {'dateTime': '01:41:30', 'value': '1'}, {'dateTime': '01:42:30', 'value': '1'}, {'dateTime': '01:43:30', 'value': '1'}, {'dateTime': '01:44:30', 'value': '1'}, {'dateTime': '01:45:30', 'value': '1'}, {'dateTime': '01:46:30', 'value': '1'}, {'dateTime': '01:47:30', 'value': '1'}, {'dateTime': '01:48:30', 'value': '1'}, {'dateTime': '01:49:30', 'value': '1'}, {'dateTime': '01:50:30', 'value': '1'}, {'dateTime': '01:51:30', 'value': '1'}, {'dateTime': '01:52:30', 'value': '1'}, {'dateTime': '01:53:30', 'value': '1'}, {'dateTime': '01:54:30', 'value': '1'}, {'dateTime': '01:55:30', 'value': '1'}, {'dateTime': '01:56:30', 'value': '1'}, {'dateTime': '01:57:30', 'value': '1'}, {'dateTime': '01:58:30', 'value': '1'}, {'dateTime': '01:59:30', 'value': '1'}, {'dateTime': '02:00:30', 'value': '1'}, {'dateTime': '02:01:30', 'value': '1'}, {'dateTime': '02:02:30', 'value': '1'}, {'dateTime': '02:03:30', 'value': '1'}, {'dateTime': '02:04:30', 'value': '1'}, {'dateTime': '02:05:30', 'value': '1'}, {'dateTime': '02:06:30', 'value': '1'}, {'dateTime': '02:07:30', 'value': '1'}, {'dateTime': '02:08:30', 'value': '1'}, {'dateTime': '02:09:30', 'value': '1'}, {'dateTime': '02:10:30', 'value': '1'}, {'dateTime': '02:11:30', 'value': '1'}, {'dateTime': '02:12:30', 'value': '1'}, {'dateTime': '02:13:30', 'value': '1'}, {'dateTime': '02:14:30', 'value': '1'}, {'dateTime': '02:15:30', 'value': '1'}, {'dateTime': '02:16:30', 'value': '1'}, {'dateTime': '02:17:30', 'value': '1'}, {'dateTime': '02:18:30', 'value': '1'}, {'dateTime': '02:19:30', 'value': '1'}, {'dateTime': '02:20:30', 'value': '1'}, {'dateTime': '02:21:30', 'value': '1'}, {'dateTime': '02:22:30', 'value': '1'}, {'dateTime': '02:23:30', 'value': '1'}, {'dateTime': '02:24:30', 'value': '1'}, {'dateTime': '02:25:30', 'value': '1'}, {'dateTime': '02:26:30', 'value': '1'}, {'dateTime': '02:27:30', 'value': '1'}, {'dateTime': '02:28:30', 'value': '1'}, {'dateTime': '02:29:30', 'value': '1'}, {'dateTime': '02:30:30', 'value': '1'}, {'dateTime': '02:31:30', 'value': '1'}, {'dateTime': '02:32:30', 'value': '1'}, {'dateTime': '02:33:30', 'value': '1'}, {'dateTime': '02:34:30', 'value': '1'}, {'dateTime': '02:35:30', 'value': '1'}, {'dateTime': '02:36:30', 'value': '1'}, {'dateTime': '02:37:30', 'value': '1'}, {'dateTime': '02:38:30', 'value': '1'}, {'dateTime': '02:39:30', 'value': '1'}, {'dateTime': '02:40:30', 'value': '1'}, {'dateTime': '02:41:30', 'value': '1'}, {'dateTime': '02:42:30', 'value': '1'}, {'dateTime': '02:43:30', 'value': '1'}, {'dateTime': '02:44:30', 'value': '1'}, {'dateTime': '02:45:30', 'value': '1'}, {'dateTime': '02:46:30', 'value': '1'}, {'dateTime': '02:47:30', 'value': '1'}, {'dateTime': '02:48:30', 'value': '1'}, {'dateTime': '02:49:30', 'value': '1'}, {'dateTime': '02:50:30', 'value': '1'}, {'dateTime': '02:51:30', 'value': '1'}, {'dateTime': '02:52:30', 'value': '1'}, {'dateTime': '02:53:30', 'value': '1'}, {'dateTime': '02:54:30', 'value': '1'}, {'dateTime': '02:55:30', 'value': '1'}, {'dateTime': '02:56:30', 'value': '1'}, {'dateTime': '02:57:30', 'value': '1'}, {'dateTime': '02:58:30', 'value': '1'}, {'dateTime': '02:59:30', 'value': '1'}, {'dateTime': '03:00:30', 'value': '1'}, {'dateTime': '03:01:30', 'value': '1'}, {'dateTime': '03:02:30', 'value': '1'}, {'dateTime': '03:03:30', 'value': '1'}, {'dateTime': '03:04:30', 'value': '1'}, {'dateTime': '03:05:30', 'value': '1'}, {'dateTime': '03:06:30', 'value': '1'}, {'dateTime': '03:07:30', 'value': '1'}, {'dateTime': '03:08:30', 'value': '1'}, {'dateTime': '03:09:30', 'value': '1'}, {'dateTime': '03:10:30', 'value': '1'}, {'dateTime': '03:11:30', 'value': '1'}, {'dateTime': '03:12:30', 'value': '1'}, {'dateTime': '03:13:30', 'value': '1'}, {'dateTime': '03:14:30', 'value': '1'}, {'dateTime': '03:15:30', 'value': '1'}, {'dateTime': '03:16:30', 'value': '1'}, {'dateTime': '03:17:30', 'value': '1'}, {'dateTime': '03:18:30', 'value': '1'}, {'dateTime': '03:19:30', 'value': '1'}, {'dateTime': '03:20:30', 'value': '1'}, {'dateTime': '03:21:30', 'value': '1'}, {'dateTime': '03:22:30', 'value': '1'}, {'dateTime': '03:23:30', 'value': '1'}, {'dateTime': '03:24:30', 'value': '1'}, {'dateTime': '03:25:30', 'value': '1'}, {'dateTime': '03:26:30', 'value': '1'}, {'dateTime': '03:27:30', 'value': '1'}, {'dateTime': '03:28:30', 'value': '1'}, {'dateTime': '03:29:30', 'value': '1'}, {'dateTime': '03:30:30', 'value': '1'}, {'dateTime': '03:31:30', 'value': '1'}, {'dateTime': '03:32:30', 'value': '1'}, {'dateTime': '03:33:30', 'value': '1'}, {'dateTime': '03:34:30', 'value': '1'}, {'dateTime': '03:35:30', 'value': '1'}, {'dateTime': '03:36:30', 'value': '1'}, {'dateTime': '03:37:30', 'value': '1'}, {'dateTime': '03:38:30', 'value': '1'}, {'dateTime': '03:39:30', 'value': '1'}, {'dateTime': '03:40:30', 'value': '1'}, {'dateTime': '03:41:30', 'value': '1'}, {'dateTime': '03:42:30', 'value': '1'}, {'dateTime': '03:43:30', 'value': '1'}, {'dateTime': '03:44:30', 'value': '1'}, {'dateTime': '03:45:30', 'value': '1'}, {'dateTime': '03:46:30', 'value': '1'}, {'dateTime': '03:47:30', 'value': '1'}, {'dateTime': '03:48:30', 'value': '1'}, {'dateTime': '03:49:30', 'value': '1'}, {'dateTime': '03:50:30', 'value': '1'}, {'dateTime': '03:51:30', 'value': '1'}, {'dateTime': '03:52:30', 'value': '1'}, {'dateTime': '03:53:30', 'value': '1'}, {'dateTime': '03:54:30', 'value': '1'}, {'dateTime': '03:55:30', 'value': '1'}, {'dateTime': '03:56:30', 'value': '1'}, {'dateTime': '03:57:30', 'value': '1'}, {'dateTime': '03:58:30', 'value': '1'}, {'dateTime': '03:59:30', 'value': '1'}, {'dateTime': '04:00:30', 'value': '1'}, {'dateTime': '04:01:30', 'value': '1'}, {'dateTime': '04:02:30', 'value': '1'}, {'dateTime': '04:03:30', 'value': '1'}, {'dateTime': '04:04:30', 'value': '1'}, {'dateTime': '04:05:30', 'value': '1'}, {'dateTime': '04:06:30', 'value': '1'}, {'dateTime': '04:07:30', 'value': '1'}, {'dateTime': '04:08:30', 'value': '1'}, {'dateTime': '04:09:30', 'value': '1'}, {'dateTime': '04:10:30', 'value': '1'}, {'dateTime': '04:11:30', 'value': '1'}, {'dateTime': '04:12:30', 'value': '1'}, {'dateTime': '04:13:30', 'value': '1'}, {'dateTime': '04:14:30', 'value': '1'}, {'dateTime': '04:15:30', 'value': '1'}, {'dateTime': '04:16:30', 'value': '1'}, {'dateTime': '04:17:30', 'value': '1'}, {'dateTime': '04:18:30', 'value': '2'}, {'dateTime': '04:19:30', 'value': '2'}, {'dateTime': '04:20:30', 'value': '1'}, {'dateTime': '04:21:30', 'value': '1'}, {'dateTime': '04:22:30', 'value': '2'}, {'dateTime': '04:23:30', 'value': '1'}, {'dateTime': '04:24:30', 'value': '1'}, {'dateTime': '04:25:30', 'value': '1'}, {'dateTime': '04:26:30', 'value': '1'}, {'dateTime': '04:27:30', 'value': '1'}, {'dateTime': '04:28:30', 'value': '1'}, {'dateTime': '04:29:30', 'value': '1'}, {'dateTime': '04:30:30', 'value': '1'}, {'dateTime': '04:31:30', 'value': '1'}, {'dateTime': '04:32:30', 'value': '1'}, {'dateTime': '04:33:30', 'value': '1'}, {'dateTime': '04:34:30', 'value': '1'}, {'dateTime': '04:35:30', 'value': '1'}, {'dateTime': '04:36:30', 'value': '1'}, {'dateTime': '04:37:30', 'value': '1'}, {'dateTime': '04:38:30', 'value': '1'}, {'dateTime': '04:39:30', 'value': '1'}, {'dateTime': '04:40:30', 'value': '1'}, {'dateTime': '04:41:30', 'value': '1'}, {'dateTime': '04:42:30', 'value': '1'}, {'dateTime': '04:43:30', 'value': '1'}, {'dateTime': '04:44:30', 'value': '1'}, {'dateTime': '04:45:30', 'value': '1'}, {'dateTime': '04:46:30', 'value': '1'}, {'dateTime': '04:47:30', 'value': '2'}, {'dateTime': '04:48:30', 'value': '2'}, {'dateTime': '04:49:30', 'value': '2'}, {'dateTime': '04:50:30', 'value': '2'}, {'dateTime': '04:51:30', 'value': '2'}, {'dateTime': '04:52:30', 'value': '2'}, {'dateTime': '04:53:30', 'value': '3'}, {'dateTime': '04:54:30', 'value': '2'}, {'dateTime': '04:55:30', 'value': '2'}, {'dateTime': '04:56:30', 'value': '3'}, {'dateTime': '04:57:30', 'value': '3'}, {'dateTime': '04:58:30', 'value': '2'}, {'dateTime': '04:59:30', 'value': '3'}, {'dateTime': '05:00:30', 'value': '2'}, {'dateTime': '05:01:30', 'value': '3'}, {'dateTime': '05:02:30', 'value': '3'}, {'dateTime': '05:03:30', 'value': '3'}, {'dateTime': '05:04:30', 'value': '2'}, {'dateTime': '05:05:30', 'value': '2'}, {'dateTime': '05:06:30', 'value': '1'}, {'dateTime': '05:07:30', 'value': '1'}, {'dateTime': '05:08:30', 'value': '1'}, {'dateTime': '05:09:30', 'value': '1'}, {'dateTime': '05:10:30', 'value': '1'}, {'dateTime': '05:11:30', 'value': '1'}, {'dateTime': '05:12:30', 'value': '1'}, {'dateTime': '05:13:30', 'value': '1'}, {'dateTime': '05:14:30', 'value': '1'}, {'dateTime': '05:15:30', 'value': '1'}, {'dateTime': '05:16:30', 'value': '1'}, {'dateTime': '05:17:30', 'value': '1'}, {'dateTime': '05:18:30', 'value': '1'}, {'dateTime': '05:19:30', 'value': '1'}, {'dateTime': '05:20:30', 'value': '1'}, {'dateTime': '05:21:30', 'value': '1'}, {'dateTime': '05:22:30', 'value': '1'}, {'dateTime': '05:23:30', 'value': '2'}, {'dateTime': '05:24:30', 'value': '1'}, {'dateTime': '05:25:30', 'value': '1'}, {'dateTime': '05:26:30', 'value': '1'}, {'dateTime': '05:27:30', 'value': '1'}, {'dateTime': '05:28:30', 'value': '1'}, {'dateTime': '05:29:30', 'value': '1'}, {'dateTime': '05:30:30', 'value': '1'}, {'dateTime': '05:31:30', 'value': '1'}, {'dateTime': '05:32:30', 'value': '1'}, {'dateTime': '05:33:30', 'value': '1'}, {'dateTime': '05:34:30', 'value': '1'}, {'dateTime': '05:35:30', 'value': '1'}, {'dateTime': '05:36:30', 'value': '1'}, {'dateTime': '05:37:30', 'value': '2'}, {'dateTime': '05:38:30', 'value': '1'}, {'dateTime': '05:39:30', 'value': '1'}, {'dateTime': '05:40:30', 'value': '1'}, {'dateTime': '05:41:30', 'value': '1'}, {'dateTime': '05:42:30', 'value': '1'}, {'dateTime': '05:43:30', 'value': '1'}, {'dateTime': '05:44:30', 'value': '1'}, {'dateTime': '05:45:30', 'value': '1'}, {'dateTime': '05:46:30', 'value': '1'}, {'dateTime': '05:47:30', 'value': '1'}, {'dateTime': '05:48:30', 'value': '1'}, {'dateTime': '05:49:30', 'value': '1'}, {'dateTime': '05:50:30', 'value': '1'}, {'dateTime': '05:51:30', 'value': '1'}, {'dateTime': '05:52:30', 'value': '1'}, {'dateTime': '05:53:30', 'value': '1'}, {'dateTime': '05:54:30', 'value': '1'}, {'dateTime': '05:55:30', 'value': '1'}, {'dateTime': '05:56:30', 'value': '1'}, {'dateTime': '05:57:30', 'value': '1'}, {'dateTime': '05:58:30', 'value': '1'}, {'dateTime': '05:59:30', 'value': '1'}, {'dateTime': '06:00:30', 'value': '1'}, {'dateTime': '06:01:30', 'value': '1'}, {'dateTime': '06:02:30', 'value': '1'}, {'dateTime': '06:03:30', 'value': '1'}, {'dateTime': '06:04:30', 'value': '1'}, {'dateTime': '06:05:30', 'value': '1'}, {'dateTime': '06:06:30', 'value': '1'}, {'dateTime': '06:07:30', 'value': '1'}, {'dateTime': '06:08:30', 'value': '1'}]
+minutesAfterWakeup 0
+minutesAsleep 384
+minutesAwake 26
+minutesToFallAsleep 0
+restlessCount 12
+restlessDuration 20
+startTime 2015-04-27T23:16:30.000
+timeInBed 413
+</code></pre></div></div>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">sample_data</span><span class="o">.</span><span class="n">keys</span><span class="p">()</span>
+</code></pre></div></div>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>dict_keys(['sleep', 'summary'])
+</code></pre></div></div>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">list</span><span class="p">(</span><span class="n">sample_data</span><span class="p">[</span><span class="s">'sleep'</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">keys</span><span class="p">())</span>
+</code></pre></div></div>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>['awakeCount',
+ 'awakeDuration',
+ 'awakeningsCount',
+ 'dateOfSleep',
+ 'duration',
+ 'efficiency',
+ 'endTime',
+ 'isMainSleep',
+ 'logId',
+ 'minuteData',
+ 'minutesAfterWakeup',
+ 'minutesAsleep',
+ 'minutesAwake',
+ 'minutesToFallAsleep',
+ 'restlessCount',
+ 'restlessDuration',
+ 'startTime',
+ 'timeInBed']
+</code></pre></div></div>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">list</span><span class="p">(</span><span class="n">sample_data</span><span class="p">[</span><span class="s">'summary'</span><span class="p">]</span><span class="o">.</span><span class="n">keys</span><span class="p">())</span>
+</code></pre></div></div>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>['totalMinutesAsleep', 'totalSleepRecords', 'totalTimeInBed']
+</code></pre></div></div>
+
+<p>Now it is time to extract the data needed from each json file and load into python lists to create the data for our table.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="n">np</span>
+<span class="c"># Dates of interest, and NamedTuple to hold data</span>
+<span class="n">dates</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">date_range</span><span class="p">(</span><span class="s">"2015-04-28"</span><span class="p">,</span> <span class="s">"2015-04-30"</span><span class="p">)</span>
+<span class="n">data_timeInBed</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">data_minutesToFallAsleep</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">data_minutesAsleep</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">data_minutesAwake</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">data_startTime</span> <span class="o">=</span> <span class="p">[]</span>
+
+<span class="c"># Obtain time spent in bed for each main sleep event</span>
+<span class="k">for</span> <span class="n">date</span> <span class="ow">in</span> <span class="n">dates</span><span class="p">:</span>
+    <span class="n">fname</span> <span class="o">=</span> <span class="n">date</span><span class="o">.</span><span class="n">strftime</span><span class="p">(</span><span class="s">'</span><span class="si">%</span><span class="s">Y-</span><span class="si">%</span><span class="s">m-</span><span class="si">%</span><span class="s">d'</span><span class="p">)</span> <span class="o">+</span> <span class="s">'.json'</span>
+    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">fname</span><span class="p">,</span> <span class="s">"r"</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+        <span class="n">date_data</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">loads</span><span class="p">(</span><span class="n">f</span><span class="o">.</span><span class="n">read</span><span class="p">())</span>
+
+
+        <span class="k">for</span> <span class="n">k</span><span class="p">,</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">date_data</span><span class="p">[</span><span class="s">'summary'</span><span class="p">]</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+            <span class="c">#check file contents to see if there is data for the date if no, add nan</span>
+            <span class="k">if</span> <span class="n">k</span> <span class="o">==</span> <span class="s">'totalMinutesAsleep'</span><span class="p">:</span>
+                <span class="k">if</span> <span class="n">v</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+                    <span class="n">data</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">nan</span><span class="p">)</span>
+                    <span class="c">#print('found')</span>
+        <span class="k">for</span> <span class="n">sleep_event</span> <span class="ow">in</span> <span class="n">date_data</span><span class="p">[</span><span class="s">"sleep"</span><span class="p">]:</span>
+            <span class="c">#fitbit records each sleep cylce within the day.  It has a key 'isMainSleep' to flag main sleep.</span>
+            <span class="k">if</span> <span class="n">sleep_event</span><span class="p">[</span><span class="s">"isMainSleep"</span><span class="p">]:</span>
+                <span class="n">data_timeInBed</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">sleep_event</span><span class="p">[</span><span class="s">"timeInBed"</span><span class="p">])</span>
+                <span class="n">data_minutesToFallAsleep</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">sleep_event</span><span class="p">[</span><span class="s">"minutesToFallAsleep"</span><span class="p">])</span>
+                <span class="n">data_minutesAsleep</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">sleep_event</span><span class="p">[</span><span class="s">"minutesAsleep"</span><span class="p">])</span>
+                <span class="n">data_minutesAwake</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">sleep_event</span><span class="p">[</span><span class="s">"minutesAwake"</span><span class="p">])</span>
+                <span class="n">data_startTime</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">sleep_event</span><span class="p">[</span><span class="s">"startTime"</span><span class="p">])</span>
+            <span class="c">#print(k, v)</span>
+</code></pre></div></div>
+
+<p>Take a quick look at the data created from the files.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">print</span><span class="p">(</span><span class="n">data_timeInBed</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">data_minutesToFallAsleep</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">data_startTime</span><span class="p">)</span>
+</code></pre></div></div>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>[413, 478, 454]
+[0, 0, 0]
+['2015-04-27T23:16:30.000', '2015-04-28T22:02:00.000', '2015-04-29T22:12:30.000']
+</code></pre></div></div>
+
+<p>Create the Pandas dataframe that will be stored to the MariaDB and view the table.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span>
+    <span class="p">{</span><span class="s">'startTime'</span><span class="p">:</span> <span class="n">data_startTime</span><span class="p">,</span>
+     <span class="s">'timeInBed'</span><span class="p">:</span> <span class="n">data_timeInBed</span><span class="p">,</span>
+     <span class="s">'minutesToFallAsleep'</span><span class="p">:</span> <span class="n">data_minutesToFallAsleep</span><span class="p">,</span>
+     <span class="s">'minutesAsleep'</span> <span class="p">:</span> <span class="n">data_minutesAsleep</span><span class="p">,</span>
+     <span class="s">'minutesAwake'</span> <span class="p">:</span> <span class="n">data_minutesAwake</span>    
+    <span class="p">},</span> <span class="n">index</span> <span class="o">=</span> <span class="n">dates</span><span class="p">)</span>
+
+<span class="n">df</span><span class="p">[</span><span class="s">"date_delta"</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">index</span> <span class="o">-</span> <span class="n">dates</span><span class="o">.</span><span class="nb">min</span><span class="p">())</span>  <span class="o">/</span> <span class="n">np</span><span class="o">.</span><span class="n">timedelta64</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="s">'D'</span><span class="p">)</span>
+<span class="n">df</span><span class="p">[</span><span class="s">"timeInBed"</span><span class="p">]</span> <span class="o">/=</span> <span class="mi">60</span>
+<span class="n">df</span><span class="p">[</span><span class="s">"minutesAsleep"</span><span class="p">]</span> <span class="o">/=</span> <span class="mi">60</span>
+
+<span class="n">df</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</code></pre></div></div>
+
+<div>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>minutesAsleep</th>
+      <th>minutesAwake</th>
+      <th>minutesToFallAsleep</th>
+      <th>startTime</th>
+      <th>timeInBed</th>
+      <th>date_delta</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>2015-04-28</th>
+      <td>6.400000</td>
+      <td>26</td>
+      <td>0</td>
+      <td>2015-04-27T23:16:30.000</td>
+      <td>6.883333</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>2015-04-29</th>
+      <td>7.433333</td>
+      <td>26</td>
+      <td>0</td>
+      <td>2015-04-28T22:02:00.000</td>
+      <td>7.966667</td>
+      <td>1.0</td>
+    </tr>
+    <tr>
+      <th>2015-04-30</th>
+      <td>7.366667</td>
+      <td>9</td>
+      <td>0</td>
+      <td>2015-04-29T22:12:30.000</td>
+      <td>7.566667</td>
+      <td>2.0</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<p>Restablish connection to the database.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">mysql_dest_engine</span> <span class="o">=</span> <span class="n">create_engine</span><span class="p">(</span><span class="s">'mysql+pymysql://root:admin@mariadb.my-network/Fitbit?charset=utf8mb4'</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p>Write pandas table to the database.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">df</span><span class="o">.</span><span class="n">to_sql</span><span class="p">(</span><span class="n">con</span><span class="o">=</span><span class="n">mysql_dest_engine</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s">'sleepFitbit'</span><span class="p">,</span> <span class="n">schema</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span> <span class="n">if_exists</span><span class="o">=</span><span class="s">'replace'</span><span class="p">,</span> <span class="n">chunksize</span><span class="o">=</span><span class="mi">1000</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p>Confirm data was written to database.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">showTable</span> <span class="o">=</span> <span class="n">mysql_dest_engine</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s">'select * from test;'</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">showTable</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+</code></pre></div></div>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>(datetime.datetime(2015, 4, 28, 0, 0), 6.4, 26, 0, '2015-04-27T23:16:30.000', 6.88333333333333, 0.0)
+(datetime.datetime(2015, 4, 29, 0, 0), 7.43333333333333, 26, 0, '2015-04-28T22:02:00.000', 7.96666666666667, 1.0)
+(datetime.datetime(2015, 4, 30, 0, 0), 7.36666666666667, 9, 0, '2015-04-29T22:12:30.000', 7.56666666666667, 2.0)
+</code></pre></div></div>
+
+  </div>
+
+
+<!-- Add Disqus comments. -->
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+  /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+  var disqus_shortname = 'https-piccoloa-github-io'; // required: replace example with your forum shortname
+  var disqus_identifier = "/2018/06/30/DS1a_Set_up.html";
+
+  /* * * DON'T EDIT BELOW THIS LINE * * */
+  (function() {
+    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+  })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+
+
+</article>
+
+      </div>
+    </div>
+
+    <footer class="site-footer">
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">Alex Piccolo</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li>Alex Piccolo</li>
+          <li><a href="mailto:alexpiccolo+blog@gmail.com">alexpiccolo+blog@gmail.com</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col footer-col-2">
+        <ul class="social-media-list">
+          
+          <li>
+            <a href="https://github.com/piccoloa">
+    <span class="purple-icon icon--github">
+        <svg viewBox="0 0 16 16">
+    <path fill="#6e5494" d="M7.999,0.431c-4.285,0-7.76,3.474-7.76,7.761 c0,3.428,2.223,6.337,5.307,7.363c0.388,0.071,0.53-0.168,0.53-0.374c0-0.184-0.007-0.672-0.01-1.32 c-2.159,0.469-2.614-1.04-2.614-1.04c-0.353-0.896-0.862-1.135-0.862-1.135c-0.705-0.481,0.053-0.472,0.053-0.472 c0.779,0.055,1.189,0.8,1.189,0.8c0.692,1.186,1.816,0.843,2.258,0.645c0.071-0.502,0.271-0.843,0.493-1.037 C4.86,11.425,3.049,10.76,3.049,7.786c0-0.847,0.302-1.54,0.799-2.082C3.768,5.507,3.501,4.718,3.924,3.65 c0,0,0.652-0.209,2.134,0.796C6.677,4.273,7.34,4.187,8,4.184c0.659,0.003,1.323,0.089,1.943,0.261 c1.482-1.004,2.132-0.796,2.132-0.796c0.423,1.068,0.157,1.857,0.077,2.054c0.497,0.542,0.798,1.235,0.798,2.082 c0,2.981-1.814,3.637-3.543,3.829c0.279,0.24,0.527,0.713,0.527,1.437c0,1.037-0.01,1.874-0.01,2.129 c0,0.208,0.14,0.449,0.534,0.373c3.081-1.028,5.302-3.935,5.302-7.362C15.76,3.906,12.285,0.431,7.999,0.431z"/>
+</svg>
+
+    </span>
+    <span class="username">
+        piccoloa
+    </span>
+</a>
+
+          </li>
+          
+
+          
+          <li>
+            <a href="https://twitter.com/PiccoloSunday"><span class="icon icon--twitter"><svg viewBox="0 0 16 16"><path fill="#00aced" d="M15.969,3.058c-0.586,0.26-1.217,0.436-1.878,0.515c0.675-0.405,1.194-1.045,1.438-1.809c-0.632,0.375-1.332,0.647-2.076,0.793c-0.596-0.636-1.446-1.033-2.387-1.033c-1.806,0-3.27,1.464-3.27,3.27 c0,0.256,0.029,0.506,0.085,0.745C5.163,5.404,2.753,4.102,1.14,2.124C0.859,2.607,0.698,3.168,0.698,3.767 c0,1.134,0.577,2.135,1.455,2.722C1.616,6.472,1.112,6.325,0.671,6.08c0,0.014,0,0.027,0,0.041c0,1.584,1.127,2.906,2.623,3.206 C3.02,9.402,2.731,9.442,2.433,9.442c-0.211,0-0.416-0.021-0.615-0.059c0.416,1.299,1.624,2.245,3.055,2.271 c-1.119,0.877-2.529,1.4-4.061,1.4c-0.264,0-0.524-0.015-0.78-0.046c1.447,0.928,3.166,1.469,5.013,1.469 c6.015,0,9.304-4.983,9.304-9.304c0-0.142-0.003-0.283-0.009-0.423C14.976,4.29,15.531,3.714,15.969,3.058z"/></svg>
+</span><span class="username">PiccoloSunday</span></a>
+
+          </li>
+          
+          
+          <li>
+                <a href="https://www.linkedin.com/in/alex-piccolo-cfa">
+      <span class="icon  icon--linkedin">
+        <svg viewBox="0 50 512 512" >
+          <path fill="#828282" d="M150.65,100.682c0,27.992-22.508,50.683-50.273,50.683c-27.765,0-50.273-22.691-50.273-50.683
+          C50.104,72.691,72.612,50,100.377,50C128.143,50,150.65,72.691,150.65,100.682z M143.294,187.333H58.277V462h85.017V187.333z
+          M279.195,187.333h-81.541V462h81.541c0,0,0-101.877,0-144.181c0-38.624,17.779-61.615,51.807-61.615
+          c31.268,0,46.289,22.071,46.289,61.615c0,39.545,0,144.181,0,144.181h84.605c0,0,0-100.344,0-173.915
+          s-41.689-109.131-99.934-109.131s-82.768,45.369-82.768,45.369V187.333z"/>
+        </svg>
+      </span>
+  
+      <span class="username">Alex Piccolo</span>
+    </a>
+          </li>
+          
+        </ul>
+      </div>
+
+      <div class="footer-col footer-col-3">
+        <p>Created using Jekyll.</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+
+
+  </body>
+
+</html>
