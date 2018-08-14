@@ -2,6 +2,7 @@
 permalink: /resume/
 excerpt: "Resume"
 title: Resume
+author_profile: true
 ayouts_gallery:
   - url: /assets/images/mm-layout-splash.png
     image_path: /assets/images/mm-layout-splash.png

@@ -1,6 +1,7 @@
 ---
 title:  "Data Lakes: Overview"
 excerpt: 'This is the first blog under the topic Data Lakes and will be followed by additional topics pertaining to data lakes. Each topic will go deeper and share additional details and links to practical tools that I have discovered.'
+author_profile: false
 sidebar:
   title: "Big Data"
   nav: Big-Data

@@ -1,6 +1,7 @@
 ---
 title:  "Data Science: Set up"
 excerpt: 'Not so pretty Set Up'
+author_profile: false
 sidebar:
   title: "Big Data"
   nav: Big-Data

@@ -2,6 +2,7 @@
 permalink: /entityresolution_over/
 title: "Entity Resolution: Overview"
 excerpt: 'Disambiguating manifestations of real world entities'
+author_profile: false
 category: Exploring Big Data
 sidebar:
   title: "Big Data"
