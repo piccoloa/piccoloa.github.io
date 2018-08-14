@@ -1,0 +1,18 @@
+---
+title:  "Data Lakes: Overview"
+excerpt: 'Collection: Notes from concept to implementation.'
+permalink: /datalakes/
+header:
+  teaser: "assets/images/oxfordPond.jpg"
+  overlay_color: "#5e616c"
+  overlay_image: "assets/images/oxfordPond.jpg"
+  overlay_filter: .4
+categories:
+- newstory
+# comments: true
+author: Alex_Piccolo
+output:
+    html_document:
+            css: prettify.css
+pinned: false
+---
