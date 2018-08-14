@@ -318,8 +318,7 @@ environment was created while completing this research for this paper
 and was deployed into production by my employer. A public GitHub repo
 was created and can be used follow the examples for this paper.
 
-![](/assets/images/gitRepo.jpg){width="4.0396041119860016in"
-height="4.469011373578303in"}
+![](/assets/images/gitRepo.jpg)
 
 References:
 ---
