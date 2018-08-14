@@ -88,8 +88,7 @@ the Department of Homeland Security attempt at joining passenger data
 with homeland security no-fly lists and other potential terrorism
 security measures an extreme in linking related identities.
 
-![test](assets/walkingPeople.jpg.jpg){width="4.435831146106737in"
-height="3.20792104111986in"}
+![test](/assets/images/walkingPeople.jpg)
 
 ### Description of Concepts Learned
 
@@ -146,8 +145,7 @@ be forgotten".
 
 ### Describing the Supervised Learning Model [^6]
 
-![test2](assets/classifierSmart.jpg){width="3.6651968503937007in"
-height="2.8555457130358706in"}[^7]
+![test2](/assets/images/classifierSmart.jpg)
 
 The "committee of classifiers" as depicted above is a good
 representation of the learning process and how the user trains the
@@ -230,23 +228,8 @@ will combine blocks that include the same field to form cross-field
 blocks. The concept of combining these blocks are discussed in Bilenko's
 thesis under the topic of disjunctive blocking.
 
-"Given a set of specific blocking predicates
-$\mathcal{P} = \ {\{\rho_{i}\}}_{i = 1}^{t}$ , a disjunctive blocking
-function corresponds to selecting some subset of predicates
-$\mathcal{P}^{'\ }\mathcal{\subseteq \ P}$, performing blocking using
-each $\rho_{i}\  \in \ \mathcal{P}^{'}$ , and then selecting record
-pairs that share at least one common key in the key sets computed by the
-indexing functions of the selected predicates. Thus, the equality
-function for the disjunctive blocking function based on subset
-$\mathcal{P}^{'} = \left\{ \rho_{i1},\ldots\rho_{\text{ik}}\}\ , \right.\ $of
-predicates returns 1 if the equality function for at least one predicate
-returns
-$\left. ⟦p_{i}\left( x_{i} \right.\ \left. \ x_{j} \right) \right.\  + \cdots + p_{\text{ik}}\left. \ \left( x_{i},x_{j} \right) \right.⟧$
-where
-$\left. ⟦\pi \right.\ \left. \ \  \right.⟧ = 1\ if\ \pi\  > 0,\ and\ 0\ otherwise$.
-If the equality function for the overall blocking function
-$\mathfrak{f}_{p'}\ returns\ 1\ for\ a\ pair\ (x\text{i\ }xj$) we say
-that this pair is *covered* by the blocking function."[^9]
+![test2](/assets/images/thesis.png)
+[^9]
 
 The learnable aspect of the model occurs as the optimal blocking
 function are created during the supervised learning of the model. As the
@@ -256,8 +239,7 @@ create acceptable weighted values for the string function comparisons.
 An example of the supervised learning aspect of the model for the
 Company Listing dataset is the figure below:
 
-![test3](/assets/images/trainLabel.jpg){width="2.3861384514435695in"
-height="1.5745264654418198in"}
+![test3](/assets/images/trainLabel.jpg)
 
 Prior to creating the final training model for comparing the records and
 performing the blocking and indexing on the whole dataset, supervised
@@ -292,8 +274,7 @@ and Cosine measures. The linkage between two groups in the dedupe
 approach is done using a centroid method. The centroid method is
 resolved by comparing the mean of all points with the cluster.
 
-![test4](/assets/images/centroid.jpg){width="3.0694444444444446in"
-height="1.9861111111111112in"}
+![test4](/assets/images/centroid.jpg)
 
 
 **Choosing a Good Threshold**
@@ -330,32 +311,26 @@ application's services. Then, with a single command, you create and
 start all the services from your configuration."[^14]. The environment
 was tested on a MacOs and a Linux virtual machine running VMWare.
 
-![test5](/assets/images/dockerDedupe.jpg){width="3.653846237970254in"
-height="3.2275634295713034in"}
+![test5](/assets/images/dockerDedupe.jpg)
 
 The four separate containers as visualized above:
 
-A.  Ubuntu OS with Python 3 including the installation of the Dedupe
-    module (ETL)
+>A.  Ubuntu OS with Python 3 including the installation of the Dedupe
+    module (ETL)  a.  Built by dockerfile using needed python libraries.
 
-    a.  Built by dockerfile using needed python libraries.
+>B.  Ubuntu OS with Posgresql 10 images (Master Database)
+b.  https://hub.docker.com/\_/postgres/
 
-B.  Ubuntu OS with Posgresql 10 images (Master Database)
-
-    b.  https://hub.docker.com/\_/postgres/
-
-C.  Ubuntu OS with PHP webserver for accessing master database by
+>C.  Ubuntu OS with PHP webserver for accessing master database by
     browser(Web)
+c.  https://hub.docker.com/\_/php/
 
-    c.  https://hub.docker.com/\_/php/
+>D.  Unbuntu OS with Anaconda and Jupyter notebook running data science
+    stacks.(Test)d.  <https://github.com/jupyter/docker-stacks/tree/master/datascience-notebook>
 
-D.  Unbuntu OS with Anaconda and Jupyter notebook running data science
-    stacks.(Test)
-
-    d.  <https://github.com/jupyter/docker-stacks/tree/master/datascience-notebook>
-
-    e.  Additional python libraries were added to container to allow for
+>e.  Additional python libraries were added to container to allow for
         odbc connections
+
 
 The tested container environment can be further enhanced to a production
 version that would write results to the master data index. A similar ETL
