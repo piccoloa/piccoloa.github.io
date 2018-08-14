@@ -90,7 +90,7 @@ security measures an extreme in linking related identities.
 
 ![test](/assets/images/walkingPeople.jpg)
 
-### Description of Concepts Learned
+### Key Concepts in Resolving Entities
 
 "Entity resolution is to distinguish the representations referring to
 the same real world object entity in one or more databases and recognize
@@ -121,27 +121,6 @@ assertion](https://repositories.lib.utexas.edu/handle/2152/2681) that:
 > notion of similarity for a particular domain, dataset, or
 > application."[^5]
 
-While the main focus of this paper is to explore the machine learning
-concepts outlined in Bilenko's paper and test the implementation of
-entity resolution using the open source [dedupe.io python
-library](https://docs.dedupe.io/en/latest/) on three datasets (childhood
-education, linked customers, campaign contributions), the challenges of
-implementing entity resolution are explored as they relate to the type
-of source files, the size of data and how to implement a single source
-of truth within an organization using a PostGres database. For the
-purpose of replicating the experiments in this project, a [Docker
-container platform](https://www.docker.com/) was implemented and a
-[GitHub repository](https://github.com/piccoloa/dedupePostgresDocker)
-can be cloned to follow the results of each sample.
-
-The ability to clean dirty data by detecting the objects referring to
-the same real world entity will result in a consolidated entity based
-management approach. Understanding the concepts learned combined with
-implementing a scalable container based approach as created for the
-studies could potentially allow a more effective master data index to
-manage personally identifiable information. In short, the concepts
-learned could help an organization effectively comply with "the right to
-be forgotten".
 
 ### Describing the Supervised Learning Model [^6]
 
@@ -193,7 +172,7 @@ record. The predicate could include "the first 3 characters of the
 field," "every word in the field," and so on as a feature sets for
 predicates are formed. Records with the same feature are included in
 each block. An example of creating a predicate block could include the
-first three letters of the site name for the Childhood Learning dataset:
+first three letters of the site name for the dedupe.io Childhood Learning csv example:
 
 |Id|Site Name | Address | Zip | Phone
 |--|--|--|--|--|
