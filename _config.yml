@@ -86,7 +86,7 @@ analytics:
 author:
   name             : *name
   avatar           : "/assets/images/bio-photo.jpg" #"michael-rose.jpg"
-  bio              : "Drinking the big data cool-aid."
+  bio              : "Human"
   location         : "New Jersey, USA"
   email            : "alexpiccolo@gmail.com"
   uri              : #"https://mademistakes.com"

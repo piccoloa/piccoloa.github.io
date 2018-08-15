@@ -4,6 +4,10 @@ title: "Exploring Big Data"
 excerpt: "This is an excerpt in a portfolio md file"
 author_profile: false
 # nav-title: 'Lesson Overview'  #added ap
+categories:
+- big data
+- privacy
+- GDPR
 sidebar:
   title: "Big Data"
   nav: Big-Data

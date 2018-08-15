@@ -1,5 +1,14 @@
 ---
 title:  "Data Lakes: Overview"
+feature_row:
+  - image_path: /assets/images/portrait.jpg
+    image_caption: "Image courtesy of [Unsplash](https://unsplash.com/)"
+    alt: "placeholder image 2"
+    title: "Curriculum Vitae"
+    excerpt: "Interests and work history."
+    url: "https://piccoloa.github.io/resume/"
+    btn_label: "Read More"
+    btn_class: "btn--primary"
 excerpt: 'Collection: Notes from concept to implementation.'
 permalink: /datalakes/
 header:
