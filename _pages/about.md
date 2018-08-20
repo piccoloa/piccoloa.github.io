@@ -11,7 +11,7 @@ header:
 excerpt: "Dream with your eyes open."
 author_profile: true
 feature_row2:
-  - image_path: /assets/images/portrait2.jpg
+  - image_path: /assets/images/portrait3.jpg
     # image_caption: "Image courtesy of [Unsplash](https://unsplash.com/)"
     alt: "placeholder image 2"
     title: "Welcome"
