@@ -1,7 +1,7 @@
 ---
 permalink: /BigData/
 title: "Exploring Big Data"
-excerpt: "This is an excerpt in a portfolio md file"
+excerpt: "Beggining the journey."
 author_profile: false
 # nav-title: 'Lesson Overview'  #added ap
 categories:
