@@ -16,7 +16,7 @@ feature_row2:
     alt: "placeholder image 2"
     title: "Welcome"
     #excerpt: 'This is some sample content that goes here with **Markdown** formatting. Left aligned with `type="left"`'
-    excerpt: "The idea behind the website is to share what I have learned and communicate more effectively. <br /> <br /> Below are some topics I have been exploring and links to areas you may find of interest. <br /> <br />
+    excerpt: "Below are some topics I have been exploring and links to areas you may find of interest. <br /> <br />
     Feel free to contact me on social media."
     url: "https://piccoloa.github.io/resume/"
     btn_label: "Curriculum Vitae"
