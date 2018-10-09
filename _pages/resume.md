@@ -24,10 +24,14 @@ toc: true
 
     *Subject Matter Expert: Office of CTO, Search & Analytics*
 
+    -	Thought leader and product expert for innovative search and machine learning initiatives.  
+    - Lead data science and machine learning product incubation projects with R&D and contracted partners.  
+    - From ideation to working across departments to define, manage, and launch green field new product initiatives.
     -	Responsible for performing advanced data analysis techniques that include customer segmentation, customer lifecycle modeling, lifetime customer value, customer experience optimization and predictive modeling.
     -	Extensive experience using Python programming and Python libraries for data science including NumPy, Pandas, SciPy, Scikit-learn and Natural Language Tool Kit (NLTK).  Proficient with R.
     - Strong proficiency in SQL and familiar with working in big data Hadoop / Hive / Spark / SolR environments.
-    - Actively engaged in large enterprise customer solutions that are leveraging big data, machine learning, and sensitive data governance applications.    
+    - Actively engaged in large enterprise customer solutions that are leveraging big data, machine learning, and sensitive data governance applications.
+    - Experience building search applications built on Apache Solr and Lucidwork’s Fusion platform.    
 <br/>
 
     *Senior Manager Analytics: Product Management/Marketing/Sales*
