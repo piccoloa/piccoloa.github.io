@@ -58,4 +58,9 @@ var store = [{
         "excerpt":"Good details on how to understand where and how our personal identity is collected and shared. How to do a data detox, in a zillion easy steps “I understand that our data is being collected to make products more useful to us and to make us more useful to advertisers. But seeing the surveillance economy all in one place made that truth more stark — and more unsettling.” ","categories": ["notes"],
         "tags": ["personal data","google","facebook"],
         "url": "http://0.0.0.0:4000/notes/PersonalData1/",
+        "teaser":"http://0.0.0.0:4000/assets/images/unsplash-gallery-image-3-th.jpg"},{
+        "title": "Shared with Joseph",
+        "excerpt":"Stories you may be interested in reading. hometown-nobel-prize ““This is my bible,” Ashkin said of Bartoli’s text on radiation pressure from thermodynamical considerations.” ","categories": ["notes"],
+        "tags": ["personal data","family"],
+        "url": "http://0.0.0.0:4000/notes/joseph_posts/",
         "teaser":"http://0.0.0.0:4000/assets/images/unsplash-gallery-image-3-th.jpg"}]

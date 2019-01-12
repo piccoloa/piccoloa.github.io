@@ -1,4 +1,15 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.3">Jekyll</generator><link href="http://0.0.0.0:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://0.0.0.0:4000/" rel="alternate" type="text/html" /><updated>2018-10-09T10:28:39-04:00</updated><id>http://0.0.0.0:4000/</id><title type="html">a piccolo history | grep *</title><subtitle>Personal website for Alessandro Piccolo.  I'm a human.</subtitle><author><name>Alessandro Piccolo</name><email>alexpiccolo@gmail.com</email></author><entry><title type="html">What Google and Facebook Know About You</title><link href="http://0.0.0.0:4000/notes/PersonalData1/" rel="alternate" type="text/html" title="What Google and Facebook Know About You" /><published>2018-06-06T00:00:00-04:00</published><updated>2018-06-06T00:00:00-04:00</updated><id>http://0.0.0.0:4000/notes/PersonalData1</id><content type="html" xml:base="http://0.0.0.0:4000/notes/PersonalData1/">&lt;!-- ---
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.3">Jekyll</generator><link href="http://0.0.0.0:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://0.0.0.0:4000/" rel="alternate" type="text/html" /><updated>2019-01-12T09:00:59-05:00</updated><id>http://0.0.0.0:4000/</id><title type="html">a piccolo history | grep *</title><subtitle>Personal website for Alessandro Piccolo.  I'm a human.</subtitle><author><name>Alessandro Piccolo</name><email>alexpiccolo@gmail.com</email></author><entry><title type="html">Shared with Joseph</title><link href="http://0.0.0.0:4000/notes/joseph_posts/" rel="alternate" type="text/html" title="Shared with Joseph" /><published>2019-01-12T00:00:00-05:00</published><updated>2019-01-12T00:00:00-05:00</updated><id>http://0.0.0.0:4000/notes/joseph_posts</id><content type="html" xml:base="http://0.0.0.0:4000/notes/joseph_posts/">&lt;!-- ---
+layout: post
+title:  'Shared Article: What Google and Facebook Know About You'
+comments: true
+date:   2018-06-06
+excerpt: 'Good details on how to understand where and how our personal identity is collected and shared'
+--- --&gt;
+&lt;h3 id=&quot;stories-you-may-be-interested-in-reading&quot;&gt;Stories you may be interested in reading.&lt;/h3&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://tworivertimes.com/rumson-honors-its-hometown-nobel-prize-recipient/&quot;&gt;hometown-nobel-prize&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;““This is my bible,” Ashkin said of Bartoli’s text on radiation pressure from thermodynamical considerations.”&lt;/p&gt;</content><author><name>Alex Piccolo</name></author><category term="personal data" /><category term="family" /><summary type="html">Thinking of you</summary></entry><entry><title type="html">What Google and Facebook Know About You</title><link href="http://0.0.0.0:4000/notes/PersonalData1/" rel="alternate" type="text/html" title="What Google and Facebook Know About You" /><published>2018-06-06T00:00:00-04:00</published><updated>2018-06-06T00:00:00-04:00</updated><id>http://0.0.0.0:4000/notes/PersonalData1</id><content type="html" xml:base="http://0.0.0.0:4000/notes/PersonalData1/">&lt;!-- ---
 layout: post
 title:  'Shared Article: What Google and Facebook Know About You'
 comments: true
