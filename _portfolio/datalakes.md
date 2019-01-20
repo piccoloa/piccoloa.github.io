@@ -44,7 +44,7 @@ The primary use of a data lake is to store data.  The Apache Hadoop project is p
 
 
 
-**2. **What are the problems that data lakes are solving or not solving?**
+### 2. **What are the problems that data lakes are solving or not solving?**
 
 Data lakes are perceived very much in the same light as the original data warehouse. The promise of answering important strategic as well as predicting success or failure based on large volumes of data have been the primary reason to spend. Predicting the future is not easy. Many of the data science or predictive models have not had as high returns as originally thought.  More successful approaches to implementing data lakes have started with a small single cross departmental data problem that can show a high ROI.  A project such as reducing customer churn that reaches across two or three organizations including support, product analytics, sales and a renewals team could be one example.  Another project could be one related to a central point of governance.  This could be a data lake to create a centralized entity resolution dataset to monitor and manage sensitive data.     
 
@@ -54,7 +54,7 @@ Some of the other benefits include allowing for non-programmers to create data v
 
 One of the pitfalls to Data lakes has been couched in the "data puddles" term.  These stranded data lakes become a problem when the proliferation of data lakes leads to data quality and cost problems of implementing duplicative systems.  Data puddles are meant to be avoided with the proper implementation by IT versus separate business initiatives.  
 
-**3.  **What are the typical components of enterprise data lakes?**
+### 3.  **What are the typical components of enterprise data lakes?**
 
 Hadoop is a massively parallel storage and execution platform.  Hadoop includes a distributed files system (HDFS) that some vendors like MapR and IBM provide their own proprietary files systems.  
 ![enter image description here](https://lh3.googleusercontent.com/qZGmOopCmnwsJI5NyI1gj9EwqZ58kJepgyB9aCrHXAhG4aDlB2WUrAkmBpOp6mtysXDUaXfJ4DMDQw "Storage System")
@@ -72,7 +72,7 @@ The raw or landing zone within the data lake context is usually where files are 
 
 Given the size of the data lake and lack of a search function, finding relevant data is extremely cumbersome in a data lake without a catalog.  Although Hue, the Hadoop utility, allows for some limited preview of data files additional tools from vendors like [Teradata's Loom](https://www.prnewswire.com/news-releases/teradata-loom-radically-increases-data-lake-productivity-300034309.html)  and Waterline Data Inventory are used to catalog Hadoop data besides relational databases to run outside of Hadoop for the cataloging data. Additional cataloging tools are available from [Cloudera's Navigator product](https://www.cloudera.com/products/product-components/cloudera-navigator.html).  One open source project, [Apache Atlas,](https://atlas.apache.org/) has been created to help solve the meta data and governance framework for Hadoop.
 
-**4.  **How are data lakes being used to increase productivity or share data?**
+### 4.  **How are data lakes being used to increase productivity or share data?**
 
 Besides the technical requirements, some organizations are struggling to implement Hadoop as there is a battle between the silos of the business user and IT for control of the Hadoop cluster.   This is where the democratization of data is one of the first steps to capitalizing on a companies digital assets. Like markets, the potential of data is curtailed when data is not transparent.  Early in my transition to using corporate data, I discovered the only way to perform any meaningful analysis was to ask questions of the available data. I quickly realized that unless I was querying the data myself, the data was either out of date or incomplete. I subsequently took my first database class at the local community college.  New self-service tools such as Tableau and Qlik are allowing power users or subject matter experts to create and transform data to allow business users to more quickly access the data to help answer business questions.
 
@@ -82,7 +82,7 @@ In order to make consumption of the data easier, many tools are being used to pr
 
 Combining data or joining data sets is where much of the value from data lakes becomes immediately useful.  Unfortunately, common ids are uncommon amongst separate data sets.  This is where the idea of entity resolution becomes instrumental in capturing value from the data.  Master Data Management systems with probabilistic matching engines that have rules for defining matched entities help in joining data sets.  One company providing entity resolution products is [Tamr](https://www.tamr.com/).
 
-**5.  **What are the data governance issues that need to be addressed?**
+### 5.  **What are the data governance issues that need to be addressed?**
 
 The centralized nature of a data lake could allow for greater governance versus heterogenous systems that use different technologies.  Stewardship of data lakes is key to creating trusted users that have organizational responsibility for the data.  Some form of provisioning of the data is one of the critical problems of data lakes.  One approach that has been widely adopted is only allowing analysts access to data they need for there specific job function.  An example could be allowing access based on location or some other form of limiting data.  
 
