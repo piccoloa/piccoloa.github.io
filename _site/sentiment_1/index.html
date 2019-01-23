@@ -9,14 +9,14 @@
   <head>
     <meta charset="utf-8">
 
-<!-- begin _includes/seo.html --><title>            Natural Language Processing: Sentiment Analysis - a piccolo history      grep *      </title>
+<!-- begin _includes/seo.html --><title>Natural Language Processing: Sentiment Analysis - Alessandro Piccolo</title>
 <meta name="description" content="Applying Sentiment analysis to movie review using Kaggle labeled dataset.">
 
 
 
 <meta property="og:type" content="article">
 <meta property="og:locale" content="en_US">
-<meta property="og:site_name" content="a piccolo history | grep *">
+<meta property="og:site_name" content="Alessandro Piccolo">
 <meta property="og:title" content="Natural Language Processing: Sentiment Analysis">
 <meta property="og:url" content="http://0.0.0.0:4000/sentiment_1/">
 
@@ -45,7 +45,7 @@
 
 
 
-  <meta property="article:published_time" content="2019-01-20T12:20:52-05:00">
+  <meta property="article:published_time" content="2019-01-23T14:19:08-05:00">
 
 
 
@@ -94,7 +94,7 @@
 <!-- end _includes/seo.html -->
 
 
-<link href="/feed.xml" type="application/atom+xml" rel="alternate" title="a piccolo history | grep * Feed">
+<link href="/feed.xml" type="application/atom+xml" rel="alternate" title="Alessandro Piccolo Feed">
 
 <!-- http://t.co/dKP3o1e -->
 <meta name="HandheldFriendly" content="True">
@@ -142,7 +142,7 @@
   <div class="masthead__inner-wrap">
     <div class="masthead__menu">
       <nav id="site-nav" class="greedy-nav">
-        <a class="site-title" href="/">a piccolo history | grep *</a>
+        <a class="site-title" href="/">Alessandro Piccolo</a>
         <ul class="visible-links">
           
             
@@ -322,7 +322,7 @@
   <article class="page" itemscope itemtype="http://schema.org/CreativeWork">
     <meta itemprop="headline" content="Natural Language Processing: Sentiment Analysis">
     <meta itemprop="description" content="Applying Sentiment analysis to movie review using Kaggle labeled dataset.">
-    <meta itemprop="datePublished" content="January 20, 2019">
+    <meta itemprop="datePublished" content="January 23, 2019">
     <meta itemprop="dateModified" content="January 19, 2019">
 
     <div class="page__inner-wrap">
@@ -349,10 +349,10 @@
               <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> On This Page</h4></header>
               <ul class="toc__menu">
   <li><a href="#overview">OVERVIEW</a></li>
-  <li><a href="#part-1--write-data-to-postgres-db">Part 1- Write data to Postgres DB</a></li>
-  <li><a href="#part-2-create-test--save-sentiment-model">Part 2-Create, Test &amp; Save Sentiment Model</a></li>
-  <li><a href="#part-3---process-phrases-using-sentiment-model">Part 3 - Process phrases using Sentiment Model</a></li>
-  <li><a href="#part-4--evaluate-model-using-kaggle-training-set">Part 4- Evaluate Model using Kaggle Training Set</a></li>
+  <li><a href="#part-1--write-data-to-postgres-db-go-deeper">Part 1- Write data to Postgres DB Go deeper…</a></li>
+  <li><a href="#part-2-create-test--save-sentiment-model-go-deeper">Part 2-Create, Test &amp; Save Sentiment Model Go deeper…</a></li>
+  <li><a href="#part-3---process-phrases-using-sentiment-model-go-deeper">Part 3 - Process phrases using Sentiment Model Go deeper…</a></li>
+  <li><a href="#part-4--evaluate-model-using-kaggle-training-set-go-deeper">Part 4- Evaluate Model using Kaggle Training Set Go deeper…</a></li>
   <li><a href="#does-the-model-work">Does the model work?</a></li>
 </ul>
             </nav>
@@ -363,32 +363,29 @@
 
 <p>The purpose of this post besides creating and measuring the accuracy of a sentiment model is to practice creating most of necessary steps to implement a working environment within a sharable database environment.  From my experience, many of the cool and useful data mining and analytics I have uncovered are most useful when the results are easily accessed in a database and shared with other systems.  This example uses a Postgres database in a Docker-Compose environment. A similar environment was created in the <a href="https://github.com/piccoloa/dedupePostgresDocker">dedupe using postgres environment</a> that implemented one form of <a href="https://piccoloa.github.io/entityresolution/">identity resolution</a>.  Most of the essential parts of extracting, transforming, and loading (ETL) are performed in Jupyter notebooks that are referenced in this post.</p>
 
-<p>The sentiment model example uses a Kaggle <a href="https://www.kaggle.com/c/sentiment-analysis-on-movie-reviews/data">sample dataset</a>. To follow along my learning path, I gathered the basics of NLP using concepts learned in <em>Python 3 Text Processing with NLTK 3 Cookbook</em> and <em>pythonprogramming.net</em>. In practice, I have used these concepts to implement a sentiment system for customer and support calls stored extracted from  salesforce.com and shared via a Postgres database. Although much of this project could have been done using Pandas, I prefer to use a database in a docker service to make the data persistent and to allow for easily querying the data using <a href="https://www.adminer.org/">Adminer</a>.</p>
+<p>The sentiment model example uses a Kaggle <a href="https://www.kaggle.com/c/sentiment-analysis-on-movie-reviews/data">sample dataset</a>. To follow along my learning path, I gathered the basics of NLP using concepts learned in <em>Python 3 Text Processing with NLTK 3 Cookbook</em> and <em>pythonprogramming.net</em>. In practice, I have used these concepts to implement a sentiment system for scoring customer interactions stored in salesforce.com and sharing model results via a Postgres database. Although much of this project could have been done using Pandas, I prefer to use a database in a docker service to make the data persistent and to allow for easily querying the data using <a href="https://www.adminer.org/">Adminer</a>.</p>
 
-<h3 id="part-1--write-data-to-postgres-db"><strong>Part 1- Write data to Postgres DB</strong></h3>
-<p><img src="/assets/html/Part_1.md" alt="md" /></p>
+<h3 id="part-1--write-data-to-postgres-db-go-deeper"><strong>Part 1- Write data to Postgres DB</strong> <a href="https://github.com/piccoloa/piccoloa.github.io/blob/master/assets/notebooks/Part%201-%20Write%20data%20to%20Postgres%20DB.ipynb">Go deeper…</a></h3>
 
 <p>Set up Kaggle dataset to access from a Postgres DB</p>
 
-<h3 id="part-2-create-test--save-sentiment-model"><strong>Part 2-Create, Test &amp; Save Sentiment Model</strong></h3>
+<h3 id="part-2-create-test--save-sentiment-model-go-deeper"><strong>Part 2-Create, Test &amp; Save Sentiment Model</strong> <a href="https://github.com/piccoloa/piccoloa.github.io/blob/master/assets/notebooks/Part%202-Create%2C%20Test%20%26%20Save%20Sentiment%20Model.ipynb">Go deeper…</a></h3>
 
 <p>Create a sentiment analysis algorithm using labeled Kaggle movie reviews.  Part 1 cleaned and saved reviews to a database. Our model adjusts the Kaggle dataset to comply with a binary classification, in which the target variable only has two classes to be predicted. For this post, the classes are either “negative” or “positive”. Labeled reviews are marked as either a <strong>positive</strong>(&gt; 3) or <strong>negative</strong>(&lt;3) phrases. The Kaggle dataset reviews are labeled as 0 - 4 (neg - pos) based on the provided training set.<br />
 In short, the NLTK library is used to extract POS (parts-of-speech- adjectives) from reviews to use as <strong>features</strong> for each movie review. These featuresets are then used to train the classification models.  The feature sets associated with the labeled reviews are measured against a bag-of-words to calculate the likelihood of the review being categorized as a positive or negative sentiment.</p>
 
 <p>Combining the classifier algorithms is a common technique, done by creating a sort of voting system, where each algorithm gets one vote, and the classification that has the most votes is the chosen one.  In NLTK, classifiers are defined using classes that implement the ClassifyI interface. A processing interface for labeling tokens with a single category label (or “class”). Labels are typically strings or integers, but can be any immutable type. The set of labels that the classifier chooses from must be fixed and finite.</p>
 
-<h3 id="part-3---process-phrases-using-sentiment-model"><strong>Part 3 - Process phrases using Sentiment Model</strong></h3>
+<h3 id="part-3---process-phrases-using-sentiment-model-go-deeper"><strong>Part 3 - Process phrases using Sentiment Model</strong> <a href="https://github.com/piccoloa/piccoloa.github.io/blob/master/assets/notebooks/Part%203-%20Process%20phrases%20using%20Sentiment%20Model.ipynb">Go deeper…</a></h3>
 
 <p>Part 3 is a brief.  The sentiment model saved in part 2 is used to score unclassified phrases. In this case the test phrases provided by Kaggle.</p>
 
-<h3 id="part-4--evaluate-model-using-kaggle-training-set"><strong>Part 4- Evaluate Model using Kaggle Training Set</strong></h3>
+<h3 id="part-4--evaluate-model-using-kaggle-training-set-go-deeper"><strong>Part 4- Evaluate Model using Kaggle Training Set</strong> <a href="https://github.com/piccoloa/piccoloa.github.io/blob/master/assets/notebooks/Part%204-%20Evaluate%20Model%20using%20Kaggle%20Training%20Set.ipynb">Go deeper…</a></h3>
 
 <p>The accuracy of our model is the number of times the model correctly predicts the sentiment on new phrases. This is a supervised learning exercise. Given that the Kaggle data has a 0-4 scale, any review labeled 2 would be neither positive nor negative.  For the purpose of our binary classification, the prediction is either positive or negative.  Excluding any neutral reviews, 6,874 labeled phrases are available to measure for our model.  100% of the trained data is used to test the accuracy of the model.  Only the top 5,000 features for all 6,874 phrases were used to train the model. Post the removal of neutral labels, the base positive sentiment prediction is 52.40%. Of course, overfitting our model is a risk given this is supervised learning and we are testing our model against the training set.</p>
 
 <h3 id="does-the-model-work">Does the model work?</h3>
 <p>Our analysis yielded 68% accuracy on the training set, which is 16.25% more accurate than null accuracy of 52%.  The model has a much higher precision for predicting positive(94%) reviews vs negative(60%) while having a higher F-1 score for negative predictions(75 vs 58). Overall, I am more confident in predicting negative reviews than positive reviews, which I think may reflect the sarcasm that is more likely mis-understood by the analysis.</p>
-
-<p><a href="/entityresolution/">Go deeper…</a></p>
 
 <hr />
 

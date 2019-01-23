@@ -1,9 +1,9 @@
 ---
 permalink: /resume/
 excerpt: "Resume"
-title: Resume
+title: Professional Experience
 author_profile: true
-ayouts_gallery:
+layouts_gallery:
   - url: /assets/images/mm-layout-splash.png
     image_path: /assets/images/mm-layout-splash.png
     alt: "splash layout example"
@@ -17,7 +17,9 @@ last_modified_at: 2018-06-04T12:04:24-04:00
 toc: true
 ---
 <hr>
-<br/>
+Software Industry
+---------
+
 > 2013-Present
 
 * **[COMMVAULT SYSTEMS, INC.](https://www.commvault.com/about-us)** (Tinton Falls, NJ)
@@ -43,6 +45,8 @@ toc: true
     - Authored first comprehensive Commvault software licensing guide.  
     - Worked with account teams and sales management to structure multi-million dollar deals, long-term volume pricing agreements, ELAs, and other non-standard pricing agreements. Partnered with legal and finance teams to create software pricing contracts, agreements and proposals.
 
+Independent Consultant
+---------  
 > 2011-2013
 
 *   **CONSULTANT** (Rumson, NJ)
@@ -51,8 +55,10 @@ toc: true
     -	Established an independent consulting practice.
     - Provided clients with unbiased strategic advice surrounding corporate finance and strategic alternatives.
     -	Engagements included creating business plans, forecasting a business model, extensive financial analysis, valuation analysis and pro forma financial modeling.  
-<br/>
 
+
+Financial Services
+---------  
 > 1998-2011
 
 *   **[AIG Global Investment Fund Management Ltd.](https://www.bloomberg.com/research/stocks/private/snapshot.asp?privcapId=13290936)** (New York, NY)
@@ -91,7 +97,8 @@ toc: true
     - Implemented and administered internal control compliance procedures as required by the 1991 FDIC Improvement Act.
     - Supervised internal audit staff.
 
-
+Public Accounting
+---------  
 > 1990-1993
 
 *   **Certified Public Accounting**  
@@ -121,7 +128,7 @@ Education
 
     *BS Accounting*, 1990  
 
-Certifications:
+Certifications
 ------
 * Chartered Financial Analyst
 * Certified Public Accountant (Inactive)

@@ -7,7 +7,7 @@
 
 # Site Settings
 locale                   : "en-US"
-title                    : "a piccolo history | grep *"
+title                    : "Alessandro Piccolo"
 title_separator          : "-"
 name                     : &name "Alessandro Piccolo"
 description              : &description "Personal website for Alessandro Piccolo.  I'm a human."
@@ -18,7 +18,7 @@ teaser                   : "/assets/images/500x300.ppg" # filename of teaser fal
 # breadcrumbs            : false # true, false (default)
 words_per_minute         : 200
 comments:
-  provider               : false # (default), "disqus", "discourse", "facebook", "google-plus", "staticman", "custom"
+  provider               : #disqus # (default), "disqus", "discourse", "facebook", "google-plus", "staticman", "custom"
         #  provider               : "staticman" # false (default), "disqus", "discourse", "facebook", "google-plus", "staticman", "custom"
   disqus:
     shortname            :

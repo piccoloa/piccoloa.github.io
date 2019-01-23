@@ -35,7 +35,7 @@ toc: true
  5. **What are the data governance issues that need to be addressed?**  
 
 
-**1. **Where did the data lake concept originate?**
+### 1. **Where did the data lake concept originate?**
 
 "Google, Facebook and Yahoo had discovered big data before anyone else, but it was obvious that it was coming to banks, hospitals and other traditional companies. Enterprises had already realized that cloud computing was important. They were rebuilding their data centers to be cloudy. We realized that a once‑in‑a‑generation technology change was underway, and knew that we had a chance to create a company to deliver the modern platform for big data"  [Cloudera](https://www.sec.gov/Archives/edgar/data/1535379/000162828017003221/projectthunders-1.htm#seac698b4139f443582aeb0a2fd342826).  While not inventing the term, Cloudera embraced the Apache open source projects to build a data management platform that could scale the way of Google, Facebook and Yahoo.   
 Prior to data lakes, technologies were architected and created to solve specific data related problems.  These special purpose legacy architectures were expensive and inflexible.  Examples of these systems included relational databases for back-office reporting and billing, to large document management systems for storing unstructured data.  Those companies born from the web were the first to encounter the limitations of processing large volumes of data with data of different variety.  Building on the idea's of  Google, Apache Hadoop software was created by Doug Cutting and Mike Carfarella.  Hadoop was comprised of HDFS and MapReduce technologies.   
