@@ -53,10 +53,9 @@ Our analysis yielded 68% accuracy on the training set, which is 16.25% more accu
 
 ---
 
-#### **Sources**
->[binary classification](https://en.wikipedia.org/wiki/Binary_classification)
->[confusion matrix](https://en.wikipedia.org/wiki/Confusion_matrix)
->[precision, recall and f measures](https://en.wikipedia.org/wiki/Precision_and_recall)
->[Python 3 Text Processing with NLTK 3 Cookbook](https://www.amazon.com/Python-Text-Processing-NLTK-Cookbook-ebook/dp/B00N2RWMJU/ref=sr_1_2?ie=UTF8&qid=1547992672&sr=8-2&keywords=nltk)
->[Tokenizing Words and Sentences with NLTK](https://pythonprogramming.net/tokenizing-words-sentences-nltk-tutorial/)
-<img src="confusionmatrix.png">,
+#### **Definitions and Sources**
+i. [binary classification](https://en.wikipedia.org/wiki/Binary_classification)  
+ii. [confusion matrix](https://en.wikipedia.org/wiki/Confusion_matrix)  
+iii. [precision, recall and f measures](https://en.wikipedia.org/wiki/Precision_and_recall)  
+iv. [Python 3 Text Processing with NLTK 3 Cookbook](https://www.amazon.com/Python-Text-Processing-NLTK-Cookbook-ebook/dp/B00N2RWMJU/ref=sr_1_2?ie=UTF8&qid=1547992672&sr=8-2&keywords=nltk)  
+v.  [Tokenizing Words and Sentences with NLTK](https://pythonprogramming.net/tokenizing-words-sentences-nltk-tutorial/)
