@@ -2,7 +2,7 @@
 permalink: /sentiment_1/
 title: "Natural Language Processing: Sentiment Analysis"
 excerpt: 'Applying Sentiment analysis to movie review using Kaggle labeled dataset.'
-author_profile: false
+author: Alex_Piccolo
 categories:
 - exploring big data
 - nlp
