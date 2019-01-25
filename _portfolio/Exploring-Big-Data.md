@@ -1,8 +1,8 @@
 ---
 permalink: /BigData/
 title: "Exploring Big Data"
-excerpt: "Beggining the journey."
-author_profile: false
+excerpt: "Beginning the journey."
+author_profile: true
 # nav-title: 'Lesson Overview'  #added ap
 categories:
 - big data

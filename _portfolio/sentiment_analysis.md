@@ -3,6 +3,11 @@ permalink: /sentiment_1/
 title: "Natural Language Processing: Sentiment Analysis"
 excerpt: 'Applying Sentiment analysis to movie review using Kaggle labeled dataset.'
 author_profile: false
+categories:
+- exploring big data
+- nlp
+- docker
+- data science
 category: Exploring Big Data
 sidebar:
   title: "Big Data"
@@ -24,7 +29,7 @@ toc: true
 ![jpg](/assets/images/sentimentpost.png)
 ### **OVERVIEW**
 
-The purpose of this post besides creating and measuring the accuracy of a sentiment model is to practice creating most of necessary steps to implement a working environment within a sharable database environment.  From my experience, many of the cool and useful data mining and analytics I have uncovered are most useful when the results are easily accessed in a database and shared with other systems.  This example uses a Postgres database in a Docker-Compose environment. A similar environment was created in the [dedupe using postgres environment](https://github.com/piccoloa/dedupePostgresDocker) that implemented one form of [identity resolution](https://piccoloa.github.io/entityresolution/).  Most of the essential parts of extracting, transforming, and loading (ETL) are performed in Jupyter notebooks that are referenced in this post.
+The purpose of this post besides creating and measuring the accuracy of a sentiment model is to practice creating most of necessary steps to implement a working environment within a sharable database environment.  From my experience, many of the cool and useful data mining and analytics I have uncovered are most useful when the results are easily accessed in a database and shared with other systems.  This example uses a Postgres database in a Docker-Compose environment. To create a similar environment clone [this GitHub](https://github.com/piccoloa/priv_jupyter) repo, start docker-compose and follow the notebook links in each part this post. A similar environment was created in the [dedupe using postgres environment](https://github.com/piccoloa/dedupePostgresDocker) that implemented one form of [identity resolution](https://piccoloa.github.io/entityresolution/).  Most of the essential parts of extracting, transforming, and loading (ETL) are performed in Jupyter notebooks that are referenced in this post.
 
 The sentiment model example uses a Kaggle [sample dataset](https://www.kaggle.com/c/sentiment-analysis-on-movie-reviews/data). To follow along my learning path, I gathered the basics of NLP using concepts learned in _Python 3 Text Processing with NLTK 3 Cookbook_ and _pythonprogramming.net_. In practice, I have used these concepts to implement a sentiment system for scoring customer interactions stored in salesforce.com and sharing model results via a Postgres database. Although much of this project could have been done using Pandas, I prefer to use a database in a docker service to make the data persistent and to allow for easily querying the data using [Adminer](https://www.adminer.org/).   
 
