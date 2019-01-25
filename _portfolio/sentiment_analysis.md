@@ -60,4 +60,4 @@ iii. [precision, recall and f measures](https://en.wikipedia.org/wiki/Precision_
 iv. [Python 3 Text Processing with NLTK 3 Cookbook](https://www.amazon.com/Python-Text-Processing-NLTK-Cookbook-ebook/dp/B00N2RWMJU/ref=sr_1_2?ie=UTF8&qid=1547992672&sr=8-2&keywords=nltk)  
 v.  [Tokenizing Words and Sentences with NLTK](https://pythonprogramming.net/tokenizing-words-sentences-nltk-tutorial/)
 
-// [disqus_comments]: https://disqus.com/
+[disqus_comments]: https://disqus.com/
