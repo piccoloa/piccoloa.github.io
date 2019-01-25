@@ -18,6 +18,7 @@ layouts_gallery:
     image_path: /assets/images/mm-layout-archive.png
     alt: "archive layout example"
 last_modified_at: 2019-01-19T12:04:24-04:00
+comments: true
 toc: true
 ---
 ![jpg](/assets/images/sentimentpost.png)
