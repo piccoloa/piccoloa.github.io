@@ -1,6 +1,6 @@
 ---
 permalink: /resume/
-excerpt: "Resume"
+excerpt: "Resume- Data Scientist"
 title: Professional Experience
 author_profile: true
 layouts_gallery:
