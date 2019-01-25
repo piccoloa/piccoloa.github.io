@@ -24,7 +24,8 @@ Software Industry
 
 * **[COMMVAULT SYSTEMS, INC.](https://www.commvault.com/about-us)** (Tinton Falls, NJ)
 
-    *Subject Matter Expert: Office of CTO, Search & Analytics*
+    *Subject Matter Expert: Data Scientist  
+    Office of CTO, Search & Analytics*
 
     -	Thought leader and product expert for innovative search and machine learning initiatives.  
     - Lead data science and machine learning product incubation projects with R&D and contracted partners.  
