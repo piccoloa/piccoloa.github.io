@@ -1,7 +1,9 @@
 ---
-title:  "Data Science: Set up"
+title:  "Data Science"
 excerpt: 'Not so pretty Set Up'
-author_profile: false
+header:
+  overlay_image: /assets/images/longbranch.jpg
+  caption: "A.Piccolo: [Long Branch](https://www.google.com/maps/place/40%C2%B018'02.1%22N+73%C2%B058'43.0%22W/@40.3005917,-73.9808026,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x0!8m2!3d40.3005917!4d-73.9786139)"
 sidebar:
   title: "Big Data"
   nav: Big-Data
@@ -19,11 +21,11 @@ toc: true
 ---
 ![jpg](/assets/images/datascience1.jpg)
 
-### Notes Exploring Personalized Health
+### Using fitbit API example  
 
-This is a blog of my notes for setting up and beginning to explore my health data.  The idea here is to have reliable way to gather the data and have it available to mine and create models to help explain and answer questions about my own personal data. If anyone is reading these blogs, I will throw a [song](https://www.youtube.com/watch?v=TTg7NcucINc) somewhere in each blog that came to mind while writing it.  
+This is a blog of my notes for setting up and beginning to explore my health data.  The idea here is to have reliable way to gather the data and have it available to mine and create models to help explain and answer questions about my own personal data. Bonus [song](https://www.youtube.com/watch?v=TTg7NcucINc) that came to mind while writing this post.  
 
-**Example of ETL using Docker, Python and MariaDB**
+### Set-up using Docker, Python and MariaDB
 
 This is an example of using ETL with Docker containers. The data is extracted from Fitbit using the Fitbit API by way of a [python script](https://github.com/tuchandra/sleep-analysis) to access the nightly sleep logs.  Follow the instructions created by [Tushar Chandra](https://github.com/tuchandra)  to save the JSON files to your local host. Once your data is saved to a DB, the data can be used to access historical data for further analysis.  To access your personal information through your Fitbit JSON files, you will be required to go to the [Fitbit Developers website](https://dev.fitbit.com/) and register an account and create an app. Chandra's python script and instructions are well documented in his [Github repository](https://github.com/tuchandra/sleep-analysis).  The app will be for "Personal" use, which gives access to intraday sleep data and can be revised to access other Fitbit data.
 
@@ -39,7 +41,7 @@ Note: Fitbit is a registered trademark and service mark of Fitbit, Inc. My analy
 
 [Link to Github repo](https://github.com/piccoloa/datamovers)
 
-**Install required python packages**
+### Installing required python packages  
 
 
 ```python
@@ -187,7 +189,7 @@ print(columns[0])
 
     {'totalMinutesAsleep': 384, 'totalSleepRecords': 1, 'totalTimeInBed': 413}
 
-
+### Using pyhon json module  
 Another approach to viewing and working with the json file is to use the json package.  I've seen this package more often used for smaller datasets.  In this case we will take a look at the file again with this method.  There is a lot of data collected for one night's sleep.  You can get real sense of how the internet of things is a big data volume problem.  
 
 
@@ -272,7 +274,7 @@ list(sample_data['summary'].keys())
     ['totalMinutesAsleep', 'totalSleepRecords', 'totalTimeInBed']
 
 
-
+### Extracting data from log files  
 Now it is time to extract the data needed from each json file and load into python lists to create the data for our table.  
 
 
@@ -392,7 +394,7 @@ df.head()
 </div>
 
 
-
+### Loading files to a database  
 Restablish connection to the database.
 
 

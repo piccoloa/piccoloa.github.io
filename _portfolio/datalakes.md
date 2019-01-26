@@ -1,7 +1,10 @@
 ---
-title:  "Data Lakes: Overview"
-excerpt: 'This is the first blog under the topic Data Lakes and will be followed by additional topics pertaining to data lakes. Each topic will go deeper and share additional details and links to practical tools that I have discovered.'
-author_profile: false
+title:  "Data Lakes"
+excerpt: 'OVERVIEW'
+author: Alex_Piccolo
+header:
+  overlay_image: /assets/images/hadrianWall.jpg
+  caption: "A. Piccolo: [Hadrian's Wall](https://en.wikipedia.org/wiki/Hadrian%27s_Wall)"
 sidebar:
   title: "Big Data"
   nav: Big-Data
@@ -14,10 +17,10 @@ categories:
 author: Alex_Piccolo
 layouts_gallery:
   - url: /assets/images/oxfordPond.png
-    image_path: /assets/images/hadrianWall.png
+    image_path: /assets/images/hadrianWall.jgp
     alt: "splash layout example"
   - url: /assets/images/hadrianWall.png
-    image_path: /assets/images/hadrianWall.png
+    image_path: /assets/images/hadrianWall.jgp
     alt: "single layout with comments and related posts"
   - url: /assets/images/mm-layout-archive.png
     image_path: /assets/images/mm-layout-archive.png
@@ -25,6 +28,9 @@ layouts_gallery:
 last_modified_at: 2018-06-04T12:04:24-04:00
 toc: true
 ---
+
+This is the first blog under the topic big data and will be followed by additional topics exploring data. Each topic will go deeper and share additional details and links to practical tools that I have discovered useful.
+
 ### Notes From Concept to Implementation  
 
  This is the first blog under the topic **Data Lakes** and will be followed by additional topics pertaining to data lakes.  Each post will start with the title Data Lakes followed by a [:new topic].  Each topic will go deeper and share additional details and links to practical tools that I have discovered.  The goal is to better understand the impact of data lakes on the analytics value chain.   This post broadly covers the following questions:

@@ -1,9 +1,16 @@
 ---
 permalink: /entityresolution/
 title: Identity Resolution
-excerpt: 'Exploring different models to eliminate redundant and erroneous text records from different sources to manage personally identifiable information(PII)'
-author_profile: false
-category: Exploring Big Data
+excerpt: 'Managing Personally Identifiable Information'
+author: Alex_Piccolo
+header:
+  overlay_image: /assets/images/rome2.jpg
+  caption: "A. Piccolo: [Rome](https://www.google.com/maps?q=loc:41.9017028,12.4664611)"
+  categories:
+  - Big Data
+  - PII
+  - GDPR
+  - Data Governance
 sidebar:
   title: "Big Data"
   nav: Big-Data
@@ -21,11 +28,8 @@ last_modified_at: 2018-06-04T12:04:24-04:00
 toc: true
 ---
 
-Managing Personally Identifiable Information (PII)
---------------------------------------------------
-
-### Overview
-
+### Why does it matter?
+**Exploring different models to eliminate redundant and erroneous data**  
 Complying with privacy and information security laws is increasingly
 becoming more challenging for individuals and organizations. Events such
 as the 2017 Equifax data breach of 143 million individual identities is
@@ -123,9 +127,9 @@ assertion](https://repositories.lib.utexas.edu/handle/2152/2681) that:
 > application."[^5]
 
 
-### Describing the Supervised Learning Model [^6]
+### Describing the Supervised Learning Model
 
-![test2](/assets/images/classifierSmart.jpg)
+![test2](/assets/images/classifierSmart.jpg)[^6]
 
 The "committee of classifiers" as depicted above is a good
 representation of the learning process and how the user trains the
@@ -270,7 +274,7 @@ each of block. From learned probabilities, the model calculates the
 expected precision and recall.
 
 
-**Development of Container Environment**
+### Developing a Container Environment  
 
 In addition to effectively testing the dedupe.io python module for
 resolving duplicates in three datasets; Childhood Leaning Center,

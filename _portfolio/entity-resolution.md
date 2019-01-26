@@ -1,8 +1,11 @@
 ---
 permalink: /entityresolution_over/
-title: "Entity Resolution: Overview"
-excerpt: 'Disambiguating manifestations of real world entities'
-author_profile: false
+title: "Entity Resolution"
+excerpt: 'Disambiguating real world entities'
+author: Alex_Piccolo
+header:
+  overlay_image: /assets/images/rome1.jpg
+  caption: "A. Piccolo: [Rome](https://www.google.com/maps?q=loc:41.8904,12.4923)"
 category: Exploring Big Data
 sidebar:
   title: "Big Data"
@@ -21,10 +24,11 @@ last_modified_at: 2018-06-04T12:04:24-04:00
 toc: true
 ---
 
+
 ### **What is Entity Resolution?**
 Entity Resolution is the task of disambiguating manifestations of real world entities in various records or mentions by linking and grouping.[^fn1] Effectively reducing something to its most basic conical form. Linking entities to form relationships and draw conclusions from data is becoming increasingly relevant as making use of big data becomes prevalent in organizations and protecting data integrity expectations increases especially as it relates to making use of private personal data. Many organizations ranging from government and public health data, web search, comparison shopping, law enforcement are being expected to provide a higher level of transparency and protection of the data being collected and used for predicting behavior and accomplishing their goals.  Below are two short youtube videos(combined < 5 minutes) when watched together give a good base for understanding the importance of the subject.  
 [Go deeper...]({% link _portfolio/linking-people.md %})
-#### 2008 Tip of iceberg versus today's reality...
+### 2008 Tip of iceberg versus today's reality...
 <a href="http://www.youtube.com/watch?feature=player_embedded&v=39iKLwlUqBo
 " target="_blank"><img src="/assets/images/jobsPrivacy.png"
 alt="Perception 2008" width="240" height="180" border="10" /></a>   2008

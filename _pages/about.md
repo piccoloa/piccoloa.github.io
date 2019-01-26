@@ -6,8 +6,8 @@ date: 2016-03-23T11:48:41-04:00
 header:
   overlay_color: "#000"
   overlay_filter: "0.5"
-  overlay_image: /assets/images/naples.jpg
-  caption: "Napoli: [**A.Piccolo**](https://www.google.com/maps/place/Ovo+Castle/@40.8283157,14.2476044,14.16z/data=!4m13!1m7!3m6!1s0x0:0x0!2zNDDCsDUxJzA2LjQiTiAxNMKwMTYnMDUuMyJF!3b1!8m2!3d40.8517746!4d14.2681244!3m4!1s0x133b09ac26357211:0x970c840bd5800ad!8m2!3d40.828314!4d14.2476046)"
+  overlay_image: /assets/images/napoli.jpg
+  caption: "A.Piccolo: [Napoli](https://www.google.com/maps/place/Ovo+Castle/@40.8283157,14.2476044,14.16z/data=!4m13!1m7!3m6!1s0x0:0x0!2zNDDCsDUxJzA2LjQiTiAxNMKwMTYnMDUuMyJF!3b1!8m2!3d40.8517746!4d14.2681244!3m4!1s0x133b09ac26357211:0x970c840bd5800ad!8m2!3d40.828314!4d14.2476046)"
 excerpt: "Dream with your eyes open."
 author_profile: true
 feature_row2:

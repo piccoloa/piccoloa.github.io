@@ -7,7 +7,7 @@
 
 # Site Settings
 locale                   : "en-US"
-title                    : "Alessandro Piccolo"
+title                    : "ALESSANDRO PICCOLO"
 title_separator          : "-"
 name                     : &name "Alessandro Piccolo"
 description              : &description "Personal website for Alessandro Piccolo.  I'm a human."
@@ -64,7 +64,7 @@ facebook:
   username               : #&facebook "drjjmc"
   app_id                 :
   publisher              :
-og_image                 : "/assets/images/family_teaser.jpg" # Open Graph/Twitter default site image
+og_image                 : "/assets/images/napoli.jpg" # Open Graph/Twitter default site image
 # For specifying social profiles
 # - https://developers.google.com/structured-data/customize/social-profiles
 social:
