@@ -5,7 +5,7 @@ excerpt: 'OVERVIEW'
 author: Alex_Piccolo
 header:
   overlay_image: /assets/images/oxfordPond.jpg
-  caption: "A. Piccolo: [Hadrian's Wall](https://www.google.com/maps?q=loc:55.002075,-2.3859417)"
+  caption: "A. Piccolo: [Oxford University](https://www.google.com/maps?q=loc:51.7508,-1.2468)"
   actions:
     - label: "More Info"
       url: "https://piccoloa.github.io/datalakes/"
