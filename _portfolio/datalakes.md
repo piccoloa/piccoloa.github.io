@@ -4,7 +4,7 @@ title:  "Data Lakes"
 excerpt: 'OVERVIEW'
 author: Alex_Piccolo
 header:
-  overlay_image: /assets/images/hadrianWall.jpg
+  overlay_image: /assets/images/oxfordPond.jpg
   caption: "A. Piccolo: [Hadrian's Wall](https://www.google.com/maps?q=loc:55.002075,-2.3859417)"
   actions:
     - label: "More Info"
