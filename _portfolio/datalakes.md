@@ -1,20 +1,19 @@
 ---
-permalink: /sentiment_1/
-title: "Sentiment Analysis"
-excerpt: 'Applying NLP to movie reviews using Kaggle trained data.'
+permalink: /datalakes/
+title:  "Data Lakes"
+excerpt: 'OVERVIEW'
 author: Alex_Piccolo
 header:
-  overlay_image: /assets/images/chocolate.jpg
-  caption: "A. Piccolo: [Chocolate Guadeloupe](https://www.google.com/maps/place/16%C2%B012'28.4%22N+61%C2%B046'48.4%22W/@16.2079,-61.7822887,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x0!8m2!3d16.2079!4d-61.7801)"
+  overlay_image: /assets/images/hadrianWall.jpg
+  caption: "A. Piccolo: [Hadrian's Wall](https://www.google.com/maps?q=loc:55.002075,-2.3859417)"
   actions:
     - label: "More Info"
-      url: "https://piccoloa.github.io/sentiment_1/"
+      url: "https://piccoloa.github.io/datalakes/"
 categories:
-- nlp
-- docker
+- big data
+- hadoop
 - data science
-- NLTK
-- Postgres
+
 category: Exploring Big Data
 sidebar:
   title: "Big Data"
