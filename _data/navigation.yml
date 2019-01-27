@@ -22,7 +22,7 @@ Big-Data:
   - title: "Datalakes"
     children:
       - title: "Overview"
-        url: /datalakes/
+        url: /datalake0/
   - title: "Data Science"
     children:
       - title: "Set-Up Example"
