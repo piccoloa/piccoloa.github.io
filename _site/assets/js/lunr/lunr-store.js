@@ -5,7 +5,7 @@ var store = [{
         "url": "http://0.0.0.0:4000/data_science1/",
         "teaser":"http://0.0.0.0:4000/assets/images/500x300.ppg"},{
         "title": "Exploring Big Data",
-        "excerpt":"The topics traversed here are a combination of academic areas explored while getting my masters in data science as well as areas I found of interest since drinking the big data kool-aid. If you find areas for improving this content or are looking for more detailed understanding of the subject areas send me an email. ","categories": ["big data","privacy","GDPR"],
+        "excerpt":"The topics traversed here are a combination of academic areas explored while getting my masters in data science as well as areas I found of interest since drinking the big data kool-aid. If you find areas for improving this content or are looking for more detailed understanding of the subject areas send me an email. ","categories": ["big data","privacy"],
         "tags": [],
         "url": "http://0.0.0.0:4000/BigData/",
         "teaser":"http://0.0.0.0:4000/assets/images/500x300.ppg"},{

@@ -86,7 +86,7 @@ analytics:
 # Site Author
 author:
   name             : *name
-  avatar           : "/assets/images/bio-photo.jpg" #"michael-rose.jpg"
+  avatar           : "/assets/images/biophoto.jpg" #"michael-rose.jpg"
   bio              : "Human"
   location         : "New Jersey, USA"
   email            : "alexpiccolo@gmail.com"

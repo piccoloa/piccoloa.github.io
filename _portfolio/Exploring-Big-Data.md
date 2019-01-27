@@ -4,8 +4,8 @@ title: "Exploring Big Data"
 excerpt: "Beginning the journey."
 author: Alex_Piccolo
 header:
-  overlay_image: /assets/images/leaves.jpg
-  caption: "Photo credit: minimal mistakes"
+  overlay_image: /assets/images/centralpark.jpg
+  caption: "A. Piccolo: [Central Park](https://www.google.com/maps?q=loc:40.7711329,-73.9741874)"
 #  actions:
 #    - label: "More Info"
 #      url: "https://piccoloa.github.io/sentiment_1/"
@@ -13,7 +13,6 @@ header:
 categories:
 - big data
 - privacy
-- GDPR
 sidebar:
   title: "Big Data"
   nav: Big-Data
