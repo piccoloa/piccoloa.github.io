@@ -36,7 +36,7 @@ toc: true
 ![jpg](/assets/images/sentimentpost.png)
 ### **OVERVIEW**
 
-In this natural language processing example, an attempt is made to use sentiment analysis similar to our own recording of episodic memories to consciously recollect memories from prior experienced events to categorize future occurances. Using part-of-speech, this sentiment analysis uses supervised learning to categorize prior topics to predict new events.  Applying prior labeled reviews of movies to predict the sentiment of new movie reviews is just one example of where this concept can be applied. A similar use case may include predicing customer future decisions based on learning from prior labeled interactions with customers.
+In this natural language processing example, an attempt is made to use sentiment analysis similar to our own recording of episodic memories to consciously recollect memories from prior experienced events to categorize future occurances. Using parts-of-speech, this sentiment analysis uses supervised learning to categorize prior topics to predict new events.  Applying prior labeled reviews of movies to predict the sentiment of new movie reviews is just one example of where this concept can be applied. A similar use case may include predicing customer future decisions based on learning from prior labeled interactions with customers.
 
 The purpose of this post besides creating and measuring the accuracy of a sentiment model is to practice creating most of the necessary steps to implement a working environment within a sharable database environment. In its very simplistic form, the model uses parts-of-speach from prior reviews to score or predict new or un-labeled input.  
 
