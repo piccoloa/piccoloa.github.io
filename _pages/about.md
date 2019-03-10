@@ -41,7 +41,7 @@ feature_row:
   - image_path: assets/images/unsplash-gallery-image-4-th.jpg
     alt: "placeholder image 1"
     title: "Data science"
-    excerpt: "Setting up an data science framework."
+    excerpt: "Setting up a data science framework."
     # permalink: /_portfolio/entit
     url: "https://piccoloa.github.io/data_science1/"
     btn_label: "Read More"
