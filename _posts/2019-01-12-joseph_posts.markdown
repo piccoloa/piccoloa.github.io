@@ -24,7 +24,11 @@ comments: true
 date:   2018-06-06
 excerpt: 'Good details on how to understand where and how our personal identity is collected and shared'
 --- -->
-### Stories you may be interested in reading.
+### Stories and notes for Joseph.
+
+Biophysical Society 63rd Annual Meeting  
+
+[DYNAMIC FORCE-SPECTROSCOPY ON A BUDGET](https://biophysics.cld.bz/Biophysical-Society-63rd-Annual-Meeting-Program-Guide/125/)
 
 [hometown-nobel-prize](https://tworivertimes.com/rumson-honors-its-hometown-nobel-prize-recipient/)
 
