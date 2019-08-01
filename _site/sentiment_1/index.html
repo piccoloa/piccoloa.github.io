@@ -47,11 +47,11 @@
 
 
 
-  <meta property="article:published_time" content="2019-02-15T11:55:42-05:00">
+  <meta property="article:published_time" content="2019-07-31T20:05:27-04:00">
 
 
 
-  <meta property="article:modified_time" content="2019-01-19T11:04:24-05:00">
+  <meta property="article:modified_time" content="2019-02-19T11:04:24-05:00">
 
 
 
@@ -225,7 +225,7 @@
 
 
 
-  4 minute read
+  5 minute read
 </p>
       
       
@@ -483,8 +483,8 @@
   <article class="page" itemscope itemtype="http://schema.org/CreativeWork">
     <meta itemprop="headline" content="Sentiment Analysis">
     <meta itemprop="description" content="Relating memories to reality- using NLP as your crutch.">
-    <meta itemprop="datePublished" content="February 15, 2019">
-    <meta itemprop="dateModified" content="January 19, 2019">
+    <meta itemprop="datePublished" content="July 31, 2019">
+    <meta itemprop="dateModified" content="February 19, 2019">
 
     <div class="page__inner-wrap">
       
@@ -495,7 +495,8 @@
             <nav class="toc">
               <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> On This Page</h4></header>
               <ul class="toc__menu">
-  <li><a href="#overview">OVERVIEW</a></li>
+  <li><a href="#sentiment-analysis">Sentiment Analysis</a></li>
+  <li><a href="#explanation-of-the-code">Explanation of the Code</a></li>
   <li><a href="#part-1--write-data-to-postgres-db">Part 1- Write data to Postgres DB</a></li>
   <li><a href="#part-2-create-test--save-sentiment-model">Part 2-Create, Test &amp; Save Sentiment Model</a></li>
   <li><a href="#part-3---process-phrases-using-sentiment-model">Part 3 - Process phrases using Sentiment Model</a></li>
@@ -506,23 +507,38 @@
           </aside>
         
         <p><img src="/assets/images/sentimentpost.png" alt="jpg" /></p>
-<h3 id="overview"><strong>OVERVIEW</strong></h3>
+<h3 id="sentiment-analysis"><strong>Sentiment Analysis</strong></h3>
+<h4 id="using-nlp-to-more-efficently-analyze-unstructured-text">Using NLP to more efficently analyze unstructured text.</h4>
 
-<p>In this natural language processing example, an attempt is made to use sentiment analysis similar to our own recording of episodic memories to consciously recollect memories from prior experienced events to categorize future occurances. Using parts-of-speech, this sentiment analysis uses supervised learning to categorize prior topics to predict new events.  Applying prior labeled reviews of movies to predict the sentiment of new movie reviews is just one example of where this concept can be applied. A similar use case may include predicing customer future decisions based on learning from prior labeled interactions with customers.</p>
+<p>With the likes of Alexa and Siri hitting mainstream adoption, Natural language processing(NLP) has gained much relevance to the average person. That being said, much of the value in unstructured data that is collected, stored and shared in traditional systems is of little value to most within the organization outside of the original content creator and his or her circle of influence. This is where NLP can potentially shine by using symbols in content as a crutch to relate memories of the the original content creator’s intentions.<br />
+In this NLP example, an attempt is made to use sentiment analysis similar to our own recording of episodic memories to consciously recollect memories from prior experienced events to categorize future occurrences. Using parts-of-speech, sentiment analysis uses supervised learning to categorize prior topics to predict new outcomes. Did the person writing the movie review like or not like the movie? Applying prior labeled reviews of movies to predict the sentiment of new movie reviews is just one example of where the concept can be applied. A similar use case may include predicting a customer’s future intentions based on learning from prior labeled interactions with like minded customers.</p>
 
-<p>The purpose of this post besides creating and measuring the accuracy of a sentiment model is to practice creating most of the necessary steps to implement a working environment within a sharable database environment. In its very simplistic form, the model uses parts-of-speach from prior reviews to score or predict new or un-labeled input.</p>
+<p>The purpose of this post besides creating and measuring the accuracy of a sentiment model is to practice creating most of the necessary steps to implement a working production environment. In short, the model uses parts-of-speach from prior reviews to score or predict new or un-labeled reviews.</p>
 
-<p>From my experience many of the most useful data mining and analytics I have uncovered are not really helpful to those using the results until they are easily accessed in a database and more easily shared with other systems.  This example uses a Postgres database in a Docker-Compose environment. To create a similar environment clone <a href="https://github.com/piccoloa/priv_jupyter">this GitHub</a> repo, start docker-compose and follow the notebook links in each part of this post. A similar environment was created in the <a href="https://github.com/piccoloa/dedupePostgresDocker">dedupe using postgres environment</a> that implemented one form of <a href="https://piccoloa.github.io/entityresolution/">identity resolution</a>.  Most of the essential parts of extracting, transforming, and loading (ETL) are performed in Jupyter notebooks that are referenced in this post.</p>
+<p>In practice most useful data mining and analytics are not really helpful to those using the results until they are easily accessed in a database and easily shared with other systems. In this example, I use a Postgres database in a Docker-Compose environment.
+To create a similar environment clone <a href="https://github.com/piccoloa/priv_jupyter">this GitHub</a> repo, start docker-compose and follow the notebook links in each part of this post. A similar environment was created in the <a href="https://github.com/piccoloa/dedupePostgresDocker">dedupe using postgres environment</a> that implemented one form of <a href="https://piccoloa.github.io/entityresolution/">identity resolution</a>.  Most of the essential parts of extracting, transforming, and loading (ETL) are performed in Jupyter notebooks that are referenced in this post.  In practice, a seperate Docker service is implemented to perform the ETL done in the notebooks.</p>
 
-<p>The sentiment model example uses a Kaggle <a href="https://www.kaggle.com/c/sentiment-analysis-on-movie-reviews/data">dataset</a>. I gathered the basics of NLP about three years ago using concepts learned in <em>Python 3 Text Processing with NLTK 3 Cookbook</em> and <em>pythonprogramming.net</em>. In practice, I have used these concepts to implement a sentiment system for scoring customer interactions recorded as notes in salesforce.com and sharing the model results via a Postgres database. Although much of this project could have been done using Pandas, I prefer to use a database in a docker service to make the data persistent and to allow for easily querying the data using <a href="https://www.adminer.org/">Adminer</a>.</p>
+<h3 id="explanation-of-the-code">Explanation of the Code</h3>
+<p>The sentiment model example uses a Kaggle <a href="https://www.kaggle.com/c/sentiment-analysis-on-movie-reviews/data">dataset</a>. Much of the concepts here were learned by following <em>Python 3 Text Processing with NLTK 3 Cookbook</em> and <em>pythonprogramming.net</em>. In practice, a similar approach was used for scoring customer interactions recorded as notes in salesforce.com. Although much of this project could have been done using Pandas, I prefer to use a database in a docker service to make the data persistent and to allow for easily querying the data and sharing with other front-end systems. <a href="https://www.adminer.org/">Adminer</a>.</p>
 
 <h3 id="part-1--write-data-to-postgres-db"><strong>Part 1- Write data to Postgres DB</strong></h3>
-<p><a href="https://github.com/piccoloa/priv_jupyter/blob/master/notebooks/Part%201-%20Write%20data%20to%20Postgres%20DB.ipynb">refer to notebook</a></p>
-
 <p>Set up Kaggle dataset to access from a Postgres DB</p>
 
+<ol>
+  <li>import csv files downloaded from kaggle</li>
+  <li>load data to a Postgres db in docker container</li>
+  <li>clean train and test tables to adapt Kaggle dataset to reflect more likely original data  <br />
+<a href="https://github.com/piccoloa/priv_jupyter/blob/master/notebooks/Part%201-%20Write%20data%20to%20Postgres%20DB.ipynb">refer to notebook</a></li>
+</ol>
+
 <h3 id="part-2-create-test--save-sentiment-model"><strong>Part 2-Create, Test &amp; Save Sentiment Model</strong></h3>
-<p><a href="https://github.com/piccoloa/priv_jupyter/blob/master/notebooks/Part%202-Create%2C%20Test%20%26%20Save%20Sentiment%20Model.ipynb">refer to notebook</a></p>
+<ol>
+  <li>Create two tables, one for negative reviews and one for positive reviews.</li>
+  <li>Use NLTK to tokenize phrases</li>
+  <li>Create featuresets</li>
+  <li>Test Scikit-learn classificaion models <br />
+<a href="https://github.com/piccoloa/priv_jupyter/blob/master/notebooks/Part%202-Create%2C%20Test%20%26%20Save%20Sentiment%20Model.ipynb">refer to notebook</a></li>
+</ol>
 
 <p>Create a sentiment analysis algorithm using labeled Kaggle movie reviews.  Part 1 cleaned and saved reviews to a database. Our model adjusts the Kaggle dataset to comply with a binary classification, in which the target variable only has two classes to be predicted. For this post, the classes are either “negative” or “positive”. Labeled reviews are marked as either a <strong>positive</strong>(&gt; 3) or <strong>negative</strong>(&lt;3) phrases. The Kaggle dataset reviews are labeled as 0 - 4 (neg - pos) based on the provided training set.<br />
 In short, the NLTK library is used to extract POS (parts-of-speech- adjectives) from reviews to use as <strong>features</strong> for each movie review. These featuresets are then used to train the classification models.  The feature sets associated with the labeled reviews are measured against a bag-of-words to calculate the likelihood of the review being categorized as a positive or negative sentiment.</p>
@@ -530,12 +546,21 @@ In short, the NLTK library is used to extract POS (parts-of-speech- adjectives) 
 <p>A custom classifier is used to score reviews.  The classifier includes combining the classifier algorithms and creating a sort of voting system, where each algorithm gets one vote, and the classification that has the most votes is the chosen one.  In NLTK, classifiers are defined using classes that implement the ClassifyI interface. A processing interface for labeling tokens with a single category label (or “class”). Labels are typically strings or integers, but can be any immutable type. The set of labels that the classifier chooses from must be fixed and finite.</p>
 
 <h3 id="part-3---process-phrases-using-sentiment-model"><strong>Part 3 - Process phrases using Sentiment Model</strong></h3>
-<p><a href="https://github.com/piccoloa/priv_jupyter/blob/master/notebooks/Part%203-%20Process%20phrases%20using%20Sentiment%20Model.ipynb">refer to notebook</a></p>
 
-<p>Part 3 is a brief.  The sentiment model saved in part 2 is used to score unclassified phrases. In this case the test phrases provided by Kaggle.</p>
+<ol>
+  <li>Create a processed phrase table in Postgres DB.</li>
+  <li>Incrementally process each phrase using saved sentiment module.  <br />
+<a href="https://github.com/piccoloa/priv_jupyter/blob/master/notebooks/Part%203-%20Process%20phrases%20using%20Sentiment%20Model.ipynb">refer to notebook</a>.</li>
+</ol>
+
+<p>The sentiment model saved in part 2 is used to score unclassified phrases. In this case the test phrases provided by Kaggle.</p>
 
 <h3 id="part-4--evaluate-model-using-kaggle-training-set"><strong>Part 4- Evaluate Model using Kaggle Training Set</strong></h3>
-<p><a href="https://github.com/piccoloa/priv_jupyter/blob/master/notebooks/Part%204-%20Evaluate%20Model%20using%20Kaggle%20Training%20Set.ipynb">refer to notebook</a></p>
+<ol>
+  <li>Create a processed phrase table for the training/test set in Postgres DB.</li>
+  <li>Evaluate the model using Sklearn metrics classification and confusion matrix.<br />
+<a href="https://github.com/piccoloa/priv_jupyter/blob/master/notebooks/Part%204-%20Evaluate%20Model%20using%20Kaggle%20Training%20Set.ipynb">refer to notebook</a></li>
+</ol>
 
 <p>The accuracy of the model is the number of times the model correctly predicts the sentiment on new phrases. This is a supervised learning exercise. Given that the Kaggle data has a 0-4 scale, any review labeled 2 would be neither positive nor negative.  For the purpose of the binary classification, the prediction is either positive or negative.  Excluding any neutral reviews, 6,874 labeled phrases are available to measure for our model.  100% of the trained data is used to test the accuracy of the model.  Only the top 5,000 features for all 6,874 phrases were used to train the model. Post the removal of neutral labels, the base positive sentiment prediction is 52.40%. Of course, overfitting our model is a risk given this is supervised learning and we are testing our model against the training set.</p>
 
@@ -580,10 +605,6 @@ v.  <a href="https://pythonprogramming.net/tokenizing-words-sentences-nltk-tutor
     
       
       
-      <a href="/categories/#exploring-big-data" class="page__taxonomy-item" rel="tag">Exploring Big Data</a><span class="sep">, </span>
-    
-      
-      
       <a href="/categories/#nlp" class="page__taxonomy-item" rel="tag">nlp</a><span class="sep">, </span>
     
       
@@ -599,7 +620,7 @@ v.  <a href="https://pythonprogramming.net/tokenizing-words-sentences-nltk-tutor
 
 
         
-          <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time datetime="2019-01-19">January 19, 2019</time></p>
+          <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time datetime="2019-02-19">February 19, 2019</time></p>
         
       </footer>
 

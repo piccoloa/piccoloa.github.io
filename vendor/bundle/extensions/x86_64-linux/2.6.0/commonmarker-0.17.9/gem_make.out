@@ -1,5 +1,5 @@
 current directory: /usr/local/bundle/gems/commonmarker-0.17.9/ext/commonmarker
-/usr/local/bin/ruby -r ./siteconf20180728-36-vv0cu3.rb extconf.rb
+/usr/local/bin/ruby -I /usr/local/lib/ruby/site_ruby/2.6.0 -r ./siteconf20190731-29-w86fro.rb extconf.rb
 creating Makefile
 
 current directory: /usr/local/bundle/gems/commonmarker-0.17.9/ext/commonmarker
@@ -29,8 +29,8 @@ arena.c:88:3: warning: ISO C90 forbids mixed declarations and code [-Wdeclaratio
    ^~~~
 arena.c: At top level:
 cc1: warning: unrecognized command line option '-Wno-self-assign'
-cc1: warning: unrecognized command line option '-Wno-constant-logical-operand'
 cc1: warning: unrecognized command line option '-Wno-parentheses-equality'
+cc1: warning: unrecognized command line option '-Wno-constant-logical-operand'
 compiling autolink.c
 autolink.c: In function 'www_match':
 autolink.c:178:3: warning: ISO C90 forbids mixed declarations and code [-Wdeclaration-after-statement]
@@ -62,8 +62,8 @@ autolink.c:415:3: warning: ISO C90 forbids mixed declarations and code [-Wdeclar
    ^~~~~~~~~
 autolink.c: At top level:
 cc1: warning: unrecognized command line option '-Wno-self-assign'
-cc1: warning: unrecognized command line option '-Wno-constant-logical-operand'
 cc1: warning: unrecognized command line option '-Wno-parentheses-equality'
+cc1: warning: unrecognized command line option '-Wno-constant-logical-operand'
 compiling blocks.c
 blocks.c: In function 'cmark_parser_reset':
 blocks.c:118:3: warning: ISO C90 forbids mixed declarations and code [-Wdeclaration-after-statement]
@@ -106,8 +106,8 @@ blocks.c:1292:7: warning: ISO C90 forbids mixed declarations and code [-Wdeclara
        ^~~
 blocks.c: At top level:
 cc1: warning: unrecognized command line option '-Wno-self-assign'
-cc1: warning: unrecognized command line option '-Wno-constant-logical-operand'
 cc1: warning: unrecognized command line option '-Wno-parentheses-equality'
+cc1: warning: unrecognized command line option '-Wno-constant-logical-operand'
 compiling buffer.c
 buffer.c: In function 'cmark_strbuf_grow':
 buffer.c:54:3: warning: ISO C90 forbids mixed declarations and code [-Wdeclaration-after-statement]
@@ -123,8 +123,8 @@ buffer.c:187:3: warning: ISO C90 forbids mixed declarations and code [-Wdeclarat
    ^~~~~~~~~
 buffer.c: At top level:
 cc1: warning: unrecognized command line option '-Wno-self-assign'
-cc1: warning: unrecognized command line option '-Wno-constant-logical-operand'
 cc1: warning: unrecognized command line option '-Wno-parentheses-equality'
+cc1: warning: unrecognized command line option '-Wno-constant-logical-operand'
 compiling cmark.c
 compiling cmark_ctype.c
 compiling commonmark.c
@@ -140,19 +140,19 @@ commonmark.c:478:7: warning: ISO C90 forbids mixed declarations and code [-Wdecl
        ^~~~
 commonmark.c: At top level:
 cc1: warning: unrecognized command line option '-Wno-self-assign'
-cc1: warning: unrecognized command line option '-Wno-constant-logical-operand'
 cc1: warning: unrecognized command line option '-Wno-parentheses-equality'
+cc1: warning: unrecognized command line option '-Wno-constant-logical-operand'
 compiling commonmarker.c
-In file included from houdini.h:9:0,
+In file included from houdini.h:9,
                  from commonmarker.c:3:
-config.h:8:0: warning: "HAVE_STDBOOL_H" redefined
+config.h:8: warning: "HAVE_STDBOOL_H" redefined
  #define HAVE_STDBOOL_H
  
-In file included from /usr/local/include/ruby-2.5.0/ruby/ruby.h:24:0,
-                 from /usr/local/include/ruby-2.5.0/ruby.h:33,
+In file included from /usr/local/include/ruby-2.6.0/ruby/ruby.h:24,
+                 from /usr/local/include/ruby-2.6.0/ruby.h:33,
                  from commonmarker.h:9,
                  from commonmarker.c:1:
-/usr/local/include/ruby-2.5.0/x86_64-linux-musl/ruby/config.h:28:0: note: this is the location of the previous definition
+/usr/local/include/ruby-2.6.0/x86_64-linux-musl/ruby/config.h:26: note: this is the location of the previous definition
  #define HAVE_STDBOOL_H 1
  
 commonmarker.c: In function 'prepare_parser':
@@ -210,8 +210,8 @@ commonmarker.c:1093:3: warning: ISO C90 forbids mixed declarations and code [-Wd
    ^~~~~~~~~
 commonmarker.c: At top level:
 cc1: warning: unrecognized command line option '-Wno-self-assign'
-cc1: warning: unrecognized command line option '-Wno-constant-logical-operand'
 cc1: warning: unrecognized command line option '-Wno-parentheses-equality'
+cc1: warning: unrecognized command line option '-Wno-constant-logical-operand'
 compiling core-extensions.c
 compiling ext_scanners.c
 compiling footnotes.c
@@ -229,8 +229,8 @@ html.c:391:7: warning: ISO C90 forbids mixed declarations and code [-Wdeclaratio
        ^~~~
 html.c: At top level:
 cc1: warning: unrecognized command line option '-Wno-self-assign'
-cc1: warning: unrecognized command line option '-Wno-constant-logical-operand'
 cc1: warning: unrecognized command line option '-Wno-parentheses-equality'
+cc1: warning: unrecognized command line option '-Wno-constant-logical-operand'
 compiling inlines.c
 inlines.c: In function 'adjust_subj_node_newlines':
 inlines.c:269:3: warning: ISO C90 forbids mixed declarations and code [-Wdeclaration-after-statement]
@@ -261,8 +261,8 @@ inlines.c:871:7: warning: ISO C90 forbids mixed declarations and code [-Wdeclara
        ^~~~~~~~~~
 inlines.c: At top level:
 cc1: warning: unrecognized command line option '-Wno-self-assign'
-cc1: warning: unrecognized command line option '-Wno-constant-logical-operand'
 cc1: warning: unrecognized command line option '-Wno-parentheses-equality'
+cc1: warning: unrecognized command line option '-Wno-constant-logical-operand'
 compiling iterator.c
 iterator.c: In function 'cmark_iter_new':
 iterator.c:13:3: warning: ISO C90 forbids mixed declarations and code [-Wdeclaration-after-statement]
@@ -278,8 +278,8 @@ iterator.c:132:3: warning: ISO C90 forbids mixed declarations and code [-Wdeclar
    ^~~~~~~~~~
 iterator.c: At top level:
 cc1: warning: unrecognized command line option '-Wno-self-assign'
-cc1: warning: unrecognized command line option '-Wno-constant-logical-operand'
 cc1: warning: unrecognized command line option '-Wno-parentheses-equality'
+cc1: warning: unrecognized command line option '-Wno-constant-logical-operand'
 compiling latex.c
 latex.c: In function 'get_link_type':
 latex.c:165:3: warning: ISO C90 forbids mixed declarations and code [-Wdeclaration-after-statement]
@@ -290,8 +290,8 @@ latex.c:177:3: warning: ISO C90 forbids mixed declarations and code [-Wdeclarati
    ^~~~~
 latex.c: At top level:
 cc1: warning: unrecognized command line option '-Wno-self-assign'
-cc1: warning: unrecognized command line option '-Wno-constant-logical-operand'
 cc1: warning: unrecognized command line option '-Wno-parentheses-equality'
+cc1: warning: unrecognized command line option '-Wno-constant-logical-operand'
 compiling linked_list.c
 compiling man.c
 man.c: In function 'S_render_node':
@@ -300,8 +300,8 @@ man.c:132:9: warning: ISO C90 forbids mixed declarations and code [-Wdeclaration
          ^~~~
 man.c: At top level:
 cc1: warning: unrecognized command line option '-Wno-self-assign'
-cc1: warning: unrecognized command line option '-Wno-constant-logical-operand'
 cc1: warning: unrecognized command line option '-Wno-parentheses-equality'
+cc1: warning: unrecognized command line option '-Wno-constant-logical-operand'
 compiling map.c
 compiling node.c
 node.c: In function 'S_node_unlink':
@@ -332,8 +332,8 @@ node.c:885:3: warning: ISO C90 forbids mixed declarations and code [-Wdeclaratio
    ^~~~~~~~~~
 node.c: At top level:
 cc1: warning: unrecognized command line option '-Wno-self-assign'
-cc1: warning: unrecognized command line option '-Wno-constant-logical-operand'
 cc1: warning: unrecognized command line option '-Wno-parentheses-equality'
+cc1: warning: unrecognized command line option '-Wno-constant-logical-operand'
 compiling plaintext.c
 compiling plugin.c
 compiling references.c
@@ -344,8 +344,8 @@ registry.c:23:3: warning: ISO C90 forbids mixed declarations and code [-Wdeclara
    ^~~~~~~~~~~
 registry.c: At top level:
 cc1: warning: unrecognized command line option '-Wno-self-assign'
-cc1: warning: unrecognized command line option '-Wno-constant-logical-operand'
 cc1: warning: unrecognized command line option '-Wno-parentheses-equality'
+cc1: warning: unrecognized command line option '-Wno-constant-logical-operand'
 compiling render.c
 compiling scanners.c
 compiling strikethrough.c
@@ -355,8 +355,8 @@ strikethrough.c:151:3: warning: ISO C90 forbids mixed declarations and code [-Wd
    ^~~~~~~~~
 strikethrough.c: At top level:
 cc1: warning: unrecognized command line option '-Wno-self-assign'
-cc1: warning: unrecognized command line option '-Wno-constant-logical-operand'
 cc1: warning: unrecognized command line option '-Wno-parentheses-equality'
+cc1: warning: unrecognized command line option '-Wno-constant-logical-operand'
 compiling syntax_extension.c
 compiling table.c
 table.c: In function 'row_from_string':
@@ -377,8 +377,8 @@ table.c:620:7: warning: ISO C90 forbids mixed declarations and code [-Wdeclarati
        ^~~
 table.c: At top level:
 cc1: warning: unrecognized command line option '-Wno-self-assign'
-cc1: warning: unrecognized command line option '-Wno-constant-logical-operand'
 cc1: warning: unrecognized command line option '-Wno-parentheses-equality'
+cc1: warning: unrecognized command line option '-Wno-constant-logical-operand'
 compiling tagfilter.c
 compiling utf8.c
 compiling xml.c
@@ -386,4 +386,4 @@ linking shared-object commonmarker/commonmarker.so
 
 current directory: /usr/local/bundle/gems/commonmarker-0.17.9/ext/commonmarker
 make "DESTDIR=" install
-/usr/bin/install -c -m 0755 commonmarker.so ./.gem.20180728-36-13hdhh9/commonmarker
+/usr/bin/install -c -m 0755 commonmarker.so ./.gem.20190731-29-dmos00/commonmarker
