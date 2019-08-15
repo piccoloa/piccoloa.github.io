@@ -68,4 +68,9 @@ var store = [{
         "excerpt":"Birthday Top 10 “Either foe or friend we are all equal in the end except for the symbols we leave behind.”My year 50.   Reading Fahrenheit 451, the same book assigned to my daughter’s summer reading. Ray Bradbury  Better understanding how we got where we are politically. Hillbilly Elegy: A Memoir of a Family and Culture in Crisis J.D. Vance  Finding a millenium band that kept me interested.  Sharing this song that was shared with me.  Charles Bradley- Why is it So Hard  Experiencing the best dessert I have ever had.  Discovering fasting works for me.Eat, Fast, Live Longer  Making better food and using my sous-vide whenever possible.  Running my 1st Marathon.  Finally finishing MS in Data Science at Rutgers!  Coping without my mom.","categories": ["notes"],
         "tags": ["Birthday"],
         "url": "http://0.0.0.0:4000/notes/Birthday-Blast1/",
+        "teaser":"http://0.0.0.0:4000/assets/images/family_teaser.jpg"},{
+        "title": "For Sale By Owner- 6 Buttonwood Lane East Rumson, NJ",
+        "excerpt":"For Sale by Owner  732 939 9591 6 Buttonwood Lane East, Rumson, NJ 07760– For Sale by Owner.  $1,800,000 ABSOLUTELY STUNNING! Flawlessly designed by local architect and builder.  Upgraded custom retreat that “could be featured in Architectural Digest” and set in one of Rumsons most coveted neighborhoods. Brilliant  versatile open layout w/ breathtaking natural light  multiple sets of French doors to private resort-like grounds w/ patio, covered porch w/ outdoor FP, and pool. Generous sized BRs w/ great closet space, beautifully updated baths w stylish selections. Full house generator and more!  ","categories": ["notes"],
+        "tags": ["Real estate"],
+        "url": "http://0.0.0.0:4000/notes/House_for_sale/",
         "teaser":"http://0.0.0.0:4000/assets/images/family_teaser.jpg"}]

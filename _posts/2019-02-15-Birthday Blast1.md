@@ -16,7 +16,7 @@ output:
             css: prettify.css
 pinned: false
 ---
-
+  
 ### Birthday Top 10
 "Either foe or friend we are all equal in the end except for the symbols we leave behind."  
 My year 50.  
