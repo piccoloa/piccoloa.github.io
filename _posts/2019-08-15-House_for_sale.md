@@ -25,4 +25,4 @@ pinned: false
 ABSOLUTELY STUNNING! Flawlessly designed by local architect and builder.  Upgraded custom retreat that "could be featured in Architectural Digest" and set in one of Rumsons most coveted neighborhoods. Brilliant  versatile open layout w/ breathtaking natural light  multiple sets of French doors to private resort-like grounds w/ patio, covered porch w/ outdoor FP, and pool. Generous sized BRs w/ great closet space, beautifully updated baths w stylish selections. Full house generator and more!
 
 ![Stay Tuned for More Photos](/assets/images/poolView.png)
-![Listing with Agent Soon](/assets/images/housFront.png)
+![Listing with Agent Soon](/assets/images/houseFront.png)
