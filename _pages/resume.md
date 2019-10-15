@@ -34,7 +34,7 @@ Software Industry
     -	Extensive experience using Python programming and Python libraries for data science including NumPy, Pandas, SciPy, Scikit-learn and Natural Language Tool Kit (NLTK).  Proficient with R.
     - Strong proficiency in SQL and familiar with working in big data Hadoop / Hive / Spark / SolR environments.
     - Actively engaged in large enterprise customer solutions that are leveraging big data, machine learning, and sensitive data governance applications.
-    - Experience building search applications built on Apache Solr and Lucidwork’s Fusion platform.    
+    - Built and launched an analytical application end to end using Docker microservices and machine learning that drives better knowledge and insight across Commvault. The Activate 360 application extracts data from desperate systems, builds structured analysis, implements predictive modeling and acts a communication platform for colleagues across the organization to create further discussion and innovation.    
 <br/>
 
     *Senior Manager Analytics: Product Management/Marketing/Sales*
