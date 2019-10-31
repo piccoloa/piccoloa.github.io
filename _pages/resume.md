@@ -29,12 +29,11 @@ Software Industry
 
     -	Thought leader and product expert for innovative search and machine learning initiatives.  
     - Lead data science and machine learning product incubation projects with R&D and contracted partners.  
-    - From ideation to working across departments to define, manage, and launch green field new product initiatives.
     -	Responsible for performing advanced data analysis techniques that include customer segmentation, customer lifecycle modeling, lifetime customer value, customer experience optimization and predictive modeling.
     -	Extensive experience using Python programming and Python libraries for data science including NumPy, Pandas, SciPy, Scikit-learn and Natural Language Tool Kit (NLTK).  Proficient with R.
     - Strong proficiency in SQL and familiar with working in big data Hadoop / Hive / Spark / SolR environments.
     - Actively engaged in large enterprise customer solutions that are leveraging big data, machine learning, and sensitive data governance applications.
-    - Built and launched an analytical application end to end using Docker microservices and machine learning that drives better knowledge and insight across Commvault. The Activate 360 application extracts data from desperate systems, builds structured analysis, implements predictive modeling and acts a communication platform for colleagues across the organization to create further discussion and innovation.    
+    - Built and launched the first insight engine application end to end using Commvault, Docker microservices and machine learning that drives better knowledge and insight across Commvault. The Activate 360 application extracts data from desperate systems, builds structured analysis, implements predictive modeling and acts a communication platform for colleagues across the organization to create further discussion and innovation.    
 <br/>
 
     *Senior Manager Analytics: Product Management/Marketing/Sales*

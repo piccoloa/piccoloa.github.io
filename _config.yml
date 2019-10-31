@@ -7,10 +7,10 @@
 
 # Site Settings
 locale                   : "en-US"
-title                    : "ALESSANDRO PICCOLO"
+title                    : "ALEX PICCOLO"
 title_separator          : "-"
 name                     : &name "Alessandro Piccolo"
-description              : &description "Personal website for Alessandro Piccolo.  I'm a human."
+description              : &description "Personal website for Alessandro Piccolo.  Not a bot."
 url                      : "https://piccoloa.github.io/" # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
 repository               : "piccoloa/piccoloa.github.io"

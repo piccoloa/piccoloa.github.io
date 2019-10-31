@@ -1,5 +1,5 @@
 ---
-title: " "
+title: "Welcome"
 layout: splash
 permalink: /about/
 date: 2016-03-23T11:48:41-04:00
@@ -11,15 +11,26 @@ header:
 excerpt: "Dream with your eyes open."
 author_profile: true
 feature_row2:
-  - image_path: /assets/images/biophoto2.jpg
+  - image_path: /assets/images/biophoto.jpg
     # image_caption: "Image courtesy of [Unsplash](https://unsplash.com/)"
     alt: "placeholder image 2"
-    title: "Welcome"
+    title: "About"
     #excerpt: 'This is some sample content that goes here with **Markdown** formatting. Left aligned with `type="left"`'
-    excerpt: "Below are some topics I have been exploring and links to areas you may find of interest. <br /> <br />
-    Feel free to contact me on social media."
+    excerpt: "I am passionate about knowledge creation and harnessing the power of data driven decisions to build value and create exceptional growth.  
+    <br/>  
+    <br/>  
+     My career has centered on results driven outcomes starting from ideation to working across organizations to define, manage, and launch initiatives that consistently surpass expectations.  
+<br/>
+<br/>
+Starting with an infectious positive attitude and self driven motivation, I enjoy solving hard problems by motivating and leading teams to overachieve against business goals and release their true potential individually and collectively.    
+<br/>
+<br/>
+As a  thought leader and trusted adviser in analyzing and implementing emerging and high-growth technology strategies, I am known for applying imaginative knowledge based intelligence to real world outcomes.
+<br/>
+<br/>
+Driving necessary strategic and transformational change fuels my ambitions."
     url: "https://piccoloa.github.io/resume/"
-    btn_label: "Curriculum Vitae"
+    btn_label: "Resume"
     btn_class: "btn--primary"
 feature_row:
   - image_path: assets/images/unsplash-gallery-image-1-th.jpg
@@ -33,7 +44,7 @@ feature_row:
   - image_path: assets/images/oxfordPond2.jpg
     alt: "placeholder image 1"
     title: "Data lakes"
-    excerpt: "Notes from concept to implementation."
+    excerpt: "Introduction to Concept."
     # permalink: /_portfolio/entit
     url: "https://piccoloa.github.io/datalakes/"
     btn_label: "Read More"
@@ -41,7 +52,7 @@ feature_row:
   - image_path: assets/images/unsplash-gallery-image-4-th.jpg
     alt: "placeholder image 1"
     title: "Data science"
-    excerpt: "Setting up a data science framework."
+    excerpt: "Using Docker as your data science Lab."
     # permalink: /_portfolio/entit
     url: "https://piccoloa.github.io/data_science1/"
     btn_label: "Read More"
