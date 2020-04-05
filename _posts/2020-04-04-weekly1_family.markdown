@@ -101,10 +101,8 @@ My own bias to the shared links below is that I pay particular attention to the 
 
 [Mindf*ck-Cambridge Analytica and the Plot to Break America](https://www.audible.com/pd/Mindf-ck-Audiobook/0593209613?qid=1586051134&sr=1-1&ref=a_search_c3_lProduct_1_1&pf_rd_p=e81b7c27-6880-467a-b5a7-13cef5d729fe&pf_rd_r=6AXNJXPNM5HP4X1D02PG)
 
-### Great Finacial Crises The Experts Angle  
-
 [Discussing 'The Grapes of Wrath'](https://www.cornell.edu/video/discussing-the-grapes-of-wrath)  
-If it's too long or not you really are not interested in the book try watching this video of [The Ghost of Tom Joad](https://www.youtube.com/watch?v=B-c6GphpAeY&list=RDB-c6GphpAeY&start_radio=1) video from Bruce Springsteen also mentioned in the lecture.
+If it's too long or you really are not interested in the book try watching this video of [The Ghost of Tom Joad](https://www.youtube.com/watch?v=B-c6GphpAeY&list=RDB-c6GphpAeY&start_radio=1) from Bruce Springsteen which is highlighted at the end of the lecture.
 
 
 
