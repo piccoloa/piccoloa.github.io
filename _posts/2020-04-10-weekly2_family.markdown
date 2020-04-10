@@ -125,7 +125,7 @@ At first site, I found this article a bit distrubing. My previous experiences wi
 [The Wish](https://open.spotify.com/track/2RskkQc3xmgs3peuYtXrDU?si=VMv3FL9KTDKbI94sG5TfPA)
 
 **Technology Tip of the Week**:  
-Recommend setting the Facebook timer in user settings. I get an alert you about my time on spent on the app. I have mine set to 10 minutes. It has stopped me from grazing in an unhealthy way on social networks.
+Recommend setting the Facebook timer in user settings. I get an alert  about my time spent on the app. I have mine set to 10 minutes. It has stopped me from grazing in an unhealthy way on social networks.
 
 [Chart of the week](https://flowingdata.com/2016/12/07/fields-of-study-ranked-over-past-few-decades/)
 
