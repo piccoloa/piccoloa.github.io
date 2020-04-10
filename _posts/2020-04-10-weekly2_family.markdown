@@ -127,4 +127,6 @@ At first site, I found this article a bit distrubing. My previous experiences wi
 **Tecnology Tip of the Week**:  
 Recommend setting the Facebook timer in user settings. I get an alert you about my time on spent on the app. I have mine set to 10 minutes. It has stopped me from grazing in an unhealthy way on social networks.
 
+[Chart of the week](https://flowingdata.com/2016/12/07/fields-of-study-ranked-over-past-few-decades/)
+
 Thanks for your time.
