@@ -109,7 +109,7 @@ At first site, I found this article a bit distrubing. My previous experiences wi
 [Washington state governor green-lights facial-recog law championed by... guess who: Yep, hometown hero Microsoft • The Register](https://www.theregister.co.uk/2020/04/06/ai_roundup/)  
 
 
-**What I've finshed listining to**:  
+**What I've finshed listening to**:  
 [Mindf*ck-Cambridge Analytica and the Plot to Break America](https://www.audible.com/pd/Mindf-ck-Audiobook/0593209613?qid=1586051134&sr=1-1&ref=a_search_c3_lProduct_1_1&pf_rd_p=e81b7c27-6880-467a-b5a7-13cef5d729fe&pf_rd_r=6AXNJXPNM5HP4X1D02PG)
 
 **What I plan on listening to**:  
