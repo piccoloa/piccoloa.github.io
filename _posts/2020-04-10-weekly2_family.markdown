@@ -22,7 +22,7 @@ pinned: false
 ---
 
 ### **What I’m Reading**
-This weeks links include excerpts that I hope are more useful in sifting through last weeks news.
+News I read last week with excerpts.
 
 ### Worth Sharing
 
