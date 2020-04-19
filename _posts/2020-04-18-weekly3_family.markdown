@@ -2,9 +2,9 @@
 title:  "What I’m Reading"
 excerpt: "In Isolation with PapaPiccolo: Week 6"
 header:
-   teaser: "https://images.unsplash.com/photo-1585493930977-9a223261b76f"
+   teaser: "https://images.unsplash.com/photo-1583946099379-f9c9cb8bc030"
    overlay_color: "#5e616c"
-   overlay_image: "https://images.unsplash.com/photo-1585493930977-9a223261b76f"
+   overlay_image: "https://images.unsplash.com/photo-1583946099379-f9c9cb8bc030"
    overlay_filter: .4
 categories:
 - notes
