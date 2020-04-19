@@ -170,7 +170,7 @@ By Allison Stanger](https://www.nytimes.com/2017/03/13/opinion/understanding-the
 
 >“Having to surrender the 7th Amendment in order to do most anything these days (e.g., take a job, buy a car, use Windows, etc.) continues to really upset me.
 
-We fought a war for independence to (in part) secure the right to a trial by jury.  In a country of self-rule where citizens are collectively sovereign, mandatory arbitration and class-action waivers are fundamentally un-American.” Reader comment section. 
+>We fought a war for independence to (in part) secure the right to a trial by jury.  In a country of self-rule where citizens are collectively sovereign, mandatory arbitration and class-action waivers are fundamentally un-American.” Reader comment section. 
 
 
 **What I've finshed listening to**:  
