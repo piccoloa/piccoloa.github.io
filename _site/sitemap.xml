@@ -2,11 +2,11 @@
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
 <loc>http://0.0.0.0:4000/data_science1/</loc>
-<lastmod>2020-04-10T16:57:38-04:00</lastmod>
+<lastmod>2020-04-18T22:41:18-04:00</lastmod>
 </url>
 <url>
 <loc>http://0.0.0.0:4000/BigData/</loc>
-<lastmod>2020-04-10T16:57:38-04:00</lastmod>
+<lastmod>2020-04-18T22:41:18-04:00</lastmod>
 </url>
 <url>
 <loc>http://0.0.0.0:4000/datalakes/</loc>
@@ -65,8 +65,12 @@
 <lastmod>2020-04-04T00:00:00-04:00</lastmod>
 </url>
 <url>
-<loc>http://0.0.0.0:4000/notes/weekly2_family/</loc>
+<loc>http://0.0.0.0:4000/notes/weekly2_family-copy/</loc>
 <lastmod>2020-04-10T00:00:00-04:00</lastmod>
+</url>
+<url>
+<loc>http://0.0.0.0:4000/notes/weekly3_family/</loc>
+<lastmod>2020-04-18T00:00:00-04:00</lastmod>
 </url>
 <url>
 <loc>http://0.0.0.0:4000/drafts/2019-08-15-House_for_sale/</loc>
